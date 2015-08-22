@@ -1,0 +1,16 @@
+
+<!--
+ Common scripts used by all pages.
+ Scripts are included at the end of <body>
+ (in footer.html), to avoid blocking other
+ content downloads while the browser fetches
+ the scripts.
+-->
+
+<!-- jQuery/Bootstrap: Use and external CDN to leverage parallel access. -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Common local site scripts: -->
+<script type="text/javascript" src="{{ "/static/js/main.js" | prepend: site.baseurl }}"></script>
+

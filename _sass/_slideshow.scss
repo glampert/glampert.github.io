@@ -1,0 +1,84 @@
+
+// ========================================================
+// Styles for the slide show containers:
+// ========================================================
+
+// Default sizes:
+$slide-base-width:  510px;
+$slide-base-height: 330px;
+
+// Sizes for smaller screens:
+$slide-small-width:  340px;
+$slide-small-height: 220px;
+
+.slideshow-container {
+    width:            $slide-base-width;
+    height:           $slide-base-height;
+    overflow:         hidden;
+    position:         relative;
+    margin:           0 auto;
+    margin-top:       20px;
+    margin-bottom:    20px;
+    color:            white;
+    background-color: white;
+
+    // Same shadowing effect used by common images.
+    @include my-box-shadow;
+}
+
+.slideshow-img-list {
+    font-size: 0;
+    width:     auto;
+    position:  absolute;
+}
+
+.slideshow-img-list img {
+    width:         $slide-base-width;
+    height:        $slide-base-height;
+    margin-top:    0;
+    margin-bottom: 0;
+    display:       none; // Initially hidden. Slide show script shows them when the images load.
+}
+
+.slideshow-buttons {
+    position:   relative;
+    margin-top: 60%;
+
+    @include my-display-flex-center-align;
+}
+
+.slideshow-buttons a {
+    display:       inline-block;
+    width:         15px;
+    height:        15px;
+    border-radius: 10px;
+    margin-left:   10px;
+    margin-right:  10px;
+    border:        2px solid rgb(80, 80, 80);
+}
+
+.slideshow-active-button {
+    cursor:           default;
+    background-color: rgb(80, 80, 80);
+}
+
+//
+// Shrink the slides to fit small screens:
+//
+@media screen and (max-width: 550px) {
+    .slideshow-buttons {
+        margin-top: 59%;
+    }
+
+    .slideshow-container {
+        width:  $slide-small-width;
+        height: $slide-small-height;
+    }
+
+    .slideshow-img-list img {
+        width:  $slide-small-width;
+        height: $slide-small-height;
+        border-bottom-width: 25px;
+    }
+}
+

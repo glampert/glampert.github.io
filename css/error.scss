@@ -1,0 +1,102 @@
+---
+#
+# Common stylesheet used by error pages (e.g.: 404, 403, etc)
+#
+---
+
+@charset "utf-8";
+@import "common";
+
+body {
+    font-family: $site-base-font-family;
+    font-weight: $site-base-font-weight;
+    font-size:   20px;
+    margin:      0;
+    padding:     0;
+
+    @include my-site-background;
+}
+
+h3 {
+    // Title in the page header
+    color:       rgb(157, 157, 157);
+    font-weight: lighter;
+    font-size:   26px;
+    width:       50%;
+    margin:      auto;
+    padding-top: 12px;
+}
+
+p {
+    color: rgb(100, 100, 100);
+    margin-left:  10%;
+    margin-right: 10%;
+}
+
+img {
+    display: block;
+    margin:  30px auto 30px auto;
+    padding: 0;
+
+    @include my-box-shadow;
+}
+
+svg {
+    display: block;
+    margin:  0 auto;
+    padding: 0;
+}
+
+a:link    { color: rgb( 85, 143, 218); text-decoration: none; }
+a:visited { color: rgb( 60, 102, 156); text-decoration: none; }
+a:active  { color: rgb(145, 195, 207); text-decoration: none; }
+a:hover   { color: rgb(115, 139, 170); text-decoration: underline; }
+
+#page-header {
+    height:           55px;
+    color:            rgb(34, 34, 34);
+    background-color: rgb(34, 34, 34);
+}
+
+#page-contents {
+    word-wrap:  break-word;
+    text-align: justify;
+    margin:     auto;
+    width:      50%;
+}
+
+#page-footer {
+    word-wrap: break-word;
+    font-size: 16px;
+    margin:    auto;
+    width:     50%;
+}
+
+#footer-text {
+    margin-top:    30px;
+    margin-bottom: 30px;
+    margin-left:   30%;
+    margin-right:  30%;
+}
+
+@media screen and (max-width: 768px) {
+
+    // Make the size of text slightly smaller for tiny mobile screens:
+    body         { font-size: 16px; }
+    h3           { font-size: 20px; }
+    #page-footer { font-size: 12px; }
+
+    // Reduce margins on smaller screens:
+    p {
+        margin-left:  2%;
+        margin-right: 2%;
+    }
+
+    #footer-text {
+        margin-top:    15px;
+        margin-bottom: 15px;
+        margin-left:   25%;
+        margin-right:  15%;
+    }
+}
+

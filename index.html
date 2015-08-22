@@ -1,9 +1,102 @@
+---
+layout: default
+---
 
-<!DOCTYPE html>
-<html>
-<body>
-	<h1>Hello World</h1>
-	<p>Testing GitHub Pages...</p>
-</body>
-</html>
+<div id="index" class="row">
+    <div class="col-sm-9">
+        <div class="post-area">
+            <div class="post-list-header">
+                Posts
+            </div>
+            <div class="post-list-body">
+                <div class="all-posts" post-cate="All">
+                    {% for post in paginator.posts %}
+                        {% include post-list.html %}
+                    {% endfor %}
 
+                    <div class="paginator">
+                        {% if paginator.total_pages > 1 %}
+
+                        {% if paginator.previous_page %}
+                        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Prev</a>
+                        {% endif %}
+
+                        {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                        <span class="active">{{ page }}</span>
+                        {% elsif page == 1 %}
+                        <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                        {% else %}
+                        <a href="{{ site.paginate_path | prepend: '/' | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if paginator.next_page %}
+                        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
+                        {% endif %}
+
+                        {% endif %}
+                    </div>
+                </div>
+                {% for category in site.categories %}
+                <div post-cate="{{ category | first }}">
+                    {% for posts in category %}
+                    {% for post in posts %}
+                    {% if post.url %}
+                        {% include post-list.html %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="categories-list-header">
+            Categories
+        </div>
+
+        <a href="javascript:;" class="categories-list-item" cate="All">
+            All<span class="my-badge"> {{ site.posts | size }}</span>
+        </a>
+
+        <!-- Categories list is sorted alphabetically according to category name. -->
+        {% assign sorted_categories = site.categories | sort %}
+        {% for category in sorted_categories %}
+        <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+            <!-- Same hack from 'post-list.html', to fix a few acronyms and names with different capitalization: -->
+            {% assign cat_str = category | first %}
+            {% case cat_str %}
+                {% when 'ios' %}
+                    {% assign category_name = 'iOS' %}
+                {% when 'opengl' %}
+                    {% assign category_name = 'OpenGL' %}
+                {% when 'webgl' %}
+                    {% assign category_name = 'WebGL' %}
+                {% when 'gdc' %}
+                    {% assign category_name = 'GDC' %}
+                {% else %}
+                    {% assign category_name = cat_str | capitalize %}
+            {% endcase %}
+            {{ category_name }} <span class="my-badge">{{ category | last | size }}</span>
+        </a>
+        {% endfor %}
+
+        <hr class="my-hr" />
+
+        <!-- The big site logo (the pixel-art computer) -->
+        <div id="site-logo-container">
+            <a href="{{ "/projects/index.html" | prepend: site.baseurl }}">
+                <img src="{{ "/static/images/site-logo.png" | prepend: site.baseurl }}" alt="{{ site.tag_line_alt }}" title="{{ site.tag_line_alt }}" class="site-logo">
+            </a>
+        </div>
+
+        <!-- www.addthis.com social-medial toolbox: -->
+        <div class="categories-list-header">Share</div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55d616567398a78b" async="async"></script>
+        <div class="addthis_sharing_toolbox" style="padding-top: 25px;"></div>
+
+        <hr class="my-hr" />
+    </div>
+</div>

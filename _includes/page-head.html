@@ -1,0 +1,41 @@
+<head>
+    <!-- This is the common 'head' section of every page. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <link rel="canonical" href="{{ page.url | remove_first: '/' | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url }}">
+
+    {% if page.categories %}
+        {% assign page_keywords = page.categories | join: ' ' %}
+    {% else %}
+        {% assign page_keywords = site.tag_line %}
+    {% endif %}
+    <!-- Meta information to improve searchability: -->
+    <meta name="description" content="{% if page.title %}{{ page.title | append: ' @ ' | append: page_keywords | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_newlines }}{% endif %}">
+    <meta name="keywords" content="{{ page_keywords }}">
+    <meta name="author" content="Guilherme R. Lampert">
+
+    <!-- Site icons/favicon: -->
+    <link rel="shortcut icon" href="{{ "/static/icons/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" sizes="96x96" href="{{ "/static/icons/favicon-96x96.png" | prepend: site.baseurl }}">
+    <link rel="shortcut icon" sizes="196x196" href="{{ "/static/icons/favicon-196x196.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/static/icons/apple-touch-icon-57x57.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/static/icons/apple-touch-icon-60x60.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/static/icons/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/static/icons/apple-touch-icon-76x76.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/static/icons/apple-touch-icon-114x114.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/static/icons/apple-touch-icon-120x120.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/static/icons/apple-touch-icon-144x144.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/static/icons/apple-touch-icon-152x152.png" | prepend: site.baseurl }}">
+    <meta name="msapplication-TileImage" content="{{ "/static/icons/mstile-144x144.png" | prepend: site.baseurl }}">
+    <meta name="msapplication-square70x70logo" content="{{ "/static/icons/mstile-70x70.png" | prepend: site.baseurl }}">
+    <meta name="msapplication-square150x150logo" content="{{ "/static/icons/mstile-150x150.png" | prepend: site.baseurl }}">
+    <meta name="msapplication-square310x310logo" content="{{ "/static/icons/mstile-310x310.png" | prepend: site.baseurl }}">
+
+    <!-- Common page styles and BootstrapJS: -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+</head>

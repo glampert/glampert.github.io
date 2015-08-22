@@ -1,0 +1,26 @@
+---
+layout:     post
+title:      Old Stuff/Projects
+date:       '2013-04-24T09:44:00.002-07:00'
+author:     Guilherme Lampert
+categories: Programming Miscellaneous
+thumbnail:  old-projects
+---
+
+![Old stuff]({{ "/static/images/posts/old-projects.jpeg" | prepend: site.baseurl }} "Old stuff")
+
+I have done quite a few small scale projects, crude games and demos during my Games Development course in Brazil.
+Most of the academic stuff is available online. The code is surely far from good in most of those projects,
+I can happily say that I have improved a lot over the years!
+
+Also, 2D/3D rendering used to be done with old fixed function OpenGL. So I don't see much real life use for them nowadays,
+but who knows, someone might find some useful code fragments in there anyway, I'll just dump the links here `;)`.
+
+----
+
+[**fps-game**](https://bitbucket.org/glampert/fps-game)                       | First Person Shooter game and tiny game framework/engine.
+[**simd-rt**](https://bitbucket.org/glampert/simd-rt)                         | Minimal Ray Tracer. Runs in real time, on up to 4 threads.
+[**procedural-fish**](https://bitbucket.org/glampert/procedural-fish)         | Fish simulation (yep you've read it right `:P`).
+[**tic-tac-toe-tcp**](https://bitbucket.org/glampert/tic-tac-toe-tcp)         | Networked Tic-Tac-Toe game with an OpenGL based GUI.
+[**wavefront-obj-tools**](https://bitbucket.org/glampert/wavefront-obj-tools) | Wavefront Object mesh loader and Progressive Mesh LOD system.
+

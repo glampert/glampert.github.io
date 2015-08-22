@@ -1,0 +1,21 @@
+---
+layout:     post
+title:      SCS - Space Combat Sim
+date:       '2014-12-09T10:36:00.000-08:00'
+author:     Guilherme Lampert
+categories: Programming OpenGL C++
+thumbnail:  scs
+---
+
+Just made the source code of SCS, a space-sim game I'm working on, [public](https://bitbucket.org/glampert/space-sim).
+The game is in early prototyping phase, but has some basic features already implemented.
+It uses a custom rendering engine based on OpenGL, also included in the repository linked above.
+
+Game and engine are written in C++11 with heavy use of the Standard Library.
+Some Lua code is also used for configuration.
+
+Currently, the project is only building for Mac, so if you have a Mac, feel free to give it a try `;)`.
+Also requires a modern video card with OpenGL 3+ to run.
+
+![Space Combat Sim]({{ "/static/images/posts/scs.jpeg" | prepend: site.baseurl }} "SCS - Space Combat Sim")
+

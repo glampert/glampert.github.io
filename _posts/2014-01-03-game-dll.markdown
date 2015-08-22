@@ -1,0 +1,273 @@
+---
+layout:     post
+title:      Game DLL
+date:       '2014-01-02T20:01:00.000-08:00'
+author:     Guilherme Lampert
+categories: Programming C++
+thumbnail:  dll
+highlight:  true
+---
+
+One common pattern in games software is what I call, for the lack of a better name, the *Game DLL*.
+DLL is an initialism for Dynamic Link Library, which is the name Windows gives to its dynamic modules.
+On Linux, they are the SO (Shared Object) modules. Under Mac, they are called Dynlibs.
+
+The Game DLL pattern is particularly common in games that have a clear separation between
+game code and engine code, such as the Quake family of games and also [Doom 3](https://github.com/id-Software/DOOM-3).
+
+Basically, it consists in separating the more reusable engine code into one dynamic library, and game specific
+code into another: the Game DLL. This promotes separation between the engine team and the game team, which can
+work better in parallel. Also, the engine code can be more easily reused on more than one game.
+
+Creating the engine DLL is fairly simple. All you need to do is move any generic, non game specific code into
+another project and build it as a Dynamic Link Library. The engine code knows about the game library, which is an
+abstract interface. It can hold a pointer to it, but the engine should not link with the game library.
+Instead, the engine library loads the game library at runtime, as it is done in the `LoadGameDLL()` method below,
+passing and instance of itself to the game library. It is important that the engine module never links statically
+with the game library, so that in theory, the game DLL could be replaced at any time without any changes needed
+in the engine side.
+
+{% highlight c++ %}
+
+// =======================
+// Engine.h:
+// =======================
+
+// Forward declare the game interface.
+class TheGame;
+
+class TheEngine
+{
+public:
+
+    TheEngine();
+
+    // Methods called by the game:
+    void SayHello();
+    void DoSomething();
+    void SayGoodbye();
+
+    // Called by main() to load the game DLL:
+    void LoadGameDLL();
+
+private:
+
+    // Engine keeps a pointer to the game interface,
+    // but does not link with the game DLL directly.
+    TheGame * game;
+};
+
+// =======================
+// Engine.cpp:
+// =======================
+
+TheEngine::TheEngine()
+    : game(nullptr)
+{
+}
+
+void TheEngine::SayHello()
+{
+    std::cout << "Hello from the Engine DLL\n";
+}
+
+void TheEngine::DoSomething()
+{
+    std::cout << "Engine doing some serious work, no time to chat...\n";
+}
+
+void TheEngine::SayGoodbye()
+{
+    std::cout << "Engine says goodbye!\n";
+}
+
+void TheEngine::LoadGameDLL()
+{
+    DLL gameDLL = LoadDLL("path_to_game_dll/game.dll");
+    if (!gameDLL.IsLoaded())
+    {
+        // ERROR: Failed to load the library!
+    }
+
+    typedef TheGame * (* CreateTheGame_f)(const char *, TheEngine *);
+    typedef void (* DestroyTheGame_f)(TheGame *);
+
+    // Get function pointers:
+    CreateTheGame_f  createTheGame  = (CreateTheGame_f )gameDLL.GetFunctionPointer("CreateTheGame");
+    DestroyTheGame_f destroyTheGame = (DestroyTheGame_f)gameDLL.GetFunctionPointer("DestroyTheGame");
+
+    if (!createTheGame || !destroyTheGame)
+    {
+        // ERROR: Failed to get game factory functions!
+    }
+
+    // Call the game library:
+    game = createTheGame("Test game", this);
+    assert(game != nullptr);
+
+    game->Startup();
+    game->RunGameLoop();
+    game->Shutdown();
+
+    destroyTheGame(game);
+    game = nullptr;
+}
+
+//
+// Loading a dynamic link library is an Operating System service.
+//
+
+DLL LoadDLL(const char * filePath)
+{
+    // System specific. E.g.:
+    // LoadLibrary() - Windows
+    // dlopen()      - Unix/MacOSX
+}
+
+// ...
+
+void * DLL::GetFunctionPointer(const char * functionName)
+{
+    // System specific. E.g.:
+    // GetProcAddress() - Windows
+    // dlsym()          - Unix/MacOSX
+}
+
+{% endhighlight %}
+
+The game library interface should be a pure abstract interface, together with any other classes
+that must be seen by the engine. This allows the engine library to compile without linking with
+the game library. The game library, on the other hand, can link statically with the engine.
+All engine interfaces could be abstract, but that is not strictly necessary. The game can have
+full knowledge of the engine and link with it directly, since the engine is a foundation framework,
+while the game is a case specific thing that shouldn't interfere with the engine, so the engine
+should have minimal knowledge about the game library.
+
+The game library must provide a way for the engine to initialize it once the DLL is loaded by the
+proper system calls. For that, we use a *factory function*: `CreateTheGame()`. Note that the function
+should be declared with C linkage (`extern "C"`). This is necessary because dynamic library management
+APIs in modern Operating Systems won't let you instantiate a C++ class or call a class method, you can
+only fetch pointers to plain functions. C++ mangles function names, while C doesn't. Declaring the function
+with C linkage makes it easier to fetch the function pointer from the game DLL.
+
+{% highlight c++ %}
+
+// =======================
+// Game.h:
+// =======================
+
+//
+// The game library is loaded by the engine.
+// The game links with the engine DLL, but the engine only sees the game's
+// virtual interface and loads the game DLL, but does not link with it directly.
+//
+class TheGame
+{
+public:
+    virtual void Startup()     = 0;
+    virtual void RunGameLoop() = 0;
+    virtual void Shutdown()    = 0;
+    virtual ~TheGame() { }     // Note: C++11 supports '= default' destructors.
+};
+
+extern "C"
+{
+    // Game DLL methods, called by the engine via function pointers:
+    TheGame * CreateTheGame(const char * gameName, TheEngine * engine);
+    void DestroyTheGame(TheGame * game);
+} // extern "C"
+
+// =======================
+// Game.cpp:
+// =======================
+
+//
+// Concrete implementation of the game interface.
+// Only seen inside the game DLL.
+//
+class MyGame : public TheGame
+{
+public:
+
+    MyGame(const std::string & name, TheEngine * eng)
+        : engine(eng)
+        , gameName(name)
+    {
+        std::cout << gameName << ": MyGame instance created...\n";
+    }
+
+    void Startup()
+    {
+        std::cout << gameName << ": Starting up...\n";
+
+        // Call an engine method:
+        engine->SayHello();
+    }
+
+    void RunGameLoop()
+    {
+        std::cout << gameName << ": Running game loop...\n";
+
+        // Call an engine method:
+        engine->DoSomething();
+    }
+
+    void Shutdown()
+    {
+        std::cout << gameName << ": Shutting down...\n";
+
+        // Call an engine method:
+        engine->SayGoodbye();
+    }
+
+private:
+
+    TheEngine * engine;
+    std::string gameName;
+};
+
+//
+// The factory functions:
+//
+extern "C"
+{
+
+TheGame * CreateTheGame(const char * gameName, TheEngine * engine)
+{
+    return new MyGame(gameName, engine);
+}
+
+void DestroyTheGame(TheGame * game)
+{
+    delete game;
+}
+
+} // extern "C"
+
+{% endhighlight %}
+
+Lastly, we will need an executable to tie things together. Again, the game executable only
+needs to know about the engine library, and it can be as simple as an empty `main()` function
+that forwards execution to the engine, which will eventually load the game library.
+
+{% highlight c++ %}
+
+//
+// This application will use the game engine.
+// The application executable is just a place where
+// we declare the 'main' function. It doesn't have to
+// know about the game interface.
+//
+
+#include "Tests/Engine.h"
+
+int main()
+{
+    TheEngine engine;
+
+    // Load the game DLL and call some test methods:
+    engine.LoadGameDLL();
+}
+
+{% endhighlight %}
+

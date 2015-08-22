@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    {% include page-head.html %}
+    <body>
+    {% include header.html %}
+    <div id="main" class="container main">
+        {{ content }}
+    </div>
+    <!-- Back to top floating button: -->
+    <div id="back-to-top-button" data-toggle="tooltip" data-placement="left" title="Back to top">
+        <a href="javascript:;">
+            <div class="arrow"></div>
+            <div class="stick"></div>
+        </a>
+    </div>
+    {% include footer.html %}
+    </body>
+</html>

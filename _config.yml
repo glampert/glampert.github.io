@@ -1,0 +1,49 @@
+#
+# Global site settings:
+#
+
+# Main title, displayed in the browser tab and site header.
+title: Lampert's game dev journal
+
+# Tag-line/short description displayed in the header beside the title.
+tag_line: Games and graphics programming
+
+# Alternate tag-line, used as tooltip for the site's logo.
+tag_line_alt: Welcome to Lampert's website!
+
+# Write an awesome description for your new site here.
+# It will appear in your document head meta (for Google search results)
+# Note: The `>` means to ignore newlines until next item ("baseurl").
+description: >
+    This is my personal site/blog, where I write about some of my projects and other random things about
+    programming and game development. I'm mainly interested in graphics and real-time rendering for games.
+    C and C++ are usually the languages I play with, but every now and then I venture with something more exotic.
+
+destination: ./site                # Directory the side generator outputs to
+baseurl:      ""                   # The subpath of your site, e.g. /blog/
+url:          http://glampert.com/ # The base hostname & protocol for your site
+
+# Title of the landing page. Presented in the nav-bar.
+landing_page: Blog
+
+# This format matches the one used by Blogger, so our old URLs
+# should continue to function more or less without problems.
+permalink: /:year/:month/:title.html
+
+# Number of items in the blog's post list.
+paginate:      10
+paginate_path: page:num
+
+# Social-media/contact links and icons displayed at the footer:
+email:                  guilherme.ronaldo.lampert@gmail.com
+twitter_username:       lampert_g
+github_username:        glampert
+bitbucket_username:     glampert
+stackexchange_username: glampert
+
+# Build settings:
+markdown: kramdown
+
+# Syntax highlight plugin:
+highlighter: pygments
+

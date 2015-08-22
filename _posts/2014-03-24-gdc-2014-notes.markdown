@@ -1,0 +1,124 @@
+---
+layout:     post
+title:      GDC 2014 Notes
+date:       '2014-03-23T20:16:00.000-07:00'
+author:     Guilherme Lampert
+categories: GDC Miscellaneous
+thumbnail:  gdc
+---
+
+* Contents
+{:toc}
+
+![GDC 2014]({{ "/static/images/posts/gdc-14.jpeg" | prepend: site.baseurl }} "GDC 2014")
+
+2014 was definitely a year of graphics and rendering at GDC. The buzzwords on the software side were:
+
+- Physically Based Rendering (PBR)
+
+- Multi-threading
+
+- 64bit Operating Systems
+
+- Virtual Reality (VR)
+
+Also, we had the announcement of two new rendering APIs: **Mantle** by AMD and **Direct3D-12** by Microsoft.
+On the hardware side, the focus is going to be Virtual Reality peripherals. Oculus has its second version of
+Rift almost ready to ship and Sony is now trying to cut into the action with their "Morpheus" VR headset,
+which is a PS4 only peripheral.
+
+### Physically Based Rendering
+
+We are fast approaching a sweet spot in graphics programming and graphics hardware.
+Most GPUs now have enough power to render polygons with some physical lighting properties.
+Eventually, real-time rendering will be possible with full Ray Tracing, but until then, several
+physical properties of light and materials can already be simulated with polygon rasterization.
+
+Crytek is probably the studio that is deepest into PBR right now, and they have to be anyways,
+it is their tradition to always be the leading developers in graphics engines. For their upcoming title,
+*Ryse Son of Rome*, they've stated that they didn't want it to have a "gamey" look. I must say that they've
+succeeded. From what I've seen, the game looks a lot closer to CG feature films than anything done so far, in my opinion.
+Crytek gave a one hour talk on the techniques used in the game's rendering engine. The slides will most likely be available
+in their website soon, if not already. Some fine points that I remember and can comment are:
+
+- Renderer is hybrid. Most of it is deferred, for things like terrain and static objects I'm guessing.
+  And for some materials they use a Forward+ tiled renderer. Quite a complex setup!
+
+- All materials have advanced BRDF properties. Most with a Fresnel term.
+
+- They have a lot of materials with Subsurface Scattering enabled, such as marble and skin.
+
+- Advanced skin and hair rendering.
+
+- Scenes usually have many lights, but they also have a non-physical "ambient light" for more artistic effects.
+  In true, this is the good old hack we use to simulate indirect illumination. It hasn't gone away just yet!
+
+### Multi-threading
+
+Well, a lot has been said about how you can't really have a lot of benefits by threading a renderer.
+This might actually be true for drivers like OpenGL and current D3D, which are essentially monolithic
+and designed to run from a single thread. The best we could do then was to adopt a functional threading
+model and assign a specific thread just for rendering and perform all API calls in there. This is far
+from optimal, but can ensure the GPU is kept busy. Balancing the load between cores is next to impossible though.
+
+This will now change with AMD's Mantle API/Driver. Mantle supports the concept of "user command buffers".
+Which are basically user-side buffers that store all the info and state needed for draw calls. These buffers
+can be constructed and submitted concurrently, allowing a task-based renderer to be easily implemented.
+
+The guys at Oxide did just that with their *Nitrous Engine*. According to their reports, they have achieved
+the highest throughputs so far in their test hardware, when comparing Mantle against GL and D3D.
+Microsoft is more than likely to follow in the same path and install similar features on Direct3D-12.
+
+### 64bit Systems
+
+32bit Operating Systems need to die, end of story! And it seems like games are going to be the ones to pull the trigger.
+*Titanfall* already requires a 64bit version of Windows. And a lot of AAA titles should follow on this line,
+since pretty soon more that 2 Gigs of memory will be needed to store game assets, and a 32bit OS won't cut it.
+
+### Virtual Reality
+
+Oculus gave an awesome talk on the gotchas and pitfalls of current Virtual Reality rendering. We actually have to respect
+a lot of real world constraints to make a VR simulation look good and immersive. In fact, just the positioning
+of the camera by itself can have a huge impact. One big issue is that the player is usually sitting on a chair
+when playing a game, however, the game character (in a first person setting at least) is normally standing on
+his/her feet. This results in scaling problems that will lead the player to perceive an awkwardness in the game world.
+
+I've found all these details amazing. To become a good VR hardware developer you actually need an extensive knowledge
+of the human visual system and the inner workings of the brain that deal with motion and vision.
+
+Oh, and another important thing, Oculus suggests that VR games should ideally be rendered at 75 FPS or more!
+Also noting that you have to render both eyes at 75 frames! So I personally think it is still going to take a while
+for games and hardware to catch up with Virtual Reality.
+
+### SteamOS and the Steam Controller
+
+I've played a demo of *Broken Age* running on SteamOS and with the Steam Controller. The controller prototype was 3D printed,
+so it had a very rough texture, but it sure felt nice and easy to hold. The final version will very likely be casted on plastic,
+just like a PS/XB controller. The touchpads in the controller are very interesting and comfortable. They can be used to simulate
+a mouse and there is an actuator under each pad that can give force-feedback to the user. In the *Broken Age* demo, it was used
+to simulate the mouse wheel scroll. It indeed felt just like a mouse wheel spinning under your finger. When connected to SteamOS,
+the controller's buttons can be remapped to whatever scheme the user likes. There is a keyboard/mouse emulation mode where you can
+pretty much use the controller to replace a keyboard and a mouse on a PC. The controller also has two additional buttons under the
+handles, which are new to me. These new buttons can also be rebound by the user or the game can assign a default function to them.
+When in the keyboard/mouse emulation mode, the application is completely unaware of the Steam Controller. It just receives normal
+mouse and keyboard events. To take full advantage of the controller, the game can of course implement specific support for it.
+
+### Intel's RealSense
+
+Probably not seen by many, but worth noting it. Intel's booth at the expo floor was displaying a new tech they call *RealSense*.
+They are basically trying to achieve a *Minority Report* like human`=>`machine interaction. Okay, they still don't have the holographic screens,
+but the hands tracking is in place! Basically, they use a camera to track hand movement and gestures. The camera is accurate enough to detect
+finger movement, so you can place yourself in front of the computer screen, with a camera right above it, and move the mouse cursor by pointing
+at it with your finger and them moving your hand, never touching the screen. The system wasn't quite as accurate as one would like though.
+Probably because the camera resolution was too low. But the idea is pretty cool regardless. Add some holograms and better precision and you've
+got that cool wall sized PC that Tom Cruise played with in the movie, and without the need for special gloves!
+
+----
+
+Well, that's it for now. GDC is a huge event, and there's a ton of other stuff that happened this year, but unfortunately you can't catch
+all the talks, presentations and side events. Those were the things that most caught my attention and that I could attend to.
+
+Oh, and by the way, for those that don't know, GDC United States happens in San Francisco, California. So if you're planning on
+attending the conference in future years, do yourself a favor and come to the city a couple days earlier and enjoy some of the endless
+touristic attractions of SF. Seriously, for those of you that don't already know the city, it is worth it.
+

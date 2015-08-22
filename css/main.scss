@@ -1,0 +1,567 @@
+---
+#
+# Common styles used by the whole website.
+# This is SCSS (preprocessor CSS).
+#
+# Overwrites some classes from BootstrapJS and HighlightJS.
+# JavaScript might eventually overwrite some of these styles
+# dynamically. Classes are usually preferred over ids.
+#
+---
+
+@charset "utf-8";
+@import "common";
+
+// ========================================================
+// Reset some basic elements:
+// ========================================================
+
+body {
+    font-family: $site-base-font-family;
+    font-weight: $site-base-font-weight;
+
+    @include my-site-background;
+}
+
+pre, code {
+    font-size: 13px;
+}
+
+code {
+    background-color: rgb(220, 220, 220);
+    color:            rgb( 63,  63,  63);
+}
+
+.highlight {
+    // This class is referenced by Pygments.
+	// Color set here will be the background color of code snippets.
+    pre {
+        background-color: rgb(63, 63, 63);
+        color:            rgb(63, 63, 63);
+    }
+}
+
+pre {
+    code {
+        display:       inline-block;
+        white-space:   pre;
+        border-radius: 0;
+    }
+
+    border-radius: 0;
+    margin-bottom: 10px;
+    margin-top:    10px;
+}
+
+table {
+    border-top:    2px solid rgb(119, 119, 119);
+    border-bottom: 2px solid rgb(119, 119, 119);
+    margin:        8px 0;
+
+    thead {
+        border-bottom:    1px dashed rgb(119, 119, 119);
+        background-color: rgb(170, 170, 170);
+        color:            white;
+    }
+
+    td {
+        padding: 2px 10px;
+        vertical-align: top;
+    }
+
+    th {
+        padding: 2px 10px;
+    }
+
+    tr {
+        &:nth-child(2n) {
+            background-color: rgb(229, 234, 237);
+        }
+    }
+}
+
+blockquote {
+    color:        rgb(68, 68, 68);
+    background:   rgba(112, 138, 153, 0.1);
+    border-left:  5px solid rgb(214, 219, 223);
+    padding-left: 15px;
+    font-size:    16px;
+    &:last-child { margin-bottom: 0; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align:    left;   // Keep the headings left-aligned
+    font-weight:   normal; // Normal font for headings
+    margin-top:    20px;
+    margin-bottom: 15px;
+}
+
+// Make sure code markups inside headings use the proper font size:
+h1 code { font-size: inherit; }
+h2 code { font-size: inherit; }
+h3 code { font-size: inherit; }
+h4 code { font-size: inherit; }
+h5 code { font-size: inherit; }
+h6 code { font-size: inherit; }
+
+// Custom HR, used in the index page.
+.my-hr {
+    height: 1px;
+    border: none;
+    color:  silver;
+    background-color: silver;
+}
+
+// ========================================================
+// Links/anchors:
+// ========================================================
+
+// Ordinary links:
+a:link    { color: rgb( 85, 143, 218); }
+a:visited { color: rgb( 60, 102, 156); }
+a:active  { color: rgb(145, 195, 207); }
+a:hover   { color: rgb(115, 139, 170); text-decoration: underline; }
+
+// Links with code markup get the same font
+// color and decoration of ordinary links:
+a:link    code { color: rgb( 85, 143, 218); }
+a:visited code { color: rgb( 60, 102, 156); }
+a:active  code { color: rgb(145, 195, 207); }
+a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
+
+// Main post index links:
+#index a:link    { color: rgb(  0,   0,  85); }
+#index a:visited { color: rgb(100, 128, 200); }
+#index a:active  { color: rgb(153, 153, 187); }
+#index a:hover   { color: rgb( 51,  51, 102); text-decoration: none; }
+
+// ========================================================
+// Embedded videos / iframes:
+// ========================================================
+
+.embedded-video {
+    // For embedded YouTube videos:
+    width:            100%;
+    margin-top:       10px;
+    margin-bottom:    14px;
+    position:         relative;
+    vertical-align:   middle;
+    background-color: black;
+
+    // Shadow like other images.
+    @include my-box-shadow;
+}
+
+// ========================================================
+// Nav-bar / site logo:
+// ========================================================
+
+.navbar {
+    // Nav-bar inherits from Bootstrap, which
+    // has a rounded border by default.
+    border:        none;
+    border-radius: 0;
+}
+
+.navbar-nav li {
+    width:      95px;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 26px;
+}
+
+.navbar-text {
+    font-size: 16px;
+}
+
+// Big logo at the main page:
+.site-logo {
+    width:    150px;
+    height:   150px;
+    opacity:  0.8;
+    filter:   alpha(opacity=80); // For IE8 and earlier
+    border:   none;
+    position: relative;
+
+    // Adjust margin to half the image size (150px/2 = 75).
+    margin-left: -webkit-calc(50% - 75px);
+    margin-left:         calc(50% - 75px);
+}
+
+// Big logo border/box:
+#site-logo-container {
+    width:  100%;
+    height: 100%;
+    border: 5px solid white;
+    background-color: rgba(100, 100, 100, 0.3);
+
+    @include my-box-shadow;
+}
+
+// Tiny logo in the nav bar:
+#site-logo-navbar {
+    width:   54px;
+    height:  54px;
+    padding: 0;
+    margin:  0px 22px 0px 15px;
+    border:  none;
+    float:   left;
+}
+
+// ========================================================
+// Main index / post area:
+// ========================================================
+
+.main {
+    min-height: 800px;
+}
+
+.post {
+    padding:     10px 30px;
+    font-size:   16px;
+    line-height: 1.5;
+}
+
+.post-area {
+    margin:     auto;
+    max-width:  800px;
+    text-align: justify; // Justify the post body
+}
+
+.post-list-header {
+    padding:       15px 30px;
+    border-bottom: 1px solid silver;
+    font-size:     30px;
+    font-weight:   bold;
+}
+
+.post-list-item-text {
+    position: inherit;
+    width:    auto;
+    top:      10%;
+}
+
+.post-list-item {
+    display:       block;
+    position:      relative;
+    padding:       10px 15px 0px 15px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    height:        158px;
+
+    @include my-mouse-hover-transition;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    h2 {
+        font-size:  22px;
+        margin-top: 0;
+    }
+
+    span {
+        display:       inline-block;
+        text-align:    left;
+        margin-top:    4px;
+        margin-bottom: 4px;
+    }
+}
+
+// ========================================================
+// Inner-post images and the main index thumbnail:
+// ========================================================
+
+.post {
+    img {
+        width:            100%;
+        vertical-align:   middle;
+        position:         relative;
+        background-color: black;
+        margin-top:       10px;
+        margin-bottom:    10px;
+
+        border: 10px solid white;
+        border-bottom-width: 35px;
+
+        @include my-box-shadow;
+    }
+}
+
+img + em {
+    // This is a hack used for image captions. This selector
+    // will affect only the <em>s that follow and image.
+    // Images missing a caption get one dynamically via JS
+    // when the page loads, using the image title text.
+
+    position:        relative;
+    font-size:       14px;
+    font-weight:     normal;
+    font-family:     monospace;
+    font-style:      normal;
+    text-decoration: none;
+    text-align:      justify;
+    margin-right:    5px;
+    margin-left:     5px;
+    top:            -38px;
+
+    @include my-display-flex-center-align;
+}
+
+.post-thumbnail {
+    float:            right;
+    width:            220px;
+    height:           140px;
+    margin-left:      10px;
+    color:            white;
+    background-color: white;
+
+    @include my-box-shadow;
+}
+
+.post-thumbnail-image {
+    width:  inherit;
+    height: inherit;
+    border: 5px solid white;
+    // Thumbnails are lazily loaded by JavaScript,
+    // so the images are initially hidden.
+    display: none;
+}
+
+// ========================================================
+// Paginator stuff:
+// ========================================================
+
+.paginator {
+    border-top:  1px solid rgb(221, 221, 221);
+    text-align:  center;
+    padding:     15px 20px;
+    font-size:   16px;
+    font-weight: normal;
+
+     a {
+        text-decoration: underline;
+        margin:          0 12px;
+     }
+}
+
+// ========================================================
+// Categories list:
+// ========================================================
+
+.categories-list-header {
+    display:       block;
+    padding:       12px 15px;
+    padding-top:   37px;
+    border-bottom: 1px solid silver;
+    font-size:     16px;
+    font-weight:   bold;
+}
+
+.categories-list-item {
+    display:       block;
+    padding:       8px 15px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+
+    @include my-mouse-hover-transition;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        color:            rgb(153, 136, 51);
+    }
+
+    .my-badge {
+        float:              right;
+        font-size:          12px;
+        color:              white;
+        background-color:   rgb(153, 153, 153);
+        padding:            0 7px 1px 7px;
+        border-radius:      9px;
+
+        @include my-mouse-hover-transition;
+    }
+}
+
+// ========================================================
+// Page content:
+// ========================================================
+
+.page-content table {
+    border-top:    1px dashed rgb(221, 221, 221);
+    border-bottom: 1px dashed rgb(221, 221, 221);
+    margin:        20px 0;
+}
+
+.page-content table tr td {
+    vertical-align: top;
+    padding:        6px 10px;
+}
+
+.page-content table tr td:first-of-type {
+    padding:      6px 10px 6px 10px;
+    border-right: 1px dashed rgb(221, 221, 221);
+    text-align:   right;
+}
+
+#my-affix .affix {
+    top:   -20px;
+    bottom: 0;
+}
+
+#content {
+    max-width: 292px;
+}
+
+#content .content-text {
+    padding: 10px 0;
+}
+
+#content ul {
+    padding-left: 30px;
+}
+
+#content ul li {
+    font-size:   15px;
+    line-height: 25px;
+}
+
+#content a:link    { color: rgb(102, 102, 102); }
+#content a:visited { color: rgb(102, 102, 102); }
+#content a:active  { color: rgb(153, 153, 187); }
+#content a:hover   { color: rgb( 51,  51, 102); text-decoration: underline; }
+
+// ========================================================
+// Site footer:
+// ========================================================
+
+.site-footer {
+    margin-top: 30px;
+    border-top: 1px solid rgb(30, 30, 30);
+    padding:    30px 0;
+    text-align: justify;
+}
+
+.footer-heading {
+    font-size:     24px;
+    margin-bottom: 15px;
+    margin-left:   40px;
+}
+
+.contact-list, .social-media-list {
+    list-style:  none;
+    line-height: 28px;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size:    15px;
+    margin-left: -15px;
+    color:        rgb(130, 130, 130);
+}
+
+.footer-col {
+    float:         left;
+    margin-bottom: 15px;
+    padding-left:  15px;
+}
+
+.footer-col-1, .footer-col-2 {
+    width: -webkit-calc(50% - 15px);
+    width:         calc(50% - 15px);
+
+    // Clip the email address if the window gets minimized
+    // to a point where we can't show the whole line.
+    overflow:      hidden;
+    text-overflow: clip;
+}
+
+.user-link {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+// ========================================================
+// Stuff from the ABOUT page:
+// ========================================================
+
+#profile-pic {
+    width:  135px;
+    height: 135px;
+    border: 5px solid white;
+    border-radius: 0;
+}
+
+#stackexchange-flair {
+    width:  224px;
+    height: 64px;
+    border: none;
+    border-radius: 0;
+}
+
+// ========================================================
+// SVG icons (Github/Bitbucket/etc) at the footer:
+// ========================================================
+
+.icon {
+    svg {
+        width:          28px;
+        height:         28px;
+        display:        inline-block;
+        vertical-align: middle;
+        padding-right:  8px;
+    }
+}
+
+// ========================================================
+// Back-to-top dynamic floating button:
+// ========================================================
+
+#back-to-top-button {
+    position:         fixed;
+    right:            25px;
+    bottom:           10px;
+    width:            60px;
+    height:           60px;
+    background-color: rgb(187, 187, 187);
+    opacity:          0.8;
+    filter:           alpha(opacity=80); // For IE8 and earlier
+    display:          none;
+    z-index:          888; // Should always be on top of every other element!
+
+    .arrow {
+        margin:        0 auto;
+        padding-top:   11px;
+        width:         0;
+        height:        0;
+        border-right:  15px solid transparent;
+        border-left:   15px solid transparent;
+        border-bottom: 15px solid rgb(127, 127, 127);
+    }
+
+    .stick {
+        margin:           0 auto;
+        width:            13px;
+        padding-bottom:   21px;
+        border-bottom:    13px solid rgb(187, 187, 187);
+        background-color: rgb(127, 127, 127);
+    }
+}
+
+// ========================================================
+// SCSS preprocessor includes:
+// ========================================================
+
+@import "slideshow"; // Slide-show styles.
+@import "sizefix";   // Size fixes and adjustments for different screens/device.
+@import "pygments";  // Pygments code syntax highlighting styles.
+

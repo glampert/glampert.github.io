@@ -1,0 +1,42 @@
+---
+layout: error
+---
+
+<head>
+    <title>404 - File not found</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="{{ "/static/icons/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/css/error.css" | prepend: site.baseurl }}">
+
+    <style type="text/css">
+        img {
+            width:  200px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="page-header">
+        <h3>404 - File not found</h3>
+    </div>
+    <div id="page-contents">
+        <svg height="100" width="100">
+            <polygon points="50,25 17,80 82,80" stroke-linejoin="round" style="fill:none; stroke:#FF8A00; stroke-width:8;"></polygon>
+            <text x="42" y="74" fill="#FF8A00" font-family="sans-serif" font-weight="900" font-size="42px">!</text>
+        </svg>
+        <p>Ooops&hellip; The server returned a <b>File not found (404)</b> error!</p>
+        <p>
+            <img src="{{ "/static/images/lenna-partial.jpeg" | prepend: site.baseurl }}" alt="The rest was not found..." title="The rest was not found..." />
+        </p>
+        <p>If you think what you're looking for should be here, please contact the site owner.<p/>
+    </div>
+    <hr>
+    <div id="page-footer">
+        <p id="footer-text">Copyright &copy; <a href="{{ site.url }}" target="_blank">Guilherme R. Lampert</a></p>
+    </div>
+</body>
