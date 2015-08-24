@@ -1,10 +1,16 @@
 ---
-layout:    page
-title:     C.V.
-permalink: /curriculum/
+layout:       page
+title:        Curriculum Vitae
+permalink:    /curriculum/
+menu_visible: false
 ---
 
-[Download (PDF)](http://glampert.com/cv/cv_lampert.pdf)
+[Download (PDF)]({{ "/static/pdf/cv-lampert.pdf" | prepend: site.baseurl }})
 
-<iframe type="application/pdf" title="Curriculum Vitae" src="http://glampert.com/cv/cv_lampert.pdf" width="800" height="1100"></iframe>
+<iframe type="application/pdf"
+    width="800"
+    height="1100"
+    title="Curriculum Vitae"
+    src="{{ "/static/pdf/cv-lampert.pdf" | prepend: site.baseurl }}">
+</iframe>
 

@@ -69,8 +69,7 @@ These usually are if you use your Mac for development.
 
 Once `wget` and friends are installed and the tool-chain is downloaded, you should start of by setting these environment variables:
 
-{% highlight bash %}
-
+{% highlight c %}
 export PS2DEV=/usr/local/ps2dev
 export PATH=$PATH:$PS2DEV/bin
 export PATH=$PATH:$PS2DEV/ee/bin
@@ -78,7 +77,6 @@ export PATH=$PATH:$PS2DEV/iop/bin
 export PATH=$PATH:$PS2DEV/dvp/bin
 export PS2SDK=$PS2DEV/ps2sdk
 export PATH=$PATH:$PS2SDK/bin
-
 {% endhighlight %}
 
 They need to be persistent, so edit the `~/.profile` startup script and add the lines above.
@@ -99,19 +97,14 @@ than GCC and will fail the `binutils` compilation.
 
 To fix this error, open the script `ps2toolchain/scripts/001-binutils-2.14.sh` and change this line:
 
-{% highlight bash %}
-
+{% highlight c %}
 CFLAGS="-O0" ../configure --prefix="$PS2DEV/$TARGET" --target="$TARGET" || { exit 1; }
-
 {% endhighlight %}
 
 to this:
 
-{% highlight bash %}
-
-CFLAGS="-O0 -ansi -Wno-implicit-int -Wno-return-type" \
-    ../configure --prefix="$PS2DEV/$TARGET" --target="$TARGET" || { exit 1; }
-
+{% highlight c %}
+CFLAGS="-O0 -ansi -Wno-implicit-int -Wno-return-type" ../configure --prefix="$PS2DEV/$TARGET" --target="$TARGET" || { exit 1; }
 {% endhighlight %}
 
 The new flags will compile `binutils` in old-style ANSI-C mode, silencing the error.
@@ -126,19 +119,14 @@ And indeed this is true, since the script was made to run on Linux or Windows wi
 
 Open `scripts/002-gcc-3.2.2-stage1.sh` and change this line:
 
-{% highlight bash %}
-
+{% highlight c %}
 ../configure --prefix="$PS2DEV/$TARGET" --target="$TARGET" --enable-languages="c" --with-newlib --without-headers || { exit 1; }
-
 {% endhighlight %}
 
 to this:
 
-{% highlight bash %}
-
-../configure --prefix="$PS2DEV/$TARGET" --target="$TARGET" --build=i386-linux-gnu \
-    --host=i386-linux-gnu --enable-languages="c" --with-newlib --without-headers || { exit 1; }
-
+{% highlight c %}
+../configure --prefix="$PS2DEV/$TARGET" --target="$TARGET" --build=i386-linux-gnu --host=i386-linux-gnu --enable-languages="c" --with-newlib --without-headers || { exit 1; }
 {% endhighlight %}
 
 And the script should now run fine. What we've done here was to explicitly set the current platform,
@@ -150,22 +138,14 @@ That should get you through the first stage of the GCC build. The second stage i
 Once the `toolchain.sh` progresses and reaches the second stage build-script, `ps2toolchain/scripts/004-gcc-3.2.2-stage2.sh`,
 it should again fail due to invalid platform errors. That script has the same issue of the first one, so replace:
 
-{% highlight bash %}
-
-../configure --prefix="$PS2DEV/ee" --target="ee" --enable-languages="c,c++" \
-    --with-newlib --with-headers="$PS2DEV/ee/ee/include" --enable-cxx-flags="-G0" || { exit 1; }
-
+{% highlight c %}
+../configure --prefix="$PS2DEV/ee" --target="ee" --enable-languages="c,c++" --with-newlib --with-headers="$PS2DEV/ee/ee/include" --enable-cxx-flags="-G0" || { exit 1; }
 {% endhighlight %}
 
 with:
 
-{% highlight bash %}
-
-../configure --prefix="$PS2DEV/ee" --target="ee" --build=i386-linux-gnu \
-    --host=i386-linux-gnu --enable-languages="c,c++" --with-newlib      \
-    --with-headers="$PS2DEV/ee/ee/include" --enable-cxx-flags="-G0"     \
-    || { exit 1; }
-
+{% highlight c %}
+../configure --prefix="$PS2DEV/ee" --target="ee" --build=i386-linux-gnu --host=i386-linux-gnu --enable-languages="c,c++" --with-newlib --with-headers="$PS2DEV/ee/ee/include" --enable-cxx-flags="-G0" || { exit 1; }
 {% endhighlight %}
 
 Now `GCC-stage2` should compile but fail to link. This is a very shady bug. The linker will fail to find a function
@@ -180,8 +160,7 @@ because the build script will download a fresh copy of the files every time it i
 So remove the `__inline` keywords and replace them with `static`, then copy the file to say `ps2toolchain/patches/cfns.h`
 and finally add the following `cp` command to `004-gcc-3.2.2-stage2.sh`, just before where `make` is run:
 
-{% highlight bash %}
-
+{% highlight c %}
 #
 # LAMPERT: The cfns.h that comes with GCC is broken.
 # We have to replace it with this fixed one.
@@ -190,7 +169,6 @@ cp ../../../patches/cfns.h ../gcc/cp/cfns.h || { echo Failed to copy new cfns.h!
 
 # Compile and install.
 make clean && CFLAGS_FOR_TARGET="-G0" make -j 2 && make install && make clean || { exit 1; }
-
 {% endhighlight %}
 
 This will copy the fixed `cfns.h` to the proper dir after the script refreshes the local copies, but before the build is run.
@@ -219,7 +197,7 @@ after the couple hours spent on the setup `:)`.
 ![PS2 homebrew]({{ "/static/images/posts/ps2/hello-cube.jpeg" | prepend: site.baseurl }} "Hello PlayStation 2!")
 *The cube demo from PS2DEV SDK running on the PCSX2 emulator.*
 
-[link_prev_post]:    {{ "/2015/01/playstation-2-retro-programming-or-hipster-coding.html" | prepend: site.baseurl }}
+[link_prev_post]:    {{ "/2015/01-21/playstation-2-retro-programming-or-hipster-coding/" | prepend: site.baseurl }}
 [link_ps2dev]:       https://github.com/ps2dev
 [link_ps2toolchain]: https://github.com/ps2dev/ps2toolchain
 [link_wget]:         http://coolestguidesontheplanet.com/install-and-configure-wget-on-os-x/

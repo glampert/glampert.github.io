@@ -274,7 +274,7 @@ Following are a couple YouTube videos showcasing the three demo levels I wrote.
     frameborder="0">
 </iframe>
 
-[link_prev_post]:    {{ "/2015/03/playstation-2-homebrew-2-hardware-and.html" | prepend: site.baseurl }}
+[link_prev_post]:    {{ "/2015/03-23/ps2-homebrew-hardware-and-ps2dev-sdk/" | prepend: site.baseurl }}
 [link_qmd2]:         https://en.wikipedia.org/wiki/MD2_(file_format)
 [link_dungeon_game]: https://bitbucket.org/glampert/ps2dev-tests/src/cb6f77908e2fe4f775bfaceba66ba14d93a244c2/source/demos/dungeon_game/?at=master
 [link_binaries]:     https://bitbucket.org/glampert/ps2dev-tests/src/cb6f77908e2fe4f775bfaceba66ba14d93a244c2/source/demos/bin/?at=master

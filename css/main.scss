@@ -176,12 +176,16 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     font-size: 16px;
 }
 
+// A couple tweaks in the drop-down menu...
+.dropdown-menu {
+    li { width: auto; }
+    border-radius: 0;
+}
+
 // Big logo at the main page:
 .site-logo {
     width:    150px;
     height:   150px;
-    opacity:  0.8;
-    filter:   alpha(opacity=80); // For IE8 and earlier
     border:   none;
     position: relative;
 
@@ -195,7 +199,7 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     width:  100%;
     height: 100%;
     border: 5px solid white;
-    background-color: rgba(100, 100, 100, 0.3);
+    background-color: rgb(210, 210, 210);
 
     @include my-box-shadow;
 }
@@ -282,7 +286,7 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
         width:            100%;
         vertical-align:   middle;
         position:         relative;
-        background-color: black;
+        background-color: white;
         margin-top:       10px;
         margin-bottom:    10px;
 
@@ -495,17 +499,19 @@ img + em {
 // ========================================================
 
 #profile-pic {
-    width:  135px;
-    height: 135px;
-    border: 5px solid white;
-    border-radius: 0;
+    width:            135px;
+    height:           135px;
+    border:           5px solid white;
+    border-radius:    0;
+    background-color: white;
 }
 
 #stackexchange-flair {
-    width:  224px;
-    height: 64px;
-    border: none;
-    border-radius: 0;
+    width:            224px;
+    height:           64px;
+    border:           none;
+    border-radius:    0;
+    background-color: white;
 }
 
 // ========================================================

@@ -169,8 +169,6 @@ May The Force be with you!
 
 [link_threejs]:    http://threejs.org/
 [link_jquery]:     https://jquery.com/
-[link_lightsaber]: http://glampert.com/webgl/lightsaber.html
-[link_md5viewer]:  http://glampert.com/webgl/doom3md5.html
 [link_sith]:       http://starwars.wikia.com/wiki/Sith_lightsaber
 [link_jedi]:       https://bitbucket.org/glampert/webgl-tests/src/c33790a798a433cac172c423128bf77765f023ae/jedi/?at=master
 [link_src]:        https://bitbucket.org/glampert/webgl-tests/overview
@@ -179,4 +177,7 @@ May The Force be with you!
 [link_book]:       http://www.mathfor3dgameprogramming.com/
 [link_fxaa]:       http://en.wikipedia.org/wiki/Fast_approximate_anti-aliasing
 [link_aa_shader]:  https://github.com/mattdesl/glsl-fxaa
+
+[link_lightsaber]: {{ "/static/webgl/lightsaber.html" | prepend: site.baseurl }}
+[link_md5viewer]:  {{ "/static/webgl/doom3md5.html" | prepend: site.baseurl }}
 

@@ -1,7 +1,8 @@
 ---
-layout:    post
-title:     Projects
-permalink: /projects/
+layout:       post
+title:        Projects
+permalink:    /projects/
+menu_visible: true
 ---
 
 * Contents
@@ -61,9 +62,10 @@ shading for the handle (brushed metal shader) and screen space anti-aliasing usi
 at work with JavaScript and WebGL, I ended up coding a tiny rendering framework and other demos with it, which can all
 be found at the [source code repository](https://bitbucket.org/glampert/webgl-tests).
 
-The live Lightsaber demo can be found [here](http://glampert.com/webgl/lightsaber.html); Other WebGL tests and demos,
-including a viewer for Doom 3 models, can be found [at this address](http://glampert.com/webgl/). Make sure
-to open them on a WebGL capable Browser, like Chrome, Firefox or an up-to-date version of Safari.
+The live Lightsaber demo can be found [here]({{ "/static/webgl/lightsaber.html" | prepend: site.baseurl }});
+Other WebGL tests and demos, including a viewer for Doom 3 models, can be found
+[here]({{ "/webgl/" | prepend: site.baseurl }}). Make sure to open them on a WebGL
+capable Browser, like Chrome, Firefox or an up-to-date version of Safari.
 
 Search the blog section of this site for the *webgl* category to read more about this.
 
@@ -200,7 +202,8 @@ around in the game assets and found out that it was quite easy to extract the ra
 so that they could be played on an outside application. Then I wrote a command-line tool to perform the conversion
 from proprietary ADF format to universally playable MP3. You can access source code as well as a prebuilt Windows
 binary [in the source code repo](https://bitbucket.org/glampert/adf2mp3).
-There's [a blog post]({{ "/2014/12/extracting-gta-vice-city-radio-stations.html" | prepend: site.baseurl }}) with more info about it also.
+There's [a blog post]({{ "/2014/12-27/extracting-gta-vice-city-radio-stations/" | prepend: site.baseurl }})
+with more info about it also.
 
 ----
 
@@ -226,9 +229,13 @@ used to generate the site. But nevertheless, it was fun to play with CSS and jQu
 design the interface that you see here. Hope it isn't too bad!
 
 [Jekyll](http://jekyllrb.com/) was the main tool used here, but there's also [jQuery](https://jquery.com/),
-[Bootstrap](http://getbootstrap.com/javascript/), [Highlight.js](https://highlightjs.org/) and some plain-old HTML and CSS.
+[Bootstrap](http://getbootstrap.com/), [Pygments](http://pygments.org/) for code syntax highlighting
+(previously I was using [Highlight.js](https://highlightjs.org/)) and some plain-old HTML and CSS
+([SASS actually](http://sass-lang.com/)).
 
 You can find the source code as well as all the site's content and assets in the
-[repository](https://bitbucket.org/glampert/my-website). The source code is released under the
+[repository](https://github.com/glampert/glampert.github.io). Source code is released under the
 MIT license, so feel free to fork it and use as a base template for your own website if it suits you `;)`.
+
+Site currently hosted by [GitHub Pages](https://pages.github.com/).
 

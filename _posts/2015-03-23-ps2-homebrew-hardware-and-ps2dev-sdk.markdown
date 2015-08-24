@@ -373,5 +373,5 @@ Happy hackings! Till next time.
 [link_wiki_mips]: http://en.wikipedia.org/wiki/MIPS_instruction_set
 [link_wiki_elf]:  http://en.wikipedia.org/wiki/Executable_and_Linkable_Format
 [link_ntsc]:      http://en.wikipedia.org/wiki/NTSC
-[link_prev_post]: {{ "/2015/02/playstation-2-homebrew-1-setting-up.html" | prepend: site.baseurl }}
+[link_prev_post]: {{ "/2015/02-26/ps2-homebrew-setting-up-the-environment/" | prepend: site.baseurl }}
 

@@ -1,7 +1,8 @@
 ---
-layout:    page
-title:     About
-permalink: /about/
+layout:       page
+title:        About
+permalink:    /about/
+menu_visible: true
 ---
 
 <img src="{{ "/static/images/profile-pic.png" | prepend: site.baseurl }}" id="profile-pic" title="Me circa 2014">
@@ -46,8 +47,8 @@ If you have a job proposition, check out my [CV/Résumé][link_cv] and contact m
 email: [{{ site.email }}][link_mail], or visit the [LinkedIn][link_linkedin] profile to find
 all employment-related information in one place.
 
-[link_cr]:       http://codereview.stackexchange.com/users/39810/glampert?tab=profile
-[link_cv]:       http://glampert.com/cv/cv_lampert.pdf
 [link_linkedin]: https://www.linkedin.com/in/glampert
+[link_cr]:       http://codereview.stackexchange.com/users/39810/glampert?tab=profile
+[link_cv]:       {{ '/static/pdf/cv-lampert.pdf' | prepend: site.baseurl }}
 [link_mail]:     mailto:{{ site.email }}
 
