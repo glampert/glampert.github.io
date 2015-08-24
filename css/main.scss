@@ -152,6 +152,12 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     @include my-box-shadow;
 }
 
+#cv-frame {
+    // Sizes of the iframe where I display the Curriculum doc.
+    width:  800px;
+    height: 1100px;
+}
+
 // ========================================================
 // Nav-bar / site logo:
 // ========================================================

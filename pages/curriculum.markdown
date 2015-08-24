@@ -10,7 +10,9 @@ menu_visible: false
 <iframe type="application/pdf"
     width="800"
     height="1100"
+    id="cv-frame"
     title="Curriculum Vitae"
-    src="{{ "/static/pdf/cv-lampert.pdf" | prepend: site.baseurl }}">
+    src="{{ "/static/pdf/cv-lampert.pdf" | prepend: site.baseurl }}"
+    frameborder="0">
 </iframe>
 

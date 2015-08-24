@@ -18,6 +18,10 @@
     <meta name="keywords" content="{{ page_keywords }}">
     <meta name="author" content="Guilherme R. Lampert">
 
+    {% if page.thumbnail %}
+    <meta name="thumbnail" content="{{ page.thumbnail | prepend: '/static/images/thumbnails/' | prepend: site.url | append: '.jpeg' }}">
+    {% endif %}
+
     <!-- Site icons/favicon: -->
     <link rel="shortcut icon" href="{{ "/static/icons/favicon.ico" | prepend: site.baseurl }}">
     <link rel="shortcut icon" sizes="96x96" href="{{ "/static/icons/favicon-96x96.png" | prepend: site.baseurl }}">
