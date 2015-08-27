@@ -38,13 +38,10 @@
         margin-bottom: 5px;
     }
 
-    img + em             { font-size: 12px;  } // Reduce font size of image captions
+    img + em             { font-size: 12px;  } /* Reduce font size of image captions */
     .post-list-item      { height:    148px; }
     .post-list-item span { font-size: 12px;  }
     .post-list-item-text { top:       2%;    }
-
-    // Make the CV iframe sligtly smaller for mobile screens.
-    #cv-frame { width: 600px; height: 900px; }
 }
 
 @media screen and (min-width: 768px) {
@@ -86,11 +83,6 @@
         margin-bottom: 5px;
     }
 
-    #cv-frame {
-        width:  500px;
-        height: 800px;
-    }
-
     .post-list-item-text    { top:       3%;    }
     .post-list-item         { height:    100px; }
     .post-list-header       { font-size: 28px;  }
@@ -104,10 +96,7 @@
 }
 
 @media screen and (max-width: 570px) {
-    // Reduce font size of image captions
-    img + em { font-size: 10px; }
-
-    #cv-frame { width: 400px; }
+    img + em { font-size: 10px; } /* Reduce font size of image captions */
 }
 
 @media screen and (max-width: 550px) {
@@ -130,8 +119,6 @@
     .navbar-brand     { font-size:    18px; }
     .post-list-header { font-size:    22px; }
     #site-logo-navbar { margin-right: 5px;  }
-
-    #cv-frame { width: 300px; }
 }
 
 @media screen and (max-width: 425px) {

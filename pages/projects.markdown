@@ -2,6 +2,7 @@
 layout:       post
 title:        Projects
 permalink:    /projects/
+menu_index:   1
 menu_visible: true
 ---
 

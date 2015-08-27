@@ -26,9 +26,10 @@
                     <a href="{{ site.baseurl }}/">{{ site.landing_page }}</a>
                     </li>
 
-                    {% assign sorted_pages = site.pages | sort: 'title' %}
+                    {% assign sorted_pages = site.pages | sort: 'menu_index' %}
+
                     {% for p in sorted_pages %}
-                        {% if p.title and p.menu_visible %}
+                        {% if p.title and p.menu_visible == true %}
                             {% if p.url == page.url %}
                                 <li class="active">
                             {% else %}
@@ -45,9 +46,14 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ '/curriculum/' | prepend: site.baseurl }}">CV/Résumé</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="{{ '/webgl/' | prepend: site.baseurl }}">WebGL Resources</a></li>
+                            {% for p in sorted_pages %}
+                                {% if p.title and p.menu_visible == false %}
+                                    <li><a href="{{ p.permalink | prepend: site.baseurl }}">{{ p.title }}</a></li>
+                                    {% if forloop.last == false %}
+                                        <li role="separator" class="divider"></li>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         </ul>
                     </li>
                 </ul>

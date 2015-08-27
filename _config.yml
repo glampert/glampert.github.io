@@ -31,7 +31,7 @@ landing_page: Blog
 permalink: /:year/:month-:day/:title/
 
 # Number of items in the Blog's post list:
-paginate:      10
+paginate: 10
 paginate_path: page:num
 
 # Social-media/contact links and icons displayed at the footer:

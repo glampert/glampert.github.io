@@ -1,7 +1,8 @@
 ---
 layout:       page
-title:        Curriculum Vitae
+title:        CV / Résumé
 permalink:    /curriculum/
+menu_index:   3
 menu_visible: false
 ---
 

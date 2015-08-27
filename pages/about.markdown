@@ -2,6 +2,7 @@
 layout:       page
 title:        About
 permalink:    /about/
+menu_index:   2
 menu_visible: true
 ---
 
