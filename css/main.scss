@@ -320,7 +320,7 @@ img + em {
     text-align:      justify;
     margin-right:    5px;
     margin-left:     5px;
-    top:            -30px;
+    top:            -28px;
 
     @include my-display-flex-center-align;
 }
@@ -343,6 +343,32 @@ img + em {
     // Thumbnails are lazily loaded by JavaScript,
     // so the images are initially hidden.
     display: none;
+}
+
+// ========================================================
+// Explicitly sized images (centered in parent container):
+// ========================================================
+
+.image512 {
+    width:         auto;
+    height:        auto;
+    max-width:     512px;
+    max-height:    512px;
+    position:      relative;
+    display:       table;
+    margin:        auto;
+    margin-bottom: 8px;
+}
+
+.image300 {
+    width:         auto;
+    height:        auto;
+    max-width:     300px;
+    max-height:    300px;
+    position:      relative;
+    display:       table;
+    margin:        auto;
+    margin-bottom: 8px;
 }
 
 // ========================================================

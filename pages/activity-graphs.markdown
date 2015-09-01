@@ -142,7 +142,7 @@ menu_visible: false
         var view = new google.visualization.DataView(data);
 
         var chartOptions = {
-            title:     "Category/Tag usage by Post dates:",
+            title:     "Category/Tag usage by Post date:",
             hAxis:     { minValue:   0     },
             bar:       { groupWidth: "85%" },
             legend:    { position:   "top", maxLines: 2 },
