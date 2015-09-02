@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Reverse engineering Darkstone game file formats
+title:      Reverse engineering Darkstone game files
 author:     Guilherme Lampert
 categories: Miscellaneous Reverse-Engineering
 thumbnail:  darkstone
@@ -18,13 +18,13 @@ A lot of people call it a "Diablo clone", but even so, it was pretty good at tha
 enjoyable RPG to play back then and it had a lot of nice features that set it apart from other contemporary games
 of the same genre. I have fond memories about this game and was very happy to find it on [GoG][link_gog] recently.
 It is definitely worth the playthrough. I've also just found out that there is a [2014 remake][link_remake]
-for iOS that [looks amazing][link_yt]. Haven't had the change of playing it yet, but it sure looks neat!
-It is more then likely a full remake of the game, but the overall appearance look pretty much the
+for iOS that [looks amazing][link_yt]. Haven't had the chance of playing it yet, but it sure looks neat!
+It is more than likely a full remake of the game, but the overall appearance look pretty much the
 same as the original, except for the UI, so I'm guessing they've reused most of the original art assets.
 The original release was PC/Windows only, Direct3D based. Later in 2001 a PlayStation port was also released.
 
 Anyways, reverse engineering old games is kind of a background hobby for me. Sometimes the idea just
-pops into my mind and a then I have to download the game again and fire up an Hexadecimal editor.
+pops into my mind and then I have to download the game again and fire up an Hexadecimal editor.
 But I also enjoy it because you can learn a lot about how games are structured. It serves as inspiration
 for your own games.
 
@@ -35,7 +35,7 @@ to figure out as much as possible about it. The best place to start is with the 
 
 If you download the GoG release of the game or open [your old Darkstone CD]({{ "/static/images/posts/darkstone/darkstone-cd.jpeg" | prepend: site.baseurl }}),
 you'll find some not-so-interesting stuff at first. Just the DirectX-6 redistributable stuff from MS, [Heat.Net][link_heatnet]
-stuff for the online game and a few text files with keyboard bindings. Inside an `mdata/` directory at the root,
+stuff for the online game and a few text files with keyboard bindings. Inside an `mdata/` directory at the root
 you can find AVI videos with the intro screens and cutscenes. Those can be played on VLC or any other descent
 media player, pretty cool!
 
@@ -43,7 +43,7 @@ The rest is pretty much all binaries. `Darkstone.exe` is the game executable. No
 The executable is big, by the way, about 1.3 Megabytes. It was a fairly complex game, so I assume
 the code base must have been large too.
 
-So, where are the game assets anyways? There are a couple files in the game's tree with the `.MTF`
+Where are the game assets anyways? There are a couple files in the game's tree with the `.MTF`
 extension. Those files are pretty big, the largest one with nearly 300 Megabytes. They seem like
 good candidates for the game archives storing smaller assets like textures, 3D models, sounds and such.
 
@@ -109,7 +109,7 @@ but the structure appeared quite different from what I was seeing in the Darksto
 
 After a couple hours analyzing a few O3D samples in the Hexadecimal editor, I was able to figure out the format's layout.
 It is very straightforward and easy to load. An O3D model consists of a tiny header, followed by a list of XYZ vertex positions (floats)
-and then a list of faces. Each face is a small struct with three of four indexes for the vertexes that make up a face
+and then a list of faces. Each face is a small struct with three or four indexes for the vertexes that make up a face
 (it can be a triangle or a quadrilateral) plus additional metadata like color, texture coordinates, material index and
 some other unknown flags. A detailed description of the format can be found [here][link_o3d_desc].
 
@@ -141,7 +141,7 @@ Since the terrain was composed of reusable tiles, we can find a lot of textures 
 
 <div class="image300">
 <img src="{{"/static/images/posts/darkstone/terrain-tiles.jpeg" | prepend: site.baseurl }}"
-	alt="Terrain tiles" title="Terrain tiles." />
+	alt="Terrain tiles" title="Texture with terrain tiles." />
 </div>
 
 Characters and player avatars were also packed in a single texture per class, like the Knight:
@@ -166,7 +166,7 @@ ASCII characters like accentuations, used for the non-English versions of the ga
 
 There's also a number of other unknown binary files with the `.CBS` and `.CDF` extension. They seem to contain
 fixed size strings with a lot of zero padding. The strings seem to be mostly file paths. Probably used to specify
-the 3D models used by the dungeons and monsters.
+the 3D models for the dungeons and monsters.
 
 Lots of text files with miscellaneous configurations for player classes and monsters.
 These are probably pure gold for modders, since they can be easily edited.

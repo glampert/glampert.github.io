@@ -14,7 +14,7 @@ on [Area 51](http://area51.stackexchange.com/proposals/74985/computer-graphics),
 and from what I've heard this is the second attempt at having the specialized network
 about CG. It seems like this time it is going all the way.
 
-So far, the site is looking like it's going to be very good addition to the SE
+So far, the site is looking like it's going to be a very good addition to the SE
 network, grouping a lot of useful knowledge and information in a single
 place. I'm enjoying it and learning a lot from my CG peers over there,
 so I recommend taking a look if you're interested in Computer Graphics,
