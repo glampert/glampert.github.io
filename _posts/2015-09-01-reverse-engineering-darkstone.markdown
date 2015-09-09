@@ -267,12 +267,14 @@ resembles that of a [**BNF grammar**][link_bnf].
 
 Going through the decompressed `data.mtf` yielded a couple surprises...
 
-#### A different name?
+#### A different name
 
-The main directory where most of the texture maps are stored in named **DRAGONBLADE**.
-I wonder why? Was the game originally intended to be called *Dragonblade*?
+The main directory where most of the texture maps are stored in named DRAGONBLADE.
+There are also other references in filenames and paths to that name.
+I wonder why? Was the game originally intended to be called *Dragonblade*? Or maybe
+that was the codename of the project during development?
 
-#### A Moto Racer Easter Egg?
+#### A Moto Racer Easter Egg
 
 By far the most WTF finding while going through the game's textures was this:
 

@@ -9,9 +9,11 @@ menu_visible: true
 * Contents
 {:toc}
 
-> This is my personal portfolio page where some of my most interesting projects are showcased.
-> I'm a supporter of Open Source Software, so you can find source code available with an unrestrictive
-> license for all projects. Most of them are hosted on my [Bitbucket](https://bitbucket.org/glampert/) account.
+This is my personal portfolio page where some of my most interesting projects are showcased.
+I'm a supporter of Open Source Software, so you can find source code available with an unrestrictive
+license for all projects. Most of them are hosted on my [Bitbucket](https://bitbucket.org/glampert/) account,
+but following the recent trends in Open Source development, I've moved a couple key projects to
+[GitHub](https://github.com/glampert).
 
 ----
 
