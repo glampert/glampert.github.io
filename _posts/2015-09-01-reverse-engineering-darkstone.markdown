@@ -186,18 +186,18 @@ There's a directory inside `data.mtf` named `SCRIPTS/`, which contains a bunch o
 with the `.SPT` extension. Those files contain some kind of description language for the possible game actions
 and dialogs. The structure resembles a bit the JSON format. For instance, an excerpt of `QUESTFINAL.SPT`:
 
-<pre><code>
+<pre>
 QUEST
 {
     QUESTNAME
     {
-        0 {L'affrontement final}
-        1 {The final confrontation}
+        0 { L'affrontement final }
+        1 { The final confrontation }
     }
 
     ENTRANCE    { entreeSage }
     LAND        { 7 }
-    KEY         {FINAL}
+    KEY         { FINAL }
 
     OBJECT
     {
@@ -206,7 +206,7 @@ QUEST
         FLAG    { QUEST|CUSTOM|VIRTUAL }
         NAME
         {
-            0   {qFinalvirtual1}
+            0   { qFinalvirtual1 }
         }
     }
 
@@ -217,16 +217,16 @@ QUEST
         FLAG    { QUEST|CUSTOM|VIRTUAL }
         NAME
         {
-            0   {qFinalvirtual1}
+            0   { qFinalvirtual1 }
         }
     }
 
     ...
-</code></pre>
+</pre>
 
 It also supports minimal flow control via a `GOTO` property:
 
-<pre><code>
+<pre>
 STATE
 {
     KEY         { static }
@@ -237,18 +237,18 @@ STATE
     {
         <b>CONDITION</b>
         {
-            MSG {3}
-            <b>GOTO</b> {cristauxOk}
+            MSG { 3 }
+            <b>GOTO</b> { cristauxOk }
         }
 
         <b>CONDITION</b>
         {
-            CLICK {}
-            <b>GOTO</b> {explique}
+            CLICK { }
+            <b>GOTO</b> { explique }
         }
     }
 }
-</code></pre>
+</pre>
 
 ### Sound effects / speech
 
