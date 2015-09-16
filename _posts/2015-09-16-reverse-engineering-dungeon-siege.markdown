@@ -325,7 +325,7 @@ Following are a couple samples of what a node looks like.
 
 ### Raw textures and sprites
 
-The RAW format (or simply raw; not an initialism) is a bitmap format used to store all the
+The RAW format (or simply raw; not an acronym) is a bitmap format used to store all the
 textures and sprites used by Dungeon Siege. Raw textures are always stored inside Tank archives.
 This is a custom format, not directly related to other commercial formats with the `.raw`
 filename extension.
@@ -334,7 +334,7 @@ The name comes from the fact that pixels are stored uncompressed (raw) in the fi
 Raw textures can also contain the full set of mipmap surfaces. File layout is binary,
 byte order little endian, but pixels are stored as **BGRA** DWORDs.
 
-A Raw texture file starts with a tiny 16 bytes header that contains the dimensions
+A raw texture file starts with a tiny 16 bytes header that contains the dimensions
 of the base surface (mipmap 0) and the number of surfaces/mipmaps. The dimensions
 of subsequent mipmap surfaces are calculated from that. The first 8 bytes of the
 header are the 4CCs `ipaR` (or `Rapi` backwards) and `8888`. BGRA pixel data for
@@ -583,7 +583,7 @@ world of Dungeon Siege much faster and efficiently, so it must definitely have p
 A more modern and portable approach for such a system nowadays would probably involve a preprocessing
 step of the source code to generate meta information, then compile the generate code with the rest.
 But back then they didn't have advanced Open Source tools like [LLVM/Clang][link_llvm] and [GCC-XML][link_gccxml],
-so I'd say that the FuBi system was first grade outside the box thinking!
+so I'd say that the FuBi system was first grade out-of-the-box thinking!
 
 ## Trivia
 
@@ -619,7 +619,7 @@ find it inside the game, send me an email with instructions, would ya?
 
 <div class="image512">
 <img src="https://raw.githubusercontent.com/glampert/reverse-engineering-dungeon-siege/master/misc/screenshots/ds-32.png"
-	alt="Just an ordinary cow" title="Just an ordinary cow, minding its busines." />
+	alt="Gas Powered Cow" title="Just an ordinary cow, minding its own business." />
 </div>
 
 I never noticed this tiny self promotion, did you? Very subtle.
@@ -649,9 +649,9 @@ looked in the end. I can't thank Chris Taylor and the Dungeon Siege team enough 
 	alt="After" title="After (game release)" />
 </div>
 
-That's all for now folks! I should write again when time permits about another
-of my favorite vintage games, but until then, may the blessings of Azunai The Defender
-be upon you! Travel safely, Adventurer!
+That's all for now folks! I should write again when time allows about another
+of my favorite vintage games, but until then, may the blessings of Azunai The
+Defender be upon you! Safe travels, Adventurer!
 
 
 [link_ds]:            https://en.wikipedia.org/wiki/Dungeon_Siege
