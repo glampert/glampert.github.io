@@ -44,12 +44,12 @@ Anyone who is seriously into programming should definitely pay it a visit and be
 I'm currently open for job propositions. At the present date, I reside in the south of Brazil,
 but I'm willing to relocate for the right opportunity; Location is not a concern for me.
 
-If you have a job proposition, check out my [CV/Résumé][link_cv] and contact me on my personal
+If you have a job proposition, check out my [CV/Resume][link_cv] and contact me on my personal
 email: [{{ site.email }}][link_mail], or visit the [LinkedIn][link_linkedin] profile to find
 all employment-related information in one place.
 
 [link_linkedin]: https://www.linkedin.com/in/glampert
 [link_cr]:       http://codereview.stackexchange.com/users/39810/glampert?tab=profile
-[link_cv]:       {{ '/static/pdf/cv-lampert.pdf' | prepend: site.baseurl }}
+[link_cv]:       {{ '/curriculum/' | prepend: site.baseurl }}
 [link_mail]:     mailto:{{ site.email }}
 
