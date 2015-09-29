@@ -62,7 +62,7 @@ Time went by and I put this toy project aside to finish my University dissertati
 But now that I've got some free time and decided to focus more on the subject of analyzing
 and reversing vintage games, I've reopened the project and moved it to [GitHub][link_git_prj].
 
-My goals were when I started, and still are, to lean as much as I can about the technical
+My goals were when I started, and still are, to learn as much as I can about the technical
 aspect of the game and reverse/convert the proprietary file formats that store
 the game assets to other standard formats that I can open on freely available tools.
 Starting with the Tank archive format, Dungeon Siege's main compressed archive format.
@@ -75,7 +75,7 @@ and other miscellaneous small files. The big ones, likely to have the game's dat
 with the `.dsres`, `.dsmap`, `.dsm` or `.dssave` extensions. Those will be in the tenths of megabytes size range.
 
 Do an Internet search about those filename extensions and you should come across a couple
-tools for editing and manipulating *Tank* files. GPG released official tools for modders
+tools for editing and manipulating *Tank* archives. GPG released official tools for modders
 to create their own Tanks with custom game content. A more careful search might lead you
 to Scott Bilas' personal site, where he made available [a C++ header file][link_tank_struct] from
 the game's source code that contains the structure of a Tank archive. Finding this file made things
@@ -95,7 +95,7 @@ Logic.dsres    DevLogic.dsres  Auto-Save.dsasave
 You can get a pretty good idea of what the archives store judging by their names.
 Let's take a look at the first few bytes of a Tank in an Hexadecimal editor:
 
-![Hex view of a Tank file](https://raw.githubusercontent.com/glampert/reverse-engineering-dungeon-siege/master/misc/screenshots/tank-header.png "Hex view of a Tank file.")
+![Hex view of a Tank file](https://raw.githubusercontent.com/glampert/reverse-engineering-dungeon-siege/master/misc/screenshots/tank-header.png "Hex view of a Tank file (Logic.dsres).")
 
 We can see that the file starts with two human readable 4CCs (Four Character Codes),
 `DSig` and `Tank`. There's an additional "creator id" 4CC further down, in the above
@@ -111,8 +111,8 @@ such as build dates, CRCs and versions. Not very relevant data for us. The two m
 fields in the header are the offsets to the "file set" and "directory set".
 
 As mentioned above, the Tank archive is very similar to a Zip. It stores the list
-of file/directory entries at the end of file, just as a Zip does. This might seem strange,
-but there are two main possible reasons for this layout:
+of file/directory entries at the end of the file, just as a Zip does. This might seem
+strange, but there are two main possible reasons for this layout:
 
 1. If you're seeking to the end of the file to get its length, then it makes sense putting
 the file/dir metadata in there, since that's what the application must read next before any
@@ -134,7 +134,7 @@ probably done like this to allow safely mapping the file into memory using the W
 Overall, the Tank format seems very optimized and tunned to perfection, serving the needs of
 the game as efficiently as possible. Clearly a format devised by an experienced programmer.
 
-My implementation was largely influenced by the source code snippets provided by Scott Bilas in his [website][link_scott_bilas].
+My implementation was largely influenced by the source code snippets provided by Scott Bilas [in his website][link_scott_bilas].
 You can always refer to the [source code of my implementation][link_git_tank1] and [this more detailed description of the format][link_git_tank2]
 for the nitty-gritty details. I also wrote a command-line tool for archive extraction, you'll find it in the repository as well.
 
@@ -232,11 +232,11 @@ This is the binary format used to store static map geometry, e.g.: walls, ground
 A Siege Node is much like a 3D tile of arbitrary dimensions. The world of Dungeon Siege is built by
 attaching these nodes side by side to construct the larger scenes. In its simplest form, the game
 was tile-based. Even though the world is three dimensional, the game entities moved mainly in the X-Z
-plane (moving in the Y was also possible with stains and elevators, but the tile based design doesn't
+plane (moving in the Y was also possible with stairs and elevators, but the tile based design doesn't
 impose much limitations on this).
 
 This paper by Scott Bilas, [**The Continuous World of Dungeon Siege**][link_cworld_paper], explains the
-node system is great detail. The "infinite" world setup is probably the most interesting technical
+node system in great detail. The "infinite" world setup is probably the most interesting technical
 aspect of Dungeon Siege. The paper explains that from the beginning they didn't want to have
 loading screens after the player started a game, so the solution was to subdivide the world into these tiles
 (Siege Nodes) that are dynamically loaded on demand and discarded when no longer in view. That posed
@@ -369,7 +369,7 @@ Dungeon Siege save games are written to the user's home under "My Documents". Yo
 
 The auto-save file is named `Auto-Save.dsasave`.
 
-The `.dsasave` format is actually a Tank file in disguise. Decompressing a save archive
+The `.dssave` format is actually a Tank file in disguise. Decompressing a save archive
 should output two Windows bitmap (`.bmp`) images, the player's portrait and a very low-res
 screenshot of when the game was saved (80x60px or so).
 
@@ -462,7 +462,7 @@ The Skrit scripting language is fairly sophisticated and relies a lot on the Gam
 By the way, Dungeon Siege is well known for its very polished Game Object system, which was subject
 of several presentations and papers. On of such [was this GDC 2002 presentation][link_gdc02].
 
-There is a very detailed [technical manual][link_skrit_manual] available on the Skrit lang, it's
+There is a very detailed [technical manual][link_skrit_manual] available on the Skrit language, it's
 definitely worth reading for those interested in programming languages and compilers. The highlights
 about Skrit are:
 
@@ -471,10 +471,10 @@ Syntax is C-based, most likely because of that choice of toolset. According to t
 events, triggers, states, dynamic and static state transitions, local functions, locally and globally scoped variables,
 C-preprocessor-style conditional compilation, etc"* -- Very nice!
 
-- The language is interpreted by a stack-based Virtual Machine, running Skrit bytecode (called p-code in the documentation).
-The set of virtual instructions is very small and easy to manage. The full specification is available in the doc.
+- The language is interpreted by a stack-based Virtual Machine, running Skrit bytecode (called *p-code* in the documentation).
+The set of virtual instructions is very small and easy to manage. The full specification is available in the document.
 
-- All user defined variables and functions had to be postfixed with a dollar sign (`$`). According to the document,
+- All user defined variables and functions had to be suffixed with a dollar sign (`$`). According to the document,
 this was done to prevent user names from clashing with future reserved keywords that might be introduced in the
 language. A questionable choice, in my opinion. After all, those `$` everywhere are what make PHP suck so much, right?
 
@@ -547,7 +547,7 @@ FuBi is yet another engineering gem from Dungeon Siege. Language interoperabilit
 Several solutions have come up over time, but no on-size-fits-all solution seems to be possible.
 
 In the end, it was no different with Dungeon Siege. Acknowledging that, they decided for a very platform specific
-but tailored solution that fitted the game nicely, but made it heavily dependent on the Windows Runtime and MSVC compiler.
+but tailored solution that fit the game nicely, but made it heavily dependent on the Windows Runtime and MSVC compiler.
 
 Nevertheless, FuBi was a very clever solution. The paper above explains it in great detail. That paper was
 so well received that it ended up as an entry in the first [Game Programming Gems][link_gems_book] book.
