@@ -185,7 +185,7 @@ OFF_GROUND_ABILITY: 0.9
 Level geometry textures and UI textures are stored in the old [ZSoft PCX format][link_pcx].
 You can open them in a tool like [Gimp][link_gimp]. Most will look like random noise if you open
 them, but that's not an error in the extractor. Most of the images are actually [palette textures][link_pal]
-(AKA colormaps), so then don't contain a whole image, but a pool of reusable pixels other images can use
+(AKA colormaps), so they don't contain a whole image, but a pool of reusable pixels other images can use
 to fetch color from. Palettized textures with shared palettes is one of the oldest forms of
 lossy image compression used by games.
 
