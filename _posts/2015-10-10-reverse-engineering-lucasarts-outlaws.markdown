@@ -23,7 +23,7 @@ The soundtrack, above all, lives up to the films, no doubt. Listen to the main t
 Outlaws is one of the still rare Old West themed First Person Shooters. Published in 1997
 by [LucasArts][link_la], it was quite a shift of paradigm for the studio, which then had only done
 games based on existing film IPs (Star Wars, Indiana Jones) and a few emblematic point-and-click adventure games.
-They took a gamble with an entirely new title and style, and ended up making on of the best western
+They took a gamble with an entirely new title and style, and ended up making one of the best western
 First Person Shooters to date!
 
 ![Outlaws by LucasArts]({{ "/static/images/posts/outlaws-montage.jpeg" | prepend: site.baseurl }} "Outlaws by LucasArts.")

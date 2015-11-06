@@ -27,5 +27,5 @@ Anyways, welcome to the new site, enjoy the visit!
 
 [link_jekyll]:   http://jekyllrb.com/
 [link_gh_pages]: https://pages.github.com/
-[link_time]:     http://1funny.com/wp-content/uploads/2011/11/time-flies.jpg
+[link_time]:     {{ "/static/images/posts/time-flies.jpeg" | prepend: site.baseurl }}
 
