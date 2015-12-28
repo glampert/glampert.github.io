@@ -29,9 +29,9 @@ function myImgLoadDeferred(jqImg) {
 }
 
 function myImgIsLoaded(jqImg) {
-	// Initially, the image should have no 'src', to avoid
-	// sending invalid requests to the server. We also clear
-	// the custom 'defpath' property to be sure once it is loaded.
+    // Initially, the image should have no 'src', to avoid
+    // sending invalid requests to the server. We also clear
+    // the custom 'defpath' property to be sure once it is loaded.
     return jqImg.attr("src")     != null &&
            jqImg.attr("defpath") == null;
 }
@@ -40,7 +40,7 @@ function setUpCategoryDisplay() {
     var imgFadeInDelay = 600;
 
     // Show "All" and load the deferred images for the visible thumbnails:
-	// ('img.defpath' property will have the actual path)
+    // ('img.defpath' property will have the actual path)
     $(".post-list-body>div[post-cate!=All]").hide();
     $(".post-list-body>div[post-cate=All] img").each(function(index, img) {
         var jqImg = $(img);
@@ -105,8 +105,8 @@ function setUpSlideShowContainers() {
      * The img tags in the HTML must follow this convention:
      *
      *   <img defpath="path/to/image.ext">
-	 *
-	 * No 'src' is required.
+     *
+     * No 'src' is required.
      */
 
     // Constants:
@@ -187,7 +187,7 @@ function setUpSlideShowContainers() {
                 }
 
                 // Load the image if not yet loaded. If it is loading for the first
-				// time, then defer the fade-in until loading completes.
+                // time, then defer the fade-in until loading completes.
                 var jqImg = $(img);
                 if (!myImgIsLoaded(jqImg)) {
                     slideFade(jqImg, /* waitForLoading = */ true); // Show the image only when loading completes.

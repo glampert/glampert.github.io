@@ -1,0 +1,51 @@
+---
+layout:       post
+title:        Tutorials
+permalink:    /tutorials/
+menu_index:   4
+menu_visible: false
+---
+
+## Coding / C++
+
+- **Writing a custom string class**
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 1: Design considerations and string basics](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 2: Small String Optimization - SSO](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 3: String views and iterators](#)
+
+- **Creating a custom scripting language**
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 1: Syntax definition and design considerations](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 2: Lexical tokenization with Flex](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 3: Parsing with GNU Bison](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 4: Compiler basics and the virtual instruction set](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 5: The VM, CG and tying up loose ends](#)
+
+----
+
+## Graphics / OpenGL
+
+- <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+[Projective spotlight textures](#)
+
+- <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+[Effects using Polyboards](#)
+
+- <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+[Using AMD Sparse Textures extension](#)
+
