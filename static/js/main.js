@@ -229,9 +229,15 @@ function fixMissingImageCaptions() {
                 (parentClass != "slideshow-img-list")) {
 
                 var title = jqImg.attr("title");
-                var imgCaption = $("<em>");
-                imgCaption.html(title);
-                jqImg.after(imgCaption);
+                if (title) {
+                    var imgCaption = $("<em>");
+                    imgCaption.html(title);
+                    jqImg.after(imgCaption);
+                } else {
+                    // Looks like no title/caption is available, shrink back the bottom border.
+                    jqImg.css("border-bottom-width", "10px");
+                    jqImg.css("margin-bottom", "15px");
+                }
             }
         }
     });

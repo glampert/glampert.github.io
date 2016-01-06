@@ -17,7 +17,7 @@ mostly done by me alone, so it is liable to have a few bugs `;)`.
 Unfortunately, The old blogspot URLs are no longer valid, so there will be a few broken
 links, but hey, I don't really care about legacy `:P`.
 
-The site is now hosted in the [GitHub Pages][link_gh_pages], which is very fast and responsive.
+The site is now hosted by [GitHub Pages][link_gh_pages], which is very fast and responsive.
 Previously, I was using the shared GoDaddy hosting, which I'd now suggest that **it should be avoided
 like the plague!** Seriously, it would often produce 1 minute+ load times on a first access with empty
 Browser cache. Now GitHub Pages feels like if I'm accessing from my local hard drive, just light years

@@ -1,8 +1,8 @@
 ---
-layout:       post
+layout:       tuts-list
 title:        Tutorials
 permalink:    /tutorials/
-menu_index:   4
+menu_index:   3
 menu_visible: false
 ---
 
@@ -22,7 +22,7 @@ menu_visible: false
 - **Creating a custom scripting language**
 
   - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
-  [Part 1: Syntax definition and design considerations](#)
+  [Part 1: Design considerations ans syntax definition](#)
 
   - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
   [Part 2: Lexical tokenization with Flex](#)
@@ -36,6 +36,14 @@ menu_visible: false
   - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
   [Part 5: The VM, CG and tying up loose ends](#)
 
+- **Runtime game configuration**
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 1: CVars](#)
+
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 2: Commands and the in-game developer console](#)
+
 ----
 
 ## Graphics / OpenGL
@@ -48,4 +56,7 @@ menu_visible: false
 
 - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
 [Using AMD Sparse Textures extension](#)
+
+- <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+[GLProxy - OpenGL API interception basics](#)
 

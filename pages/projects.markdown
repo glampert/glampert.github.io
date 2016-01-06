@@ -9,11 +9,13 @@ menu_visible: true
 * Contents
 {:toc}
 
-This is my personal portfolio page where some of my most interesting projects are showcased.
-I'm a supporter of Open Source Software, so you can find source code available with an unrestrictive
-license for all projects. Older projects are hosted on my [Bitbucket](https://bitbucket.org/glampert/)
-account, but following the recent trends in Open Source development, I'll host new projects on
-[GitHub](https://github.com/glampert) from now on.
+This is my personal portfolio page where some of my projects are showcased.
+I'm a supporter of Open Source Software, so you can find source code available
+with an unrestrictive license for all of them.
+
+- [GitHub page](https://github.com/glampert)
+
+- [Bitbucket page](https://bitbucket.org/glampert/)
 
 ----
 
@@ -27,7 +29,7 @@ account, but following the recent trends in Open Source development, I'll host n
 
 Debug Draw is an immediate-mode-ish, renderer agnostic, lightweight debug drawing API for C++.
 It is a single source file Public Domain library that provides simple and fast lines, points
-and text drawing for visual debugging of 3D apps and games. Its main goal is to be as easy as
+and text drawing for visual debugging of 3D scenes and games. Its main goal is to be as easy as
 possible to integrate with your own code, so it consist of a single header file that can also
 act as the implementation (when a given preprocessor is defined), so you should be able to just
 drop the file into your project's directory, `#include` it and be done. Integrating with the renderer
@@ -36,7 +38,7 @@ and give the library a pointer to your implementation. The library is designed a
 style similar to the old fixed-function OpenGL, but it batches draw calls under the hood for
 better performance. Memory footprint is also small and configurable by the user code.
 
-Library source is Public Domain and published on [GitHub](https://github.com/glampert/debug-draw).
+Library source is Public Domain and available on [GitHub](https://github.com/glampert/debug-draw).
 You'll also find detailed documentation and usage examples in the source code repository.
 
 ----
@@ -61,7 +63,7 @@ Very far from a complete game, but playable. Source code and other technical det
 I have also written a couple posts about the development process, which you can find in the blog
 section of this site under the *Playstation-2* category.
 
-There are a few YouTube videos as well (recorded from the PCSX2 Emulator):
+Gameplay recorded from the PCSX2 Emulator:
 
 - [A simple test level](https://youtu.be/kM_C4iHzdNQ)
 
@@ -173,7 +175,7 @@ Source code [is also available](https://bitbucket.org/glampert/ossg).
 
 ----
 
-## My simple 3D scene editor, AKA "l3d"
+## Simple 3D scene editor, AKA `l3d`
 
 <div class="slideshow-container"><div class="slideshow-img-list">
 <img defpath="{{ "/static/images/slides/l3d-s1.jpeg" | prepend: site.baseurl }}">
@@ -229,8 +231,8 @@ around in the game assets and found out that it was quite easy to extract the ra
 so that they could be played on an external media player. Then I wrote a command-line tool to perform the conversion
 from proprietary ADF format to universally playable MP3. You can access source code as well as a prebuilt Windows
 binary [in the source code repo](https://bitbucket.org/glampert/adf2mp3).
-There's [a blog post]({{ "/2014/12-27/extracting-gta-vice-city-radio-stations/" | prepend: site.baseurl }})
-with more info about it also.
+Here's [a blog post]({{ "/2014/12-27/extracting-gta-vice-city-radio-stations/" | prepend: site.baseurl }})
+with more info about it.
 
 ----
 

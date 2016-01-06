@@ -372,11 +372,9 @@ img + em {
     vertical-align: middle;
     position:       initial;
     border:         none;
-    margin:         2px 5px auto 5px;
-    width:          auto;
-    height:         auto;
-    max-width:      90px;
-    max-height:     18px;
+    margin:         auto 5px auto 5px;
+    max-width:      100px;
+    max-height:     20px;
 
     // Disable the shadow style used by most images:
     -webkit-box-shadow: none;
@@ -547,17 +545,19 @@ img + em {
 // ========================================================
 
 #profile-pic {
-    width:            135px;
-    height:           135px;
-    margin-bottom:    15px;
+    max-width:        135px;
+    max-height:       135px;
+    margin-bottom:    25px;
+    margin-right:     50px;
     border:           5px solid white;
     border-radius:    0;
     background-color: white;
 }
 
 #stackexchange-flair {
-    width:            224px;
-    height:           64px;
+    max-width:        245px;
+    max-height:       70px;
+    margin-bottom:    10px;
     border:           none;
     border-radius:    0;
     background-color: white;
