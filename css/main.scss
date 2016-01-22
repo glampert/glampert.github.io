@@ -273,13 +273,13 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
         font-size:  22px;
         margin-top: 0;
     }
+}
 
-    span {
-        display:       inline-block;
-        text-align:    left;
-        margin-top:    4px;
-        margin-bottom: 4px;
-    }
+.post-subheading {
+    display:       inline-block;
+    text-align:    left;
+    margin-top:    4px;
+    margin-bottom: 4px;
 }
 
 // ========================================================

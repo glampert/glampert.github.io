@@ -105,8 +105,10 @@
 
 @media screen and (max-width: 500px) {
     .post-thumbnail {
-        width:  115px;
-        height: 80px;
+        width:         115px;
+        height:        80px;
+        margin-top:    20px;
+        margin-bottom: 20px;
     }
 
     .navbar-brand        { font-size: 22px;  }
@@ -129,6 +131,15 @@
     .navbar-brand     { font-size: 15px; }
     .footer-heading   { font-size: 20px; }
     .post-list-header { font-size: 20px; }
+
+    /* iPhone and other Cells */
+    .post-thumbnail {
+        width:  100px;
+        height: 70px;
+    }
+
+    .categories-list-header { font-size: 12px;  }
+    .categories-list-item   { font-size: 12px;  }
 }
 
 @media screen and (max-width: 370px) {
@@ -139,5 +150,25 @@
 @media screen and (max-width: 360px) {
     .navbar-brand     { font-size:    12px; }
     #site-logo-navbar { margin-right: 0;    }
+
+    /* Galaxy S4 (360x640) */
+    .post-thumbnail {
+        width:  90px;
+        height: 65px;
+    }
 }
 
+@media screen and (max-width: 320px) {
+    .post-list-item h2 { font-size: 14px; }
+
+    /* Tiny phone, hide it. */
+    .post-subheading { display: none; }
+
+    /* Now that the subheading is hidden we can make the thumbnail slightly bigger */
+    .post-thumbnail {
+        width:         100px;
+        height:        70px;
+        margin-top:    10px;
+        margin-bottom: 10px;
+    }
+}

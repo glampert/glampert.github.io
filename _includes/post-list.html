@@ -7,7 +7,9 @@
 
     <div class="post-list-item-text">
     <h2>{{ post.title }}</h2>
+
     <!-- The 'capitalize' filter is not very good with acronyms. Have to manually fix a couple... -->
+    {% assign need_br = true %}
     {% capture my_categories %}
     {% for category in post.categories %}
         {% case category %}
@@ -22,11 +24,23 @@
             {% else %}
                 {{ category | capitalize }}
         {% endcase %}
-        {% if forloop.last == false %} , {% endif %}
+        {% if forloop.last == false %}
+            {% if forloop.index >= 3 %}
+                </span>
+                <br />
+                <span class="post-subheading">
+                {% assign need_br = false %}
+            {% endif %}
+            ,
+        {% endif %}
     {% endfor %}
     {% endcapture %}
-    <span>{{ my_categories | remove: ' ' | strip_newlines | replace: ',', ' • ' }}</span>
-    <br />
-    <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+    <span class="post-subheading">{{ my_categories | strip_newlines | replace: ',', ' • ' }}</span>
+    {% if need_br %}
+        <br />
+    {% else %}
+        <span class="post-subheading">&nbsp;|&nbsp;</span>
+    {% endif %}
+    <span class="post-subheading">{{ post.date | date: "%b %-d, %Y" }}</span>
     </div>
 </a>
