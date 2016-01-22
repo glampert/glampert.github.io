@@ -2,7 +2,7 @@
 layout:     post
 title:      New year, new stuff - Lots of projects on the way!
 author:     Guilherme Lampert
-categories: Miscellaneous
+categories: Miscellaneous Quake-2
 thumbnail:  2016
 ---
 
@@ -17,7 +17,7 @@ In case you haven't noticed the [project on my GitHub account][link_q2_gh] alrea
 ![Good news, everyone!]({{ "/static/images/posts/good-news.jpeg" | prepend: site.baseurl }})
 
 Quake II is a perfect game to port to the PS2. Officially, it was ported to the PSOne and the X360,
-plus a handful of other systems, but it sadly never made into the PlayStation 2. I'm big fan of the
+plus a handful of other systems, but it sadly never made into the PlayStation 2. I'm a big fan of the
 game, and was playing it last year again and thought to myself, damn, this would make for a mighty fine PS2 game.
 Then I started the project soon after. The basics are more or less already in place, we have 2D rendering
 of the menus and in-game UI plus cinematics. Now comes the hard part of the 3D drawing, so I'm guessing
