@@ -33,7 +33,6 @@ code {
 }
 
 .highlight {
-    // This class is referenced by Pygments.
     // Color set here will be the background color of code snippets.
     pre {
         background-color: rgb(63, 63, 63);
@@ -616,7 +615,7 @@ img + em {
 // SCSS preprocessor includes:
 // ========================================================
 
-@import "slideshow"; // Slide-show styles.
-@import "sizefix";   // Size fixes and adjustments for different screens/device.
-@import "pygments";  // Pygments code syntax highlighting styles.
+@import "slideshow";  // Slide-show styles.
+@import "sizefix";    // Size fixes and adjustments for different screens/device.
+@import "highlight";  // Source code syntax highlighting styles.
 

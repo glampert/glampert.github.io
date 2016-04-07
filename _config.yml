@@ -45,10 +45,11 @@ stackexchange_username: glampert
 # Build settings:
 # ===========================
 
+# Markdown engine:
 markdown: kramdown
 
 # Syntax highlight plugin:
-highlighter: pygments
+highlighter: rouge
 
 # Automatic sitemap.xml generator:
 jekyll-sitemap: true

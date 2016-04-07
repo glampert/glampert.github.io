@@ -21,8 +21,7 @@ menu_visible: false
 
 - **Creating a custom scripting language**
 
-  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
-  [Part 1: Design considerations ans syntax definition](#)
+  - [Part 1: Design considerations and syntax definition](custom-scripting-language/part-1/)
 
   - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
   [Part 2: Lexical tokenization with Flex](#)

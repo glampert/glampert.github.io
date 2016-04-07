@@ -258,7 +258,7 @@ used to generate the site. But nevertheless, it was fun to play with CSS and jQu
 design the interface that you see here. Hope it isn't too bad!
 
 [Jekyll](http://jekyllrb.com/) was the main tool used here, but there's also [jQuery](https://jquery.com/),
-[Bootstrap](http://getbootstrap.com/), [Pygments](http://pygments.org/) for code syntax highlighting
+[Bootstrap](http://getbootstrap.com/), [Rouge](http://rouge.jneen.net/) for code syntax highlighting
 (previously I was using [Highlight.js](https://highlightjs.org/)) and some plain-old HTML and CSS
 ([SASS actually](http://sass-lang.com/)).
 

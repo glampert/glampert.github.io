@@ -1,10 +1,9 @@
 
 //
-// Customized Zenburn theme for Pygments.
-// This theme is not included in the defaults.
+// Customized Zenburn theme for code syntax highlighting.
 //
 
-.hll { background-color: #222 }
+.hll { background-color: rgb(63, 63, 63) }
 .err { color: #e37170; background-color: #3d3535 }
 .ge  { color: #ccc;    font-style: italic}
 .cs  { color: #cd0000; font-weight: bold }

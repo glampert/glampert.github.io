@@ -125,7 +125,7 @@ We start off with a VCL assembly program. The following is an example of a very
 simplistic VU1 microprogram that processes a single triangle. You might recognize
 are few instructions from the MIPS instruction set:
 
-{% highlight ca65 %}
+{% highlight ini %}
 
 ;;
 ;; test_triangle.vcl
@@ -188,7 +188,7 @@ are few instructions from the MIPS instruction set:
         ; Store the transformed vertex:
         sqi vertex, (destAdress++)
 
-        ; Increment the loop counter and repeat
+        ; Decrement the loop counter and repeat
         ; if not done with the triangle yet:
         iaddi vertexCounter, vertexCounter, -1
         ibne  vertexCounter, vi00, vertexLoop
@@ -206,7 +206,7 @@ This "high-level assembly" is not valid VU1 asm code per-say. If you pass it
 to `dvp-as` is won't assemble as-is. Running Open VCL on it yields the following "raw"
 VU1 assembly microprogram:
 
-{% highlight ca65 %}
+{% highlight ini %}
 
 .global vu1Triangle_CodeStart
 .global vu1Triangle_CodeEnd

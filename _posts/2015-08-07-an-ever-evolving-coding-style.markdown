@@ -63,8 +63,11 @@ This style is similar to the [style used by the .Net](https://msdn.microsoft.com
 
 {% highlight c++ %}
 
-class HttpHeader; // Good
-class HTTPHeader; // Bad
+// Yes
+class HttpHeader { ... };
+
+// No
+class HTTPHeader { ... };
 
 {% endhighlight %}
 
@@ -108,10 +111,10 @@ Variable names are always `camelCase`, independent of scope or purpose. Examples
 
 {% highlight c++ %}
 
-int count;        // Single word, good
-int appleCount;   // Multi-word camelCase, good
-int apple_count:  // Incorrect
-int _apple_count; // No, no, no!
+int count;        /* Single word, good */
+int appleCount;   /* Multi-word camelCase, good */
+int apple_count:  /* Nope */
+int _apple_count; /* No, no, no */
 
 {% endhighlight %}
 
@@ -169,8 +172,11 @@ C++ namespace names are always lowercase. Also try to avoid long namespace names
 
 {% highlight c++ %}
 
-namespace engine { ... }       // Good
-namespace EngineModule { ... } // Bad/too long!
+// Good
+namespace engine { ... }
+
+// Bad/too long!
+namespace EngineModule { ... }
 
 {% endhighlight %}
 
@@ -209,9 +215,9 @@ of items, prefer a name ending in `Count`. Examples:
 
 {% highlight c++ %}
 
-int getElementCount() const; // Good/preffered
-int getNumElements()  const; // Incorrect
-int getNbElements()   const; // Wrong. 'Nb' is even less clear than 'Num'
+int getElementCount() const; /* Good/preffered */
+int getNumElements()  const; /* Not great, but passable... */
+int getNbElements()   const; /* Worse. 'Nb' is even less clear than 'Num' */
 
 {% endhighlight %}
 
@@ -412,7 +418,8 @@ const float ratio = (width / height);
 
 {% highlight c++ %}
 
-return (true); // Don't!
+// Don't do this!
+return (true);
 
 {% endhighlight %}
 
@@ -421,8 +428,9 @@ This is also excessive use of parenthesis:
 {% highlight c++ %}
 
 return (x == y); // Wrong
-...
-return (std::strcmp("hello", data) == 0); // Wrong
+
+// Wrong
+return (std::strcmp("hello", data) == 0);
 
 {% endhighlight %}
 
@@ -431,8 +439,9 @@ Should be just:
 {% highlight c++ %}
 
 return x == y; // Good
-...
-return std::strcmp("hello", data) == 0; // Good
+
+// Good
+return std::strcmp("hello", data) == 0;
 
 {% endhighlight %}
 
@@ -512,7 +521,7 @@ struct B
 
 void funcC();
 
-} // namespace module
+} /* namespace module */
 
 {% endhighlight %}
 
@@ -538,7 +547,7 @@ void Test_strCopy();
 // Test a class/struct named 'SpatialSorter' that sorts a specific 'DrawVertex' type.
 void Test_SpatialSorter_DrawVertexSorting();
 
-} // namespace unittest
+} /* namespace unittest */
 
 {% endhighlight %}
 

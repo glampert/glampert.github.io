@@ -21,7 +21,7 @@ the shader that is used. So I decided to do some small changes to the library an
 
 Lets start by taking a look at the implementation of `[CCSprite draw]` (I've omitted some unimportant lines used for debugging and profiling).
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 -(void)draw
 {
@@ -58,7 +58,7 @@ Lets start by taking a look at the implementation of `[CCSprite draw]` (I've omi
 OK, just some standard OpenGL drawing code. And I don't want to just copy and paste that it into my custom draw method.
 Now where is the shader setup anyway? `CC_NODE_DRAW_SETUP()` is a good place to look for it:
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 #define CC_NODE_DRAW_SETUP()                                                \
 do {                                                                        \
@@ -73,7 +73,7 @@ do {                                                                        \
 Right, `CC_NODE_DRAW_SETUP()` sets the shader program. It is mixed in the middle of the draw method.
 But it doesn't have to be. So what I did was to split `draw` into two methods:
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 // Added by Lampert on 29/April/2014 to allow overwriting [CCSprite draw] and apply a custom shader.
 -(void)drawInternal
@@ -119,7 +119,7 @@ must be provided in the header file (`CCSprite.h`). No big deal, just a recompil
 Now that the shader setup is external to `drawInternal`, we can easily overwrite draw to add a custom shader,
 without having to copy and paste the Cocos drawing code. In my custom Sprite class, for example, its draw method looks like:
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 - (void)draw
 {
@@ -174,7 +174,7 @@ As a bonus, I've written my own shader program manager, just for fun. It follows
 
 ### `GLProgManager.h`
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 // Vertex attribute pair [mane,index]
 typedef struct sVertexAttrib {
@@ -212,7 +212,7 @@ typedef enum eGLProgId {
 
 ### `GLProgManager.m`
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 #import "GLProgManager.h"
 

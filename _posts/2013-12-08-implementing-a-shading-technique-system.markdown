@@ -36,12 +36,12 @@ I won't go into the details of the parser here; just show the basic structure of
 The BON language is built around two basic elements: An **Object** and a **Property**.
 
 An object is declared as:
-{% highlight javascript %}
+{% highlight c %}
 my_object: { }
 {% endhighlight %}
 
 And properties:
-{% highlight javascript %}
+{% highlight c %}
 my_string_property: "a b c d"
 my_number_property: 3.141592
 my_vector_property: (1, 2, 3)
@@ -76,7 +76,7 @@ basic shading technique system available, it is a lot easier to do so.
 
 A shader block in a technique file is declared as the following:
 
-{% highlight javascript %}
+{% highlight c %}
 
 shader: {
 
@@ -161,7 +161,7 @@ Vertex formats (or vertex inputs if you will) are also generated based on inform
 
 A technique block is declared as the following:
 
-{% highlight javascript %}
+{% highlight c %}
 
 technique: {
     name: "my_tech", // User defined name identifier.
@@ -185,7 +185,7 @@ New render states can also be added at will, according to the needs of the engin
 
 ### An example of a complete technique file
 
-{% highlight javascript %}
+{% highlight c %}
 
 shader: {
     name: "DebugVS",
@@ -248,9 +248,9 @@ varying(1) vec2 v_texCoords;
 
 void main()
 {
-    v_color      = a_color;
-    v_texCoords  = vec2(a_texCoords_pointSize.xy); // xy are the texture coordinates
-    v_pointSize  = a_texCoords_pointSize.z;        // and z stores the point size
+    v_color     = a_color;
+    v_texCoords = vec2(a_texCoords_pointSize.xy); // xy are the texture coordinates
+    v_pointSize = a_texCoords_pointSize.z;        // and z stores the point size
 
     // Position is transformed and passed to the next stage:
     v_transformedPosition = vec4(u_modelViewProjectionMatrix * vec4(a_position, 1.0));

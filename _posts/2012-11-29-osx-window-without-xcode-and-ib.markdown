@@ -20,7 +20,7 @@ and research to finally be able to open a simple application window on the Mac.
 
 The following Objective-C code listing is all it takes:
 
-{% highlight objectivec %}
+{% highlight c++ %}
 
 /*
  * File: OSXWindow.m
