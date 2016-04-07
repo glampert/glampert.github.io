@@ -16,7 +16,7 @@ tag_line_alt: Welcome to Lampert's website!
 # It will appear in your document head meta (for Google search results)
 # Note: The `>` means to ignore newlines until next item ("destination").
 description: >
-    This is my personal site/blog, where I write about some of my projects and other random things about
+    This is my personal site/blog where I write about some of my projects and other random things about
     programming and game development. I'm mainly interested in graphics and real-time rendering for games.
     C and C++ are usually the languages I play with, but every now and then I venture with something more exotic.
 
