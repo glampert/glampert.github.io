@@ -199,7 +199,7 @@ you either find the data or until -1 is encountered.
 remain unchanged after the table is constructed, but for the above collision resolution to
 work, `indexChain[]` size must match the size of the external value-store, so whenever a new
 index is added to the hash-index, a check is performed to see if the new index will fit the
-index chain, if not, `indexChain[]` is resized to match, which some extra taken from `granularity`
+index chain, if not, `indexChain[]` is resized to match, with some extra taken from `granularity`
 to amortize future growths of the array.
 
 Now comes a little bit of old school black magic... This is what `First()` and `Next()` look like:
@@ -218,8 +218,8 @@ int idHashIndex::Next( const int index ) const {
 {% endhighlight %}
 
 `hashMask`, `lookupMask` and `INVALID_INDEX` are basically an effort to make those two methods
-as fast as possible. They effectively allow implementing lookup without using any `if` branches, which
-back then was a bigger deal then it is today. Nowadays you don't pay much for a jump instruction,
+as fast as possible. They effectively allow implementing lookup without using any `if` tests, which
+back then was a bigger deal than it is today. Nowadays you don't pay much for a jump instruction,
 but nonetheless, they are actually very elegant optimizations once you get the gist of it.
 
 `INVALID_INDEX` is a static array with one element that is set to -1, the "invalid index" sentinel
@@ -237,11 +237,11 @@ Now `lookupMask` was a bit mysterious at first. I didn't really get the point of
 the code in a few tests. `lookupMask` will always be set to either 0 or -1. It is of type `int`, and
 this is important. It's sole objective it to avoid the need for an extra `if` test for the empty hash-index
 case. When empty, `lookupMask` is 0, so the AND op we see above will always yield zero, which is the only
-index available in `INVALID_INDEX` and equals to -1, then correct value to return for the empty case.
-When *not* empty, `lookupMask` is -1. If we remember how signed integers are represented, we can see why.
+index available in `INVALID_INDEX` and equals to -1, the correct value to return for the empty case.
+When *not* empty, `lookupMask` is -1. If we remember how signed integers are represented in two's complement, we can see why.
 -1 is represented as all 1s in binary, or `0xFFFFFFFF...` in hexadecimal. ANDing a bit with 1 will yield back
 the input, so when the table is not empty, the AND with `lookupMask` is just a no-op. This smart little
-hack makes the code branch-less by trading a jump for a much cheaper AND instruction.
+hack makes the code branch-less by trading a compare and jump for a much cheaper AND instruction.
 
 ### Benchmarks
 
@@ -341,7 +341,7 @@ largest time sample..: 401 ns
 
 `std::map` as expected lost on all three operations. It only won at the worst case insertion time.
 Map is implemented as a binary search tree (usually a [Red-Black][link_rb_tree] balanced tree), so
-it allocates sparse node structures for each new value pair in the tree. This will have terrible
+it allocates sparse node structures for each new key-value pair in the tree. This will have terrible
 data locality. My guess is that it only won in the worst case insertion because it always allocates
 a new node for each insertion, so the cost is pretty much distributed evenly, while `unordered_map`
 probably only allocated memory at construction, but it might grow the table if needed, thus the
@@ -359,14 +359,14 @@ Standard sibling, the `unordered_map`.
 `idHashIndex` seems like a pretty handy tool to have, after looking at the tests above,
 so I went ahead and extracted the code into a standalone single-file template class that
 I can now use for my own projects! If you'd like to use it as well, you'll find it together
-with the test and benchmarks code in my [GitHub repository][link_git_repo]. I have kept
+with the test and benchmark code in my [GitHub repository][link_git_repo]. I have kept
 the GPL license though, to comply with the license used by the DOOM 3 project. So that might
 limit its uses a little, I'm afraid. If that is not a problem for you, then please, make
 it useful and send feedback!
 
 ### Watch list
 
-Three very relevant presentations, available on YouTube, I mentioned above
+Three very relevant presentations, available on YouTube, I mention above
 that are worth watching for anyone interested in C++ and optimizations:
 
 - [Mike Acton on "Data-Oriented Design and C++"][link_dod]
