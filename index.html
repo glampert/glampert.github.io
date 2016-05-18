@@ -61,25 +61,12 @@ layout: default
             All<span class="my-badge"> {{ site.posts | size }}</span>
         </a>
 
-        <!-- Categories list is sorted alphabetically according to category name. -->
+        <!-- Categories list is sorted alphabetically according to category name. These display in the right-side menu. -->
         {% assign sorted_categories = site.categories | sort %}
         {% for category in sorted_categories %}
         <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
-            <!-- Same hack from 'post-list.html', to fix a few acronyms and names with different capitalization: -->
-            {% assign cat_str = category | first %}
-            {% case cat_str %}
-                {% when 'ios' %}
-                    {% assign category_name = 'iOS' %}
-                {% when 'opengl' %}
-                    {% assign category_name = 'OpenGL' %}
-                {% when 'webgl' %}
-                    {% assign category_name = 'WebGL' %}
-                {% when 'gdc' %}
-                    {% assign category_name = 'GDC' %}
-                {% else %}
-                    {% assign category_name = cat_str | capitalize %}
-            {% endcase %}
-            {{ category_name }} <span class="my-badge">{{ category | last | size }}</span>
+            {% assign cat_name = category | first %}
+            {{ cat_name }} <span class="my-badge">{{ category | last | size }}</span>
         </a>
         {% endfor %}
 

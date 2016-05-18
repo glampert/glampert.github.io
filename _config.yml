@@ -56,4 +56,5 @@ jekyll-sitemap: true
 
 gems:
   - jekyll-sitemap
+  - jekyll-paginate
 
