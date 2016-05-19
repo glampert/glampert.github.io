@@ -262,9 +262,5 @@ design the interface that you see here. Hope it isn't too bad!
 (previously I was using [Highlight.js](https://highlightjs.org/)) and some plain-old HTML and CSS
 ([SASS actually](http://sass-lang.com/)).
 
-You can find the source code as well as all the site's content and assets in the
-[Git repository](https://github.com/glampert/glampert.github.io). Source code is released under the
-MIT license, so feel free to fork it and use as a base template for your own website if it suits you `;)`.
-
-Site currently hosted by [GitHub Pages](https://pages.github.com/).
+Site proudly hosted by [GitHub Pages](https://pages.github.com/).
 

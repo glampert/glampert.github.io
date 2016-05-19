@@ -14,7 +14,7 @@ Studying Open Source game engines is a great learning tool for any game develope
 specially for game programmers. Luckily we have a few good ones to look into, even
 though it is only a tiny fraction of the number of games out there that go Open Source.
 One of my favorites is the DOOM 3 Engine, AKA [id Tech 4][link_idtech4].
-Even though old by now, it was a very solid and well written game engine and it still
+Even if somewhat old by now, it was a very solid and well written game engine and it still
 offers a lot of knowledge about game programming.
 
 Whenever I start looking into a new game engine, I like to begin with the core and
