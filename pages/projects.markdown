@@ -9,13 +9,12 @@ menu_visible: true
 * Contents
 {:toc}
 
-This is my personal portfolio page where some of my projects are showcased.
-I'm a supporter of Open Source Software, so you can find source code available
-with an unrestrictive license for all of them.
+# Personal Projects
 
-- [GitHub page](https://github.com/glampert)
+Some of my favorite toy/hobby projects are listed here.
 
-- [Bitbucket page](https://bitbucket.org/glampert/)
+Source code for them is either available on [**GitHub**](https://github.com/glampert)
+or [**Bitbucket**](https://bitbucket.org/glampert/).
 
 ----
 
@@ -40,6 +39,33 @@ better performance. Memory footprint is also small and configurable by the user 
 
 Library source is Public Domain and available on [GitHub](https://github.com/glampert/debug-draw).
 You'll also find detailed documentation and usage examples in the source code repository.
+
+----
+
+## Moon Lang - Custom scripting language
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/moon-lang-s1.png" | prepend: site.baseurl }}">
+</div></div>
+
+Moon is a custom scripting language that borrows some of its syntax from Lua and Rust.
+It supports functions, structures, enums, ranges, arrays, imports, and all that good
+stuff you'd expect. It is also much more strongly-typed than Lua, but not as much as Rust.
+The C++ interface is also meant to be simple and easy to use. The Virtual Machine is stack-based
+and uses a tiny set of bytecode instructions.
+
+I started this project just to learn how to use Flex and Bison to write a simple compiler
+font-end, but I ended up taking it to a nearly production-grade stage. The language
+is fairly complete and usable, but it lacks some basic support libraries as of now.
+
+I also use this project as sample for [a series of tutorials](/tutorials/custom-scripting-language/).
+
+The name *Moon* is just a play on the meaning of Lua (Moon in Portuguese).
+I chose the name on purpose to leave it clear this is a lame rip-off on the
+syntax of the popular scripting language, even though in the end it turned
+out into a Lua/Rust hybrid syntax.
+
+[Project page on GitHub](https://github.com/glampert/moon-lang).
 
 ----
 
@@ -73,7 +99,7 @@ Gameplay recorded from the PCSX2 Emulator:
 
 ----
 
-## WebGL Lightsaber and demos
+## WebGL Lightsaber and WebGL demos
 
 <div class="slideshow-container"><div class="slideshow-img-list">
 <img defpath="{{ "/static/images/slides/lightsaber-s1.jpeg" | prepend: site.baseurl }}">
@@ -167,8 +193,8 @@ Or OSSG for short, is a side scrolling space shooter game for iOS. This game was
 course in Brazil. It uses the Objective-C version of the Cocos2D library, plus some raw OpenGL-ES for the 3D elements. The in-game background
 scene is animated with planets and randomly spawned asteroids. The main game itself is comprised of 2D sprites drawn as overlays on top of
 the 3D background. This game was my first experience with iOS dev and Objective-C programming. By the end of the iOS programming unit,
-the game was more or less done but not polished enough to be launched, plus then I didn't have a developer license either, so it never
-got published on the App Store.
+the game was more or less done but not polished enough to be launched, plus then I didn't own an Apple Developer license either, so it never
+got published in the App Store.
 
 You can watch a short gameplay video [here](https://youtu.be/YQTbddA4IYw).
 Source code [is also available](https://bitbucket.org/glampert/ossg).

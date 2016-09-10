@@ -21,7 +21,8 @@ menu_visible: false
 
 - **Creating a custom scripting language**
 
-  - [Part 1: Design considerations and syntax definition](custom-scripting-language/part-1/)
+  - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
+  [Part 1: Design considerations and syntax definition](#)
 
   - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
   [Part 2: Lexical tokenization with Flex](#)
@@ -52,9 +53,6 @@ menu_visible: false
 
 - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
 [Effects using Polyboards](#)
-
-- <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
-[Using AMD Sparse Textures extension](#)
 
 - <img src="{{ "/static/images/work-in-progress-icon.png" | prepend: site.baseurl }}" id="wip-icon-image">
 [GLProxy - OpenGL API interception basics](#)

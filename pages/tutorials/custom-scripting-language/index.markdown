@@ -8,7 +8,7 @@ permalink: /tutorials/custom-scripting-language/
 
 ### This set of tutorials is divided in the following parts:
 
-- [**Part 1:** Design considerations and syntax definition](part-1/)
+- [**Part 1:** Design considerations and syntax definition](#)
 
 - [**Part 2:** Lexical tokenization with Flex](#)
 

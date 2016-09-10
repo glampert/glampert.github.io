@@ -43,7 +43,7 @@ Everything is contained in a single source file: `adf2mp3.cpp`.
 
 ADF files with the Radio Stations can be found in the directory:
 
-> `{INSTALL_PATH}/Rockstar Games/Grand Theft Auto Vice City/audio`
+> {INSTALL_PATH}/Rockstar Games/Grand Theft Auto Vice City/audio
 
 of your local copy of the game (for the Steam version of the game, at least).
 

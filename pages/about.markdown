@@ -8,40 +8,40 @@ menu_visible: true
 
 <div>
   <img src="{{ "/static/images/profile-pic.png" | prepend: site.baseurl }}" id="profile-pic" title="Me circa 2014">
+</div>
+
+Hi, I'm Guilherme Lampert (usually known as just Lampert), a Brazilian game developer currently living and working
+in the United Kingdom. I work at [Rockstar North](http://www.rockstarnorth.com/) as an Animation Systems Programmer,
+developing games for PC and Consoles.
+
+This site/blog is where I post about some of my personal projects and experiments on games programming.
+Views and opinions expressed here are my own don't necessarily reflect those of my employer.
+
+Some topics of interest that you will find in this site:
+
+- Game development
+- Graphics and real-time rendering
+- Game Engines and low-level programming
+- Retro-programming and reverse engineering
+- Compilers and programming languages
+- General C and C++ coding tips and techniques
+
+----
+
+You can also find me on [StackOverflow][link_so], [CodeReview.SE][link_cr] and [GameDev.SE][link_gdse]:
+
+<div>
   <a href="http://stackexchange.com/users/1234852">
-    <img src="http://stackexchange.com/users/flair/1234852.png" id="stackexchange-flair" alt="Stack Exchange, a network of community-driven Q&amp;A sites" title="Profile for glampert on Stack Exchange, a network of free, community-driven Q&amp;A sites">
+    <img src="http://stackexchange.com/users/flair/1234852.png"
+         id="stackexchange-flair"
+         alt="Stack Exchange, a network of community-driven Q&amp;A sites"
+         title="Profile for glampert on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+    >
   </a>
 </div>
 
-Hi, my name is Lampert, and I know how to turn bits of strange colored text into pretty images in the computer screen.
-In other words, I'm a Graphics Programmer. My main interest is in graphics and real-time rendering for games, but I also
-like to work with low-level code and optimizations. I'm a C and C++ adept, but can also "speak" in several other programming
-languages. Lately I've been fiddling with JavaScript, which has helped me build this very website!
 
-I enjoy working with low-level, close-to-the-metal code. The inner workings of Game Engines,
-libraries, and compilers interest me a lot too, as well as optimizing and improving code performance.
-Recently, I've also played a bit with Console homebrew development and reverse engineering. Look in the
-[blog section of this site][link_blog] and you'll find some of my writings about these endeavors.
-
-Being up-to-date with the latest technologies and tools that arise in the world of computing is very
-important, so I try to experiment whenever possible with different programming languages, tools and frameworks.
-I place a lot of importance in code quality and architecture, trying to always follow the best programming
-practices and patterns. My ultimate goal as a programmer is to write code that is well designed and implemented,
-in a way that it will be easy to use and maintain and will be useful and functional for as long as it needs to be.
-In account of this, it is only natural that I'm a big adept of the practice of code review. I'm an active user
-of [CodeReview.SE][link_cr], one of the best sites in the whole StackExchange network, in my opinion. Anyone who
-is seriously into programming should definitely pay it a visit and become a regular!
-
-I'm always keen to hear about interesting and challenging job opportunities.
-If you have one, get in touch by [email][link_mail] or [LinkedIn][link_linkedin].
-
-> - [**CV / Resume**][link_cv]
-> - [**StackOverflow Careers**][link_so]
-
-[link_linkedin]: https://www.linkedin.com/in/glampert
-[link_so]:       http://stackoverflow.com/cv/glampert-gamecoder
-[link_cr]:       http://codereview.stackexchange.com/users/39810/glampert?tab=profile
-[link_cv]:       {{ '/curriculum/' | prepend: site.baseurl }}
-[link_mail]:     mailto:{{ site.email }}
-[link_blog]:     /
+[link_so]:   http://stackoverflow.com/users/1198654/glampert?tab=profile
+[link_cr]:   http://codereview.stackexchange.com/users/39810/glampert?tab=profile
+[link_gdse]: http://gamedev.stackexchange.com/users/41153/glampert?tab=profile
 
