@@ -15,7 +15,7 @@ in the United Kingdom. I work at [Rockstar North](http://www.rockstarnorth.com/)
 developing games for PC and Consoles.
 
 This site/blog is where I post about some of my personal projects and experiments on games programming.
-Views and opinions expressed here are my own don't necessarily reflect those of my employer.
+Views and opinions expressed here are my own and don't necessarily reflect those of my employer.
 
 Some topics of interest that you will find in this site:
 
