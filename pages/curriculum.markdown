@@ -2,7 +2,7 @@
 layout:       page
 title:        CV / Resume
 permalink:    /curriculum/
-menu_index:   5
+menu_index:   4
 menu_visible: false
 ---
 

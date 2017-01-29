@@ -48,7 +48,7 @@ You'll also find detailed documentation and usage examples in the source code re
 <img defpath="{{ "/static/images/slides/moon-lang-s1.png" | prepend: site.baseurl }}">
 </div></div>
 
-Moon is a custom scripting language that borrows some of its syntax from Lua and Rust.
+Moon is a custom scripting language that borrows some of its syntax from [Lua](https://www.lua.org/) and [Rust](https://www.rust-lang.org/en-US/).
 It supports functions, structures, enums, ranges, arrays, imports, and all that good
 stuff you'd expect. It is also much more strongly-typed than Lua, but not as much as Rust.
 The C++ interface is also meant to be simple and easy to use. The Virtual Machine is stack-based
@@ -57,8 +57,6 @@ and uses a tiny set of bytecode instructions.
 I started this project just to learn how to use Flex and Bison to write a simple compiler
 font-end, but I ended up taking it to a nearly production-grade stage. The language
 is fairly complete and usable, but it lacks some basic support libraries as of now.
-
-I also use this project as sample for [a series of tutorials](/tutorials/custom-scripting-language/).
 
 The name *Moon* is just a play on the meaning of Lua (Moon in Portuguese).
 I chose the name on purpose to leave it clear this is a lame rip-off on the

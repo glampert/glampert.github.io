@@ -29,22 +29,6 @@ well separated from the game logic, plus the code is quite readable and straight
 It is going to be a very interesting project to work on this year. If you'd like to contribute, get
 in touch. Let's write a port that makes John Carmack proud!
 
-## New tutorials page on the main site!
-
-You might have noticed that big "tutorials" banner on the main page,
-along with the change of layout of the post thumbnails that shifted to the left:
-
-![New tutorials]({{ "/static/images/posts/new-tuts.jpeg" | prepend: site.baseurl }})
-
-If you visit the tutorials page right now, it will be full of placeholder links
-to the tutorials to come. I plan on turning some side projects of mine
-and other small code snippets that I never published into a few tutorials
-about problems I've encountered and had to solve with little information
-available, so I thought it would be nice to spread some of the acquired
-knowledge to save other people's time if they have to solve the same problems.
-
-Check back in a couple weeks and you should already find the first few available!
-
 ## Lots of old code going Open Source or Public Domain!
 
 I'm also in the process of getting some old libraries and unfinished projects
@@ -58,8 +42,10 @@ my hard-drive anyways, so I much prefer to have people using it instead.
 
 I'll be releasing a lot more stuff in the coming months, so follow my
 [GitHub user][link_me_gh] if you're interested in getting the updates.
+For some of the smaller stuff I'll just create [Gists][link_gist], so be sure to check them as well!
 
 [link_me_gh]: https://github.com/glampert
 [link_q2_gh]: https://github.com/glampert/quake2-for-ps2
 [link_dd_gh]: https://github.com/glampert/debug-draw
+[link_gist]:  https://gist.github.com/glampert
 

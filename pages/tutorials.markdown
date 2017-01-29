@@ -2,7 +2,7 @@
 layout:       tuts-list
 title:        Tutorials
 permalink:    /tutorials/
-menu_index:   3
+menu_index:   6
 menu_visible: false
 ---
 

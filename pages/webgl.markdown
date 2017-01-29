@@ -2,7 +2,7 @@
 layout:       post
 title:        WebGL Resources
 permalink:    /webgl/
-menu_index:   4
+menu_index:   3
 menu_visible: false
 ---
 
