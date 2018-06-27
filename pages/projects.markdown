@@ -230,7 +230,7 @@ As always, [source code is available](https://bitbucket.org/glampert/l3d).
 Project done around the third semester of my Game Development course, circa 2011. The assignment was to apply a set of
 known OOP design patterns to any piece of software you wrote. So I decided to code a tiny framework for first person games
 to use as test case for the design patterns. The game itself was quite crude, just basically a level where you could move
-around in first person and shoot at badies. The framework did feature a couple cool things, such as loading and rendering of
+around in first person and shoot at baddies. The framework did feature a couple cool things, such as loading and rendering of
 animated Doom 3 MD5 models (this before the game went Open Source, if I'm not mistaken), procedural terrain generation and
 some cheesy fire and flame effects done with billboards and Fragment Shader. In implementing the first person camera was when
 I figured out about the depth hack that is used by all FPS games to avoid the weapon from poking into scene geometry.
