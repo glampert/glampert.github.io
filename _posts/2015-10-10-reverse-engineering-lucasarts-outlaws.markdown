@@ -189,7 +189,7 @@ them, but that's not an error in the extractor. Most of the images are actually 
 to fetch color from. Palettized textures with shared palettes is one of the oldest forms of
 lossy image compression used by games.
 
-The sprites for the 2D billboards like the badies and player weapons are stored in a custom binary
+The sprites for the 2D billboards like the baddies and player weapons are stored in a custom binary
 format with the `.NWX` extension. This format is not terribly complex, it seems to consist of a
 set of uncompressed bitmaps with metadata about each frame of animation. There's a Windows tool called
 "Nwx Editor" that allows editing those, you can find it at [theoutlawdad.com][link_oldad]. I didn't
