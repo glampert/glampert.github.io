@@ -16,7 +16,7 @@ and difficulties of programming a game for this platform using the freely availa
 post of this series where I'll talk a bit about the outcome of this endeavor, a little game demo which I call "The Dungeon Game".
 
 This tiny game was inspired by classics like *Dungeon Siege* and *Diablo*. It features third-person perspective camera,
-PS2 Controller input, melee combat between player and badies, particle effects, shadow-blobs and MD2 animations as well
+PS2 Controller input, melee combat between player and baddies, particle effects, shadow-blobs and MD2 animations as well
 as three game levels for you to test your skills!
 
 ![Dungeon Game]({{ "/static/images/posts/ps2/demo-running.jpeg" | prepend: site.baseurl }} "Game running on the Console")
