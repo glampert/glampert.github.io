@@ -10,9 +10,7 @@ menu_visible: true
   <img src="{{ "/static/images/profile-pic.png" | prepend: site.baseurl }}" id="profile-pic" title="Me circa 2014">
 </div>
 
-Hi, I'm Guilherme Lampert (usually known as just Lampert), a Brazilian game developer currently living and working
-in the United Kingdom. I work at [Rockstar North](http://www.rockstarnorth.com/) as an Animation Systems Programmer,
-developing games for PC and Consoles.
+Hi, I'm Guilherme Lampert (usually known as just Lampert or GL), a Brazilian game developer living and working in the United Kingdom. I'm currently working with the Engine team at [PlayStation London Studio](https://www.playstation.com/en-gb/footer/about-us/world-wide-studios/sie-london-studio/) developing awesome VR games and tech. Previously I was at [Rockstar North](http://www.rockstarnorth.com/) working in the Animation Systems used by Red Dead Redemption 2 and the RAGE Engine.
 
 This site/blog is where I post about some of my personal projects and experiments on games programming.
 Views and opinions expressed here are my own and don't necessarily reflect those of my employer.
