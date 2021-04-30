@@ -20,7 +20,7 @@ but who knows, someone might find some useful code fragments in there anyway, I'
 
 [**fps-game**](https://bitbucket.org/glampert/fps-game)                       | First Person Shooter game and tiny game framework/engine.
 [**simd-rt**](https://bitbucket.org/glampert/simd-rt)                         | Minimal Ray Tracer. Runs in real time, on up to 4 threads.
-[**procedural-fish**](https://bitbucket.org/glampert/procedural-fish)         | Fish simulation (yep you've read it right `:P`).
+[**procedural-fish**](https://bitbucket.org/glampert/procedural-fish)         | Fish simulation (using flocking behaviours).
 [**tic-tac-toe-tcp**](https://bitbucket.org/glampert/tic-tac-toe-tcp)         | Networked Tic-Tac-Toe game with an OpenGL based GUI.
 [**wavefront-obj-tools**](https://bitbucket.org/glampert/wavefront-obj-tools) | Wavefront Object mesh loader and Progressive Mesh LOD system.
 

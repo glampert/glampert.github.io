@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      New year, new stuff - Lots of projects on the way!
+title:      New year, new projects
 author:     Guilherme Lampert
 categories: Miscellaneous Quake-2
 thumbnail:  2016
@@ -8,11 +8,9 @@ thumbnail:  2016
 
 I've been off the grid for a couple months now, but I wasn't just chilling
 over the holidays, I've been doing a lot of stuff on the side too. Guess it
-is time to make some of them known `;)`
+is time to make some of them known.
 
-## Quake II on the PS2!
-
-In case you haven't noticed the [project on my GitHub account][link_q2_gh] already...
+## Quake II on the PS2
 
 ![Good news, everyone!]({{ "/static/images/posts/good-news.jpeg" | prepend: site.baseurl }})
 
@@ -29,7 +27,9 @@ well separated from the game logic, plus the code is quite readable and straight
 It is going to be a very interesting project to work on this year. If you'd like to contribute, get
 in touch. Let's write a port that makes John Carmack proud!
 
-## Lots of old code going Open Source or Public Domain!
+- [Source code][link_q2_gh]
+
+## Lots of old code going Open Source or Public Domain
 
 I'm also in the process of getting some old libraries and unfinished projects
 that I never made public into a presentable enough shape to publish them on
@@ -42,7 +42,7 @@ my hard-drive anyways, so I much prefer to have people using it instead.
 
 I'll be releasing a lot more stuff in the coming months, so follow my
 [GitHub user][link_me_gh] if you're interested in getting the updates.
-For some of the smaller stuff I'll just create [Gists][link_gist], so be sure to check them as well!
+For some of the smaller stuff I'll just create [Gists][link_gist], so be sure to check them as well.
 
 [link_me_gh]: https://github.com/glampert
 [link_q2_gh]: https://github.com/glampert/quake2-for-ps2

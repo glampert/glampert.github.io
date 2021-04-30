@@ -543,6 +543,14 @@ img + em {
 // Stuff from the ABOUT page:
 // ========================================================
 
+#medium-pic {
+    max-width:        320px;
+    max-height:       260px;
+    border:           5px solid white;
+    border-radius:    0;
+    background-color: white;
+}
+
 #profile-pic {
     max-width:        135px;
     max-height:       135px;

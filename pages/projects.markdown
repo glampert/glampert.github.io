@@ -9,8 +9,6 @@ menu_visible: true
 * Contents
 {:toc}
 
-# Personal Projects
-
 Some of my favorite toy/hobby projects are listed here.
 
 Source code for them is either available on [**GitHub**](https://github.com/glampert)
@@ -30,15 +28,14 @@ Debug Draw is an immediate-mode-ish, renderer agnostic, lightweight debug drawin
 It is a single source file Public Domain library that provides simple and fast lines, points
 and text drawing for visual debugging of 3D scenes and games. Its main goal is to be as easy as
 possible to integrate with your own code, so it consist of a single header file that can also
-act as the implementation (when a given preprocessor is defined), so you should be able to just
+act as the implementation (when a given preprocessor macro is defined), so you should be able to just
 drop the file into your project's directory, `#include` it and be done. Integrating with the renderer
 of your choice should also be easy, all you have to do is implement a small interface class
 and give the library a pointer to your implementation. The library is designed around a procedural
 style similar to the old fixed-function OpenGL, but it batches draw calls under the hood for
 better performance. Memory footprint is also small and configurable by the user code.
 
-Library source is Public Domain and available on [GitHub](https://github.com/glampert/debug-draw).
-You'll also find detailed documentation and usage examples in the source code repository.
+- [Source code](https://github.com/glampert/debug-draw)
 
 ----
 
@@ -59,11 +56,11 @@ font-end, but I ended up taking it to a nearly production-grade stage. The langu
 is fairly complete and usable, but it lacks some basic support libraries as of now.
 
 The name *Moon* is just a play on the meaning of Lua (Moon in Portuguese).
-I chose the name on purpose to leave it clear this is a lame rip-off on the
+I chose the name on purpose to make it clear this is a lame rip-off on the
 syntax of the popular scripting language, even though in the end it turned
 out into a Lua/Rust hybrid syntax.
 
-[Project page on GitHub](https://github.com/glampert/moon-lang).
+- [Source code](https://github.com/glampert/moon-lang)
 
 ----
 
@@ -83,9 +80,7 @@ homebrew development for the PlayStation 2 Console, using only the freely availa
 the images above, which I call "The Dungeon Game". It is a third-person action game, inspired by classics like *Diablo*
 and *Dungeon Siege*.
 
-Very far from a complete game, but playable. Source code and other technical details can be found [here](https://bitbucket.org/glampert/ps2dev-tests).
-I have also written a couple posts about the development process, which you can find in the blog
-section of this site under the *Playstation-2* category.
+- [Source code](https://bitbucket.org/glampert/ps2dev-tests)
 
 Gameplay recorded from the PCSX2 Emulator:
 
@@ -108,19 +103,19 @@ Gameplay recorded from the PCSX2 Emulator:
 <img defpath="{{ "/static/images/slides/webgl-md5viewer-s1.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-To commemorate the announcement of a new *Star Wars* movie (Episode VII - The Force Awakens), I coded a browser
+To celebrate the announcement of a new *Star Wars* movie (Episode VII - The Force Awakens), I wrote a browser
 based WebGL Lightsaber app. It features the iconic Lightsaber sounds and mouse/touch interaction. Other technical
 goodies include: glow effect for the laser blade (AKA Light Bloom), trail rendering with Polyboards, anisotropic
-shading for the handle (brushed metal shader) and screen space anti-aliasing using FXAA. Since I already had my hands
-at work with JavaScript and WebGL, I ended up coding a tiny rendering framework and other demos with it, which can all
-be found at the [source code repository](https://bitbucket.org/glampert/webgl-tests).
+shading for the handle (brushed metal shader) and screen space anti-aliasing using FXAA. 
+The project also includes a tiny WebGL rendering framework and a couple other demos.
 
-The live Lightsaber demo can be found [here]({{ "/static/webgl/lightsaber.html" | prepend: site.baseurl }});
-Other WebGL tests and demos, including a viewer for Doom 3 models, can be found
-[here]({{ "/webgl/" | prepend: site.baseurl }}). Make sure to open them on a WebGL
-capable Browser, like Chrome, Firefox or an up-to-date version of Safari.
+- [WebGL Lightsaber]({{ "/static/webgl/lightsaber.html" | prepend: site.baseurl }}) (and [blog post]({{ "/2015/06-07/webgl-lightsaber/" | prepend: site.baseurl }}))
 
-Search the blog section of this site for the *WebGL* category to read more about this.
+- [WebGL Cube]({{ "/static/webgl/hellocube.html" | prepend: site.baseurl }})
+
+- [DOOM3 MD5 Model Viewer]({{ "/static/webgl/doom3md5.html" | prepend: site.baseurl }})
+
+- [Source code](https://bitbucket.org/glampert/webgl-tests)
 
 ----
 
@@ -135,17 +130,17 @@ Search the blog section of this site for the *WebGL* category to read more about
 <img defpath="{{ "/static/images/slides/scs-s6.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-This project was an assignment from a University class about Game Design and Multiplayer.
+Project from my Game Development course in Brazil.
 My inspiration here was in games like *Freelancer* and *Wing Commander*. It is playable on PC and Mac, using keyboard/mouse
 or an Xbox controller. The multiplayer element is in the possibility to play it in split-screen mode with another local player.
 Initially I intended to also allow for multiplayer over the Internet, but I never got around finishing the net code before
 submitting the project. The game was written mostly in C++, with a few bits of C and Lua as well.
 
-It uses Core OpenGL 3+ for rendering. The lush backgrounds and planets you can see in the images above are just cubemaps,
-not actual geometry. The asteroids and props are real 3D models. Never got around implementing sound either, so playing
-it is a silent, self-reflection experience... This game was written at a time when I was shifting coding styles and still
-getting used to C++11, so overall, at the end I was not very pleased with the code and that contributed for me not taking
-the project any further. Project source is available [here](https://bitbucket.org/glampert/space-sim).
+It uses Core OpenGL 3+ for rendering. The space backgrounds and planets you can see in the images above are just cubemaps,
+not actual geometry. The asteroids and props are actual 3D models. Never got around implementing sound either, so playing
+it is a silent, self-reflection experience...
+
+- [Source code](https://bitbucket.org/glampert/space-sim)
 
 ----
 
@@ -160,20 +155,21 @@ the project any further. Project source is available [here](https://bitbucket.or
 <img defpath="{{ "/static/images/slides/vt-ios-s6.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-This was the final project for my Game Development course in Brazil. I implemented a "traditional" Virtual Texturing (VT)
+Project from my Game Development course in Brazil. I implemented a "traditional" Virtual Texturing (VT)
 system on OpenGL-ES for the iOS/Apple platform. Virtual Texturing, or ["MegaTextures"](https://en.wikipedia.org/wiki/MegaTexture)
 as it was popularized by John Carmack when still working at idSoftware, is an advanced texture atlasing technique that implements
-a texture streaming setup analogous to Virtual Memory, thus allowing for ridiculously large texture data sets, in the tens of Gigabytes ballpark.
+a texture streaming setup analogous to Virtual Memory, thus allowing for very large texture data sets, in the tens of Gigabytes range.
 
 Virtual Texturing is an interesting approach to the management and use of large texture databases for real-time applications,
 however, it is also very hard to get it right and working fast enough to be shippable, so it is only really worth the trouble
 for games and applications that need to render a lot of hi-res texture data. I can see some use for it on mobile platforms though.
-Mobile devices still have limited main memory but fair amounts of offline storage, plus fast Internet connections to allow for
-on-the-fly downloading of textures...
+Mobile devices still have limited main memory but fair amounts of fast offline storage, plus fast Internet connections to allow for
+on-the-fly downloading of textures.
 
-Source code for the project is available [here](https://bitbucket.org/glampert/vt-mobile). I've also recorded
-a [short video](https://youtu.be/sWz45m0QKj4) on the iOS Simulator. It runs with a very low frame-rate on the Sim,
-but you can get a better idea of how it works from the video. The demos run quite smoothly on an actual device.
+Here's a [short video](https://youtu.be/sWz45m0QKj4) captured on the iOS Simulator. It runs at a very low frame-rate on the Simulator,
+but seeing it in action gives a better idea of how the system works.
+
+- [Source code](https://bitbucket.org/glampert/vt-mobile)
 
 ----
 
@@ -187,15 +183,12 @@ but you can get a better idea of how it works from the video. The demos run quit
 <img defpath="{{ "/static/images/slides/ossg-ios-s5.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-Or OSSG for short, is a side scrolling space shooter game for iOS. This game was also built as a class assignment for my Game Development
+Abbreviated OSSG, this is a side scrolling space shooter game for iOS. It was made for a class assignment in my Game Development
 course in Brazil. It uses the Objective-C version of the Cocos2D library, plus some raw OpenGL-ES for the 3D elements. The in-game background
 scene is animated with planets and randomly spawned asteroids. The main game itself is comprised of 2D sprites drawn as overlays on top of
-the 3D background. This game was my first experience with iOS dev and Objective-C programming. By the end of the iOS programming unit,
-the game was more or less done but not polished enough to be launched, plus then I didn't own an Apple Developer license either, so it never
-got published in the App Store.
+the 3D background. This game was my first experience with iOS dev and Objective-C programming. Short gameplay video [here](https://youtu.be/YQTbddA4IYw).
 
-You can watch a short gameplay video [here](https://youtu.be/YQTbddA4IYw).
-Source code [is also available](https://bitbucket.org/glampert/ossg).
+- [Source code](https://bitbucket.org/glampert/ossg)
 
 ----
 
@@ -210,10 +203,11 @@ Source code [is also available](https://bitbucket.org/glampert/ossg).
 This one was an assignment of a Graphics Programming unit I took in the one year Study Abroad scholarship I participated
 during 2012/13. The goal was to create a simple GUI editor that allows the user to place and perform simple edits in 3D models
 loaded from file. The program also saves the work and allows loading preexistent scene files to enable incremental edits by
-the user. The User Interface was built using Qt and the QtCreator tool, which is a very fine GUI framework, IMO.
+the user. The User Interface was built using Qt and the QtCreator tool.
 It also uses the [ASSIMP](http://assimp.sourceforge.net/) model loading library to provide support for a vast number
 of 3D model file formats. One of the perks of using Qt was being able to deploy the application on Mac, Windows and Linux.
-As always, [source code is available](https://bitbucket.org/glampert/l3d).
+
+- [Source code](https://bitbucket.org/glampert/l3d)
 
 ----
 
@@ -228,18 +222,16 @@ As always, [source code is available](https://bitbucket.org/glampert/l3d).
 </div></div>
 
 Project done around the third semester of my Game Development course, circa 2011. The assignment was to apply a set of
-known OOP design patterns to any piece of software you wrote. So I decided to code a tiny framework for first person games
+common OOP design patterns to any piece of software you wrote. So I decided to code a tiny framework for first person games
 to use as test case for the design patterns. The game itself was quite crude, just basically a level where you could move
-around in first person and shoot at baddies. The framework did feature a couple cool things, such as loading and rendering of
-animated Doom 3 MD5 models (this before the game went Open Source, if I'm not mistaken), procedural terrain generation and
-some cheesy fire and flame effects done with billboards and Fragment Shader. In implementing the first person camera was when
-I figured out about the depth hack that is used by all FPS games to avoid the weapon from poking into scene geometry.
-Quite cleaver, I must say!
+around in first person and shoot at monsters. The framework did feature a couple cool things such as loading and rendering of
+animated DOOM3 MD5 models (this before DOOM3 went Open Source, if I'm not mistaken), procedural terrain generation and
+some cheesy fire and flame effects done with billboards and a Fragment Shader. In implementing the first person camera was when
+I found out about the depth hack trick that is used by all FPS games to avoid the weapon model from poking into scene geometry.
+This was originally developed around the Visual Studio 2008 IDE with a rather Windows-centric programming style, C++98,
+fixed function OpenGL and lots of raw pointers.
 
-Anyway, this project has been forgotten for quite some time, but recently I've migrated its source code to [here](https://bitbucket.org/glampert/fps-game).
-It was originally developed around the Visual Studio 2008 IDE, using a very Windows-ish style of programming, C++98,
-fixed function OpenGL and lots of raw pointers. It's pretty outdated by now and I doubt it would build on a modern
-compiler as is, but I keep it as a historical piece.
+- [Source Code](https://bitbucket.org/glampert/fps-game)
 
 ----
 
@@ -249,39 +241,33 @@ compiler as is, but I keep it as a historical piece.
 <img defpath="{{ "/static/images/slides/vc-radio-s1.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-Grand Theft Auto - Vice City might not be the most famous or fanciest GTA episode, but it certainly has the best
-sound tracks and radio stations in the whole franchise! Well, at least for me! A while back I did some sniffing
+*Grand Theft Auto - Vice City* might not be the most well known GTA episode but it certainly has the best
+sound tracks and radio stations in the whole franchise. Well, at least for me! A while back I did some sniffing
 around in the game assets and found out that it was quite easy to extract the radio station tracks from the game,
 so that they could be played on an external media player. Then I wrote a command-line tool to perform the conversion
-from proprietary ADF format to universally playable MP3. You can access source code as well as a prebuilt Windows
-binary [in the source code repo](https://bitbucket.org/glampert/adf2mp3).
-Here's [a blog post]({{ "/2014/12-27/extracting-gta-vice-city-radio-stations/" | prepend: site.baseurl }})
-with more info about it.
+from proprietary ADF format to universally playable MP3. Here's [a blog post]({{ "/2014/12-27/extracting-gta-vice-city-radio-stations/" | prepend: site.baseurl }}) with more info about it.
+
+- [Source code](https://bitbucket.org/glampert/adf2mp3)
 
 ----
 
-## Miscellaneous and ancient stuff
+## Miscellaneous
 
 <div class="slideshow-container"><div class="slideshow-img-list">
 <img defpath="{{ "/static/images/slides/old-projects-s1.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-Besides what was shown above, I also have several other older and more boring projects that are not worth
-mentioning here in full. Most were class assignments from diverse units and disciplines of my Games course,
+Besides what's listed above I also have several other older and less interesting projects that are not worth
+mentioning here in full. Most were class assignments from different units and disciplines of my Games course,
 such as a [simple RayTracer](https://bitbucket.org/glampert/simd-rt) or a [network tic-tac-toe game](https://bitbucket.org/glampert/tic-tac-toe-tcp).
 The ones I have kept because they had some interesting code fragments or solved interesting problems are now available
 on my [Bitbucket page](https://bitbucket.org/glampert/).
 
 ----
 
-## This Website!
+## This Website
 
-That's right, who would ever guess that a low-level coder like me could make a fancy website!
-To be fair, I started out from the basic blog template provided by Jekyll, the underlying platform
-used to generate the site. But nevertheless, it was fun to play with CSS and jQuery for a while to
-design the interface that you see here. Hope it isn't too bad!
-
-[Jekyll](http://jekyllrb.com/) was the main tool used here, but there's also [jQuery](https://jquery.com/),
+[Jekyll](http://jekyllrb.com/) was the main tool used to build this site, but there's also [jQuery](https://jquery.com/),
 [Bootstrap](http://getbootstrap.com/), [Rouge](http://rouge.jneen.net/) for code syntax highlighting
 (previously I was using [Highlight.js](https://highlightjs.org/)) and some plain-old HTML and CSS
 ([SASS actually](http://sass-lang.com/)).

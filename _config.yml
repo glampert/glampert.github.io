@@ -4,21 +4,21 @@
 # ===========================
 
 # Main title, displayed in the browser tab and site header.
-title: Lampert's game dev journal
+title: Guilherme Lampert
 
 # Tag-line/short description displayed in the header beside the title.
-tag_line: Games and graphics programming
+tag_line: Games Programming
 
 # Alternate tag-line, used as tooltip for the site's logo.
-tag_line_alt: Welcome to Lampert's website!
+tag_line_alt: Welcome to my personal site/blog
 
 # Write an awesome description for your new site here.
 # It will appear in your document head meta (for Google search results)
 # Note: The `>` means to ignore newlines until next item ("destination").
 description: >
-    This is my personal site/blog where I write about some of my projects and other random things about
+    I use this site/blog to occasionally write about some of my personal projects and other things related to games
     programming and game development. I'm mainly interested in graphics and real-time rendering for games.
-    C and C++ are usually the languages I play with, but every now and then I venture with something more exotic.
+    C, C++ and Rust are usually the programming languages I play with.
 
 destination: ./site               # Directory Jekyll outputs to
 baseurl:      ""                  # The subpath of your site, e.g. /site/
@@ -54,7 +54,7 @@ highlighter: rouge
 # Automatic sitemap.xml generator:
 jekyll-sitemap: true
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-paginate
 

@@ -10,7 +10,9 @@ menu_visible: true
   <img src="{{ "/static/images/profile-pic.png" | prepend: site.baseurl }}" id="profile-pic" title="Me circa 2014">
 </div>
 
-Hi, I'm Guilherme Lampert (usually known as just Lampert or GL), a Brazilian game developer living and working in the United Kingdom. I'm currently working with the Engine team at [PlayStation London Studio](https://www.playstation.com/en-gb/footer/about-us/world-wide-studios/sie-london-studio/) developing awesome VR games and tech. Previously I was at [Rockstar North](http://www.rockstarnorth.com/) working in the Animation Systems used by Red Dead Redemption 2 and the RAGE Engine.
+Hi, I'm Guilherme Lampert (usually known as just Lampert or GL), a Brazilian game developer living and working in the United Kingdom.
+I'm currently working with the Engine team at [**PlayStation London Studio**](https://playstationlondonstudio.com/) on the latest iteration of our in-house PS5 Game Engine.
+Previously I was at [**Rockstar North**](http://www.rockstarnorth.com/) working on the Animation Systems used by Red Dead Redemption 2 and the RAGE Engine.
 
 This site/blog is where I post about some of my personal projects and experiments on games programming.
 Views and opinions expressed here are my own and don't necessarily reflect those of my employer.
@@ -24,9 +26,11 @@ Some topics of interest that you will find in this site:
 - Compilers and programming languages
 - General C and C++ coding tips and techniques
 
+My CV: [Download (PDF)]({{ "/static/pdf/gr-lampert-resume.pdf" | prepend: site.baseurl }})
+
 ----
 
-You can also find me on [StackOverflow][link_so], [CodeReview.SE][link_cr] and [GameDev.SE][link_gdse]:
+You can also find me on [StackOverflow][link_so], [CodeReview.SE][link_cr] and [GameDev.SE][link_gdse]
 
 <div>
   <a href="http://stackexchange.com/users/1234852">

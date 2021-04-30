@@ -13,5 +13,5 @@ thumbnail:  hello-world-c
 > tested, and documented. A really professional job. Written by a real professional.
 > A Pragmatic Programmer.
 
-[**The Pragmatic Programmer - From journeyman to master**](http://pragprog.com/book/tpp/the-pragmatic-programmer).
+[**The Pragmatic Programmer - From journeyman to master**](https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/).
 

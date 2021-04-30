@@ -3,7 +3,7 @@ layout:     post
 title:      'PlayStation 2 homebrew #1: Setting up the environment'
 date:       '2015-02-26T19:58:00.000-07:00'
 author:     Guilherme Lampert
-categories: PlayStation-2 Homebrew Clang
+categories: PlayStation-2 Homebrew
 thumbnail:  ps2-setup
 highlight:  true
 ---

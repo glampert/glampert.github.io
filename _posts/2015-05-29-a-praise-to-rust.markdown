@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      A little praise to Rust
+title:      A small praise to Rust
 date:       '2015-05-29T12:30:00.000-07:00'
 author:     Guilherme Lampert
 categories: Programming Rust Miscellaneous
