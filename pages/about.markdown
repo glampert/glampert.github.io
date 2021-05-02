@@ -17,7 +17,7 @@ Previously I was at [**Rockstar North**](http://www.rockstarnorth.com/) working 
 This site/blog is where I post about some of my personal projects and experiments on games programming.
 Views and opinions expressed here are my own and don't necessarily reflect those of my employer.
 
-Some topics of interest that you will find in this site:
+Some topics of interest that you will find here:
 
 - Game development
 - Graphics and real-time rendering
@@ -26,7 +26,7 @@ Some topics of interest that you will find in this site:
 - Compilers and programming languages
 - General C and C++ coding tips and techniques
 
-My CV: [Download (PDF)]({{ "/static/pdf/gr-lampert-resume.pdf" | prepend: site.baseurl }})
+My CV: [Download (PDF)]({{ "/static/pdf/guilherme-lampert-cv.pdf" | prepend: site.baseurl }})
 
 ----
 

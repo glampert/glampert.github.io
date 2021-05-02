@@ -356,6 +356,8 @@ This website presents a comprehensible description of the Playstation 2 hardware
 
 #### [Playstation 2 Linux Game Programming](http://www.hsfortuna.pwp.blueyonder.co.uk/) (Dr. Fortuna's Website)
 
+**UPDATE:** The original website is now down but Lukasz has provided a mirror [here](http://lukasz.dk/mirror/hsfortuna/).
+
 This was a surprising find: A website from a University course that taught game development in the PS2.
 This site is comprised of several tutorials based on the old official Linux SDK. The tutorials are very
 well explained and contain a lot of solid information. Source code is provided for all the demos, and even
@@ -373,5 +375,5 @@ Happy hackings! Till next time.
 [link_wiki_mips]: http://en.wikipedia.org/wiki/MIPS_instruction_set
 [link_wiki_elf]:  http://en.wikipedia.org/wiki/Executable_and_Linkable_Format
 [link_ntsc]:      http://en.wikipedia.org/wiki/NTSC
-[link_prev_post]: {{ "/2015/02-26/ps2-homebrew-setting-up-the-environment/" | prepend: site.baseurl }}
+[link_prev_post]: {{ "/2015/02-27/ps2-homebrew-setting-up-the-environment/" | prepend: site.baseurl }}
 

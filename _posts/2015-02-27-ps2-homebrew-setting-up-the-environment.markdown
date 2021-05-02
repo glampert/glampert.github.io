@@ -184,20 +184,17 @@ like [PCSX2][link_pcsx2].
 ### Installing PCSX2 to run the samples
 
 Once the environment is set up and you have compiled the sample programs, you're going to want to test them
-in a quick way, without having to copy them into the Console. Luckily for us, the PCSX2 project is well under
+in a quick way, without having to copy them into the Console. Luckily for us the PCSX2 project is well under
 way and fully functional, making for a perfect test bed for PS2 homebrew games.
 
-[This video-tutorial][link_pcsx_tuto] does a great job explaining how to install and run PCSX2 on the Mac.
-The links provided in the video description are most valuable.
-
-After the emulator is installed and configured, I copied the `cube.elf` sample to the desktop and selected
+After the emulator was installed and configured, I copied the `cube.elf` sample to the desktop and selected
 `File -> Run Elf File -> No Disc` in the PCSX2 menu and ran `cube.elf`. This was the result, very rewarding
-after the couple hours spent on the setup `:)`.
+after the few hours spent on the setup `:)`.
 
 ![PS2 homebrew]({{ "/static/images/posts/ps2/hello-cube.jpeg" | prepend: site.baseurl }} "Hello PlayStation 2!")
 *The cube demo from PS2DEV SDK running on the PCSX2 emulator.*
 
-[link_prev_post]:    {{ "/2015/01-21/playstation-2-retro-programming-or-hipster-coding/" | prepend: site.baseurl }}
+[link_prev_post]:    {{ "/2015/01-21/playstation-2-retro-programming/" | prepend: site.baseurl }}
 [link_ps2dev]:       https://github.com/ps2dev
 [link_ps2toolchain]: https://github.com/ps2dev/ps2toolchain
 [link_wget]:         http://coolestguidesontheplanet.com/install-and-configure-wget-on-os-x/

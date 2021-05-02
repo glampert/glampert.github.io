@@ -10,13 +10,13 @@ title: Guilherme Lampert
 tag_line: Games Programming
 
 # Alternate tag-line, used as tooltip for the site's logo.
-tag_line_alt: Welcome to my personal site/blog
+tag_line_alt: Welcome to my personal website
 
 # Write an awesome description for your new site here.
 # It will appear in your document head meta (for Google search results)
 # Note: The `>` means to ignore newlines until next item ("destination").
 description: >
-    I use this site/blog to occasionally write about some of my personal projects and other things related to games
+    I use this space to occasionally write about some of my personal projects and other things related to games
     programming and game development. I'm mainly interested in graphics and real-time rendering for games.
     C, C++ and Rust are usually the programming languages I play with.
 

@@ -659,11 +659,11 @@ Defender be upon you! Safe travels, Adventurer!
 [link_gpg]:           https://en.wikipedia.org/wiki/Wargaming_Seattle
 [link_chris_taylor]:  https://en.wikipedia.org/wiki/Chris_Taylor_(game_designer)
 [link_scott_bilas]:   http://scottbilas.com/games/dungeon-siege/
-[link_skrit_manual]:  http://scottbilas.com/files/dungeon_siege/Skrit.pdf
-[link_tank_struct]:   http://scottbilas.com/files/dungeon_siege/TankStructure.h
-[link_save_files]:    http://scottbilas.com/files/dungeon_siege/FuBiPersistBinary.h
-[link_cworld_paper]:  http://scottbilas.com/files/2003/gdc_san_jose/continuous_world_paper.pdf
-[link_cworld_slides]: http://scottbilas.com/files/2003/gdc_san_jose/continuous_world_slides.pdf
+[link_skrit_manual]:  https://github.com/glampert/reverse-engineering-dungeon-siege/blob/master/source/thirdparty/gpg/docs/skrit-tech-manual.pdf
+[link_tank_struct]:   https://github.com/glampert/reverse-engineering-dungeon-siege/blob/master/source/thirdparty/gpg/TankStructure.h
+[link_save_files]:    https://github.com/glampert/reverse-engineering-dungeon-siege/blob/master/source/thirdparty/gpg/FuBiPersistBinary.h
+[link_cworld_paper]:  https://github.com/glampert/reverse-engineering-dungeon-siege/blob/master/source/thirdparty/gpg/docs/the-continuous-world-of-dungeon-siege-paper.pdf
+[link_cworld_slides]: https://github.com/glampert/reverse-engineering-dungeon-siege/blob/master/source/thirdparty/gpg/docs/the-continuous-world-of-dungeon-siege-slides.pdf
 [link_fubi_paper]:    http://scottbilas.com/files/2001/gdc_san_jose/fubi_paper.pdf
 [link_gdc02]:         http://scottbilas.com/files/2002/gdc_san_jose/game_objects_slides.pdf
 [link_fubi_gem]:      http://scottbilas.com/publications/gem-fubi/
