@@ -14,7 +14,7 @@ Most of the academic stuff is available online. The code is surely far from good
 I can happily say that I have improved a lot over the years!
 
 Also, 2D/3D rendering used to be done with old fixed function OpenGL. So I don't see much real life use for them nowadays,
-but who knows, someone might find some useful code fragments in there anyway, I'll just dump the links here `;)`.
+but who knows, someone might find some useful code fragments in there anyway, I'll just dump the links here.
 
 ----
 
