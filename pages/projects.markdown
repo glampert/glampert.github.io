@@ -9,58 +9,9 @@ menu_visible: true
 * Contents
 {:toc}
 
-Some of my favorite toy/hobby projects are listed here.
+Some of my personal programming projects.
 
-Source code for them is either available on [**GitHub**](https://github.com/glampert)
-or [**Bitbucket**](https://bitbucket.org/glampert/).
-
-----
-
-## Debug Draw Library
-
-<div class="slideshow-container"><div class="slideshow-img-list">
-<img defpath="{{ "/static/images/slides/debug-draw-s1.jpeg" | prepend: site.baseurl }}">
-<img defpath="{{ "/static/images/slides/debug-draw-s2.jpeg" | prepend: site.baseurl }}">
-<img defpath="{{ "/static/images/slides/debug-draw-s3.jpeg" | prepend: site.baseurl }}">
-</div></div>
-
-Debug Draw is an immediate-mode-ish, renderer agnostic, lightweight debug drawing API for C++.
-It is a single source file Public Domain library that provides simple and fast lines, points
-and text drawing for visual debugging of 3D scenes and games. Its main goal is to be as easy as
-possible to integrate with your own code, so it consist of a single header file that can also
-act as the implementation (when a given preprocessor macro is defined), so you should be able to just
-drop the file into your project's directory, `#include` it and be done. Integrating with the renderer
-of your choice should also be easy, all you have to do is implement a small interface class
-and give the library a pointer to your implementation. The library is designed around a procedural
-style similar to the old fixed-function OpenGL, but it batches draw calls under the hood for
-better performance. Memory footprint is also small and configurable by the user code.
-
-- [Source code](https://github.com/glampert/debug-draw)
-
-----
-
-## Moon Lang - Custom scripting language
-
-<div class="slideshow-container"><div class="slideshow-img-list">
-<img defpath="{{ "/static/images/slides/moon-lang-s1.png" | prepend: site.baseurl }}">
-</div></div>
-
-Moon is a custom scripting language that borrows some of its syntax from [Lua](https://www.lua.org/) and [Rust](https://www.rust-lang.org/en-US/).
-It supports functions, structures, enums, ranges, arrays, imports, and all that good
-stuff you'd expect. It is also much more strongly-typed than Lua, but not as much as Rust.
-The C++ interface is also meant to be simple and easy to use. The Virtual Machine is stack-based
-and uses a tiny set of bytecode instructions.
-
-I started this project just to learn how to use Flex and Bison to write a simple compiler
-font-end, but I ended up taking it to a nearly production-grade stage. The language
-is fairly complete and usable, but it lacks some basic support libraries as of now.
-
-The name *Moon* is just a play on the meaning of Lua (Moon in Portuguese).
-I chose the name on purpose to make it clear this is a lame rip-off on the
-syntax of the popular scripting language, even though in the end it turned
-out into a Lua/Rust hybrid syntax.
-
-- [Source code](https://github.com/glampert/moon-lang)
+Source code can be found on [**GitHub**](https://github.com/glampert) or [**Bitbucket**](https://bitbucket.org/glampert/).
 
 ----
 
@@ -92,6 +43,71 @@ Gameplay recorded from the PCSX2 Emulator:
 
 ----
 
+## Debug Draw Library
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/debug-draw-s1.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/debug-draw-s2.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/debug-draw-s3.jpeg" | prepend: site.baseurl }}">
+</div></div>
+
+Debug Draw is an immediate-mode-ish, renderer agnostic, lightweight debug drawing API for C++.
+It is a single source file Public Domain library that provides simple and fast lines, points
+and text drawing for visual debugging of 3D scenes and games. Its main goal is to be as easy as
+possible to integrate with your own code, so it consist of a single header file that can also
+act as the implementation (when a given preprocessor macro is defined), so you should be able to just
+drop the file into your project's directory, `#include` it and be done. Integrating with the renderer
+of your choice should also be easy, all you have to do is implement a small interface class
+and give the library a pointer to your implementation. The library is designed around a procedural
+style similar to the old fixed-function OpenGL, but it batches draw calls under the hood for
+better performance. Memory footprint is also small and configurable by the user code.
+
+- [Source code](https://github.com/glampert/debug-draw)
+
+----
+
+## NTB - Minimal debug GUI
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/ntb-s1.png" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/ntb-s2.png" | prepend: site.baseurl }}">
+</div></div>
+
+A small experiment on writing a simple debug UI for graphics applications.
+Initially the goal was to write a portable and renderer agnostic replacement for [AntTweakBar](http://anttweakbar.sourceforge.net/doc/).
+
+This was before [ImGui](https://github.com/ocornut/imgui) and "immediate mode UIs" became sort of an industry standard, so this project is now obsolete.
+It was implemented using a statefull widget tree which is not very friendly to debug and extend. The front-end is quite simple and only exposes windows, panels and variables.
+
+- [Source code](https://github.com/glampert/neo-tweak-bar)
+
+----
+
+## Moon Lang - Custom scripting language
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/moon-lang-s1.png" | prepend: site.baseurl }}">
+</div></div>
+
+Moon is a custom scripting language that borrows some of its syntax from [Lua](https://www.lua.org/) and [Rust](https://www.rust-lang.org/en-US/).
+It supports functions, structures, enums, ranges, arrays, imports, and all that good
+stuff you'd expect. It is also much more strongly-typed than Lua, but not as much as Rust.
+The C++ interface is also meant to be simple and easy to use. The Virtual Machine is stack-based
+and uses a tiny set of bytecode instructions.
+
+I started this project just to learn how to use Flex and Bison to write a simple compiler
+font-end, but I ended up taking it to a nearly production-grade stage. The language
+is fairly complete and usable, but it lacks some basic support libraries.
+
+The name *Moon* is just a play on the meaning of Lua (Moon in Portuguese).
+I chose the name on purpose to make it clear this is a lame rip-off on the
+syntax of the popular scripting language, even though in the end it turned
+out into a Lua/Rust hybrid syntax.
+
+- [Source code](https://github.com/glampert/moon-lang)
+
+----
+
 ## WebGL Lightsaber and WebGL demos
 
 <div class="slideshow-container"><div class="slideshow-img-list">
@@ -105,7 +121,7 @@ Gameplay recorded from the PCSX2 Emulator:
 
 To celebrate the announcement of a new *Star Wars* movie (Episode VII - The Force Awakens), I wrote a browser
 based WebGL Lightsaber app. It features the iconic Lightsaber sounds and mouse/touch interaction. Other technical
-goodies include: glow effect for the laser blade (AKA Light Bloom), trail rendering with Polyboards, anisotropic
+bits: glow effect for the laser blade (AKA Light Bloom), trail rendering with Polyboards, anisotropic
 shading for the handle (brushed metal shader) and screen space anti-aliasing using FXAA. 
 The project also includes a tiny WebGL rendering framework and a couple other demos.
 
@@ -130,17 +146,36 @@ The project also includes a tiny WebGL rendering framework and a couple other de
 <img defpath="{{ "/static/images/slides/scs-s6.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-Project from my Game Development course in Brazil.
+Project from my Game Development degree in Brazil.
 My inspiration here was in games like *Freelancer* and *Wing Commander*. It is playable on PC and Mac, using keyboard/mouse
-or an Xbox controller. The multiplayer element is in the possibility to play it in split-screen mode with another local player.
-Initially I intended to also allow for multiplayer over the Internet, but I never got around finishing the net code before
-submitting the project. The game was written mostly in C++, with a few bits of C and Lua as well.
+or an Xbox controller. It supports multiplayer in split-screen mode with another local player.
+Initially I had intended to also support online multiplayer, but I never got around finishing the net code before
+submitting the project. This game was written mostly in C++, with a few bits of C and Lua as well.
 
 It uses Core OpenGL 3+ for rendering. The space backgrounds and planets you can see in the images above are just cubemaps,
 not actual geometry. The asteroids and props are actual 3D models. Never got around implementing sound either, so playing
-it is a silent, self-reflection experience...
+it is a silent, self-reflection experience.
 
 - [Source code](https://bitbucket.org/glampert/space-sim)
+
+----
+
+## Oldschool Space Shooter Game
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/ossg-ios-s1.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/ossg-ios-s2.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/ossg-ios-s3.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/ossg-ios-s4.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/ossg-ios-s5.jpeg" | prepend: site.baseurl }}">
+</div></div>
+
+Abbreviated OSSG, this is a side scrolling space shooter game for iOS. It was made for a class assignment in my Game Development
+degree in Brazil. It uses the Objective-C version of the Cocos2D library, plus some raw OpenGL-ES for the 3D elements. The in-game background
+scene is animated with planets and randomly spawned asteroids. The main game itself is comprised of 2D sprites drawn as overlays on top of
+the 3D background. This game was my first experience with iOS dev and Objective-C programming. Short gameplay video [here](https://youtu.be/YQTbddA4IYw).
+
+- [Source code](https://bitbucket.org/glampert/ossg)
 
 ----
 
@@ -155,7 +190,7 @@ it is a silent, self-reflection experience...
 <img defpath="{{ "/static/images/slides/vt-ios-s6.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-Project from my Game Development course in Brazil. I implemented a "traditional" Virtual Texturing (VT)
+Project from my Game Development degree. I implemented a "traditional" Virtual Texturing (VT)
 system on OpenGL-ES for the iOS/Apple platform. Virtual Texturing, or ["MegaTextures"](https://en.wikipedia.org/wiki/MegaTexture)
 as it was popularized by John Carmack when still working at idSoftware, is an advanced texture atlasing technique that implements
 a texture streaming setup analogous to Virtual Memory, thus allowing for very large texture data sets, in the tens of Gigabytes range.
@@ -173,26 +208,7 @@ but seeing it in action gives a better idea of how the system works.
 
 ----
 
-## Oldschool Space Shooter Game
-
-<div class="slideshow-container"><div class="slideshow-img-list">
-<img defpath="{{ "/static/images/slides/ossg-ios-s1.jpeg" | prepend: site.baseurl }}">
-<img defpath="{{ "/static/images/slides/ossg-ios-s2.jpeg" | prepend: site.baseurl }}">
-<img defpath="{{ "/static/images/slides/ossg-ios-s3.jpeg" | prepend: site.baseurl }}">
-<img defpath="{{ "/static/images/slides/ossg-ios-s4.jpeg" | prepend: site.baseurl }}">
-<img defpath="{{ "/static/images/slides/ossg-ios-s5.jpeg" | prepend: site.baseurl }}">
-</div></div>
-
-Abbreviated OSSG, this is a side scrolling space shooter game for iOS. It was made for a class assignment in my Game Development
-course in Brazil. It uses the Objective-C version of the Cocos2D library, plus some raw OpenGL-ES for the 3D elements. The in-game background
-scene is animated with planets and randomly spawned asteroids. The main game itself is comprised of 2D sprites drawn as overlays on top of
-the 3D background. This game was my first experience with iOS dev and Objective-C programming. Short gameplay video [here](https://youtu.be/YQTbddA4IYw).
-
-- [Source code](https://bitbucket.org/glampert/ossg)
-
-----
-
-## Simple 3D scene editor, AKA `l3d`
+## Simple 3D scene editor
 
 <div class="slideshow-container"><div class="slideshow-img-list">
 <img defpath="{{ "/static/images/slides/l3d-s1.jpeg" | prepend: site.baseurl }}">
@@ -203,8 +219,8 @@ the 3D background. This game was my first experience with iOS dev and Objective-
 This one was an assignment of a Graphics Programming unit I took in the one year Study Abroad scholarship I participated
 during 2012/13. The goal was to create a simple GUI editor that allows the user to place and perform simple edits in 3D models
 loaded from file. The program also saves the work and allows loading preexistent scene files to enable incremental edits by
-the user. The User Interface was built using Qt and the QtCreator tool.
-It also uses the [ASSIMP](http://assimp.sourceforge.net/) model loading library to provide support for a vast number
+the user. The User Interface was built using Qt and QtCreator.
+It also uses the [ASSIMP](http://assimp.sourceforge.net/) model loading library to provide support for a large number
 of 3D model file formats. One of the perks of using Qt was being able to deploy the application on Mac, Windows and Linux.
 
 - [Source code](https://bitbucket.org/glampert/l3d)
@@ -221,7 +237,7 @@ of 3D model file formats. One of the perks of using Qt was being able to deploy 
 <img defpath="{{ "/static/images/slides/fpsgame-s5.jpeg" | prepend: site.baseurl }}">
 </div></div>
 
-Project done around the third semester of my Game Development course, circa 2011. The assignment was to apply a set of
+Project done around the third semester of my Game Development degree, circa 2011. The assignment was to apply a set of
 common OOP design patterns to any piece of software you wrote. So I decided to code a tiny framework for first person games
 to use as test case for the design patterns. The game itself was quite crude, just basically a level where you could move
 around in first person and shoot at monsters. The framework did feature a couple cool things such as loading and rendering of
@@ -242,7 +258,7 @@ fixed function OpenGL and lots of raw pointers.
 </div></div>
 
 *Grand Theft Auto - Vice City* might not be the most well known GTA episode but it certainly has the best
-sound tracks and radio stations in the whole franchise. Well, at least for me! A while back I did some sniffing
+sound tracks and radio stations in the whole franchise, IMO. A while back I did some sniffing
 around in the game assets and found out that it was quite easy to extract the radio station tracks from the game,
 so that they could be played on an external media player. Then I wrote a command-line tool to perform the conversion
 from proprietary ADF format to universally playable MP3. Here's [a blog post]({{ "/2014/12-27/extracting-gta-vice-city-radio-stations/" | prepend: site.baseurl }}) with more info about it.

@@ -585,41 +585,6 @@ img + em {
 }
 
 // ========================================================
-// Back-to-top dynamic floating button:
-// ========================================================
-
-#back-to-top-button {
-    position:         fixed;
-    right:            25px;
-    bottom:           10px;
-    width:            60px;
-    height:           60px;
-    background-color: rgb(187, 187, 187);
-    opacity:          0.8;
-    filter:           alpha(opacity=80); // For IE8 and earlier
-    display:          none;
-    z-index:          888; // Should always be on top of every other element!
-
-    .arrow {
-        margin:        0 auto;
-        padding-top:   11px;
-        width:         0;
-        height:        0;
-        border-right:  15px solid transparent;
-        border-left:   15px solid transparent;
-        border-bottom: 15px solid rgb(127, 127, 127);
-    }
-
-    .stick {
-        margin:           0 auto;
-        width:            13px;
-        padding-bottom:   21px;
-        border-bottom:    13px solid rgb(187, 187, 187);
-        background-color: rgb(127, 127, 127);
-    }
-}
-
-// ========================================================
 // SCSS preprocessor includes:
 // ========================================================
 

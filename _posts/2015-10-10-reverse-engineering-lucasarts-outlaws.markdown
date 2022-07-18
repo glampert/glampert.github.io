@@ -220,7 +220,7 @@ are not defined in the now usual sense of polygons or triangles. Levels were com
 of "walls" and "sectors", so converting that to renderable geometry is a little tricky.
 
 Based on the LVT, I'll try to figure out the LVB format in the next few weeks and see were it leads,
-so stay tuned for more `:P`. The really cool thing to do would be to actually write a raycast
+so stay tuned for more. The really cool thing to do would be to actually write a raycast
 engine and draw the game levels "the proper way", but I'll probably cheat and just find a way of
 converting the data to OpenGL triangles. Maybe after that, if I'm still up for it, I'll give
 a raycaster a try and see if I can draw the Outlaws maps in the same way the game did.

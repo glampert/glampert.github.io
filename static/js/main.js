@@ -76,27 +76,6 @@ function setUpTableOfContents() {
     }
 }
 
-function setUpBackToTopButton() {
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > 100) {
-            $("#back-to-top-button").fadeIn(500);
-        } else {
-            $("#back-to-top-button").fadeOut(500);
-        }
-    });
-
-    $("#back-to-top-button").click(function() {
-        // NOTE: Firefox requires both 'html' and 'body' to auto-scroll!
-        $("html, body").animate({ "scrollTop": 0 }, 500);
-        return false;
-    });
-
-    // Tooltip on mouse hover.
-    $(function() {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-}
-
 function setUpSlideShowContainers() {
     /*
      * Only loads the first image/slide. The following images are loaded
@@ -257,7 +236,6 @@ function addBlankTargetToExternalLinks() {
 $(document).ready(function() {
     setUpCategoryDisplay();
     setUpTableOfContents();
-    setUpBackToTopButton();
     setUpSlideShowContainers();
     fixMissingImageCaptions();
     addBlankTargetToExternalLinks();

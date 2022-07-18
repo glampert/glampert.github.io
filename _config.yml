@@ -25,12 +25,12 @@ baseurl:      ""                  # The subpath of your site, e.g. /site/
 url:          http://glampert.com # The base hostname & protocol for your site
 
 # Title of the landing page. Presented in the nav-bar.
-landing_page: Blog
+landing_page: Articles
 
 # Post URL format:
 permalink: /:year/:month-:day/:title/
 
-# Number of items in the Blog's post list:
+# Number of items in the Site's post list:
 paginate: 10
 paginate_path: page:num
 
