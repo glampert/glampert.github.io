@@ -56,17 +56,13 @@ A quick Internet search turned up two promising results:
 ### The MTF file format
 
 The Darkstone MTFs are a sort of package/archive file that contains a bunch of other smaller files,
-much like a popular Zip archive would. Each MTF starts with a list of file entries and their offsets in the
+much like a common Zip archive would. Each MTF starts with a list of file entries and their offsets in the
 file. Pretty straightforward. After the headers, a list of the individual files follow until the end of
 the archive. Each file entry might be compressed using a custom [RLE][link_rle]-like compression.
 
 I wrote a more detailed description of the format [here][link_mtf_desc].
-You can always refer to [C source code of the extractor][link_mtf_c] for the implementation details.
-
-By the way, I don't think this MTF format is related to *Microsoft's Tape Format*, but I have
-no idea what the acronym is supposed to mean. If you're reading this and happen to know what MTF stands for,
-or have some more info about the format, please [mail me](mailto:guilherme.ronaldo.lampert@gmail.com)
-and I'd be more than happy to extend this post with the new information!
+Refer to the [C source code of the extractor][link_mtf_c] for the implementation details.
+I don't think this MTF format is related to *Microsoft's Tape Format*, but I have no idea what the acronym is supposed to mean.
 
 #### MTF compression
 

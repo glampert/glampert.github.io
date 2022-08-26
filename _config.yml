@@ -35,7 +35,6 @@ paginate: 10
 paginate_path: page:num
 
 # Social-media/contact links and icons displayed at the footer:
-email:                  guilherme.ronaldo.lampert@gmail.com
 twitter_username:       lampert_g
 github_username:        glampert
 bitbucket_username:     glampert
