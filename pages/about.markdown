@@ -17,8 +17,8 @@ Some of my topics of interest that you will find here:
 - General C and C++ coding tips and techniques
 - PlayStation 2 homebrew
 
-Currently I'm working with the Engine team at [**PlayStation London Studio**](https://playstationlondonstudio.com/) on the latest iteration of our in-house PS5 Game Engine.
-Previously I have worked at [**Rockstar North**](http://www.rockstarnorth.com/) on the animation systems used by Red Dead Redemption 2 and the RAGE Engine.
+I have worked as Engine Programmer at [**PlayStation London Studio**](https://playstationlondonstudio.com/) developing a custom game engine for PS5 and PC
+and as Animation Programmer at [**Rockstar North**](http://www.rockstarnorth.com/) developing the animation systems used by Red Dead Redemption 2 and the RAGE Engine.
 
 ----
 
