@@ -19,7 +19,7 @@ Some of my topics of interest that you will find here:
 
 My professional experience includes Principal Engine Programmer at [**PlayStation London Studio**](https://playstationlondonstudio.com/) developing a proprietary game engine for PlayStation 5 and PC, and Animation Systems Programmer at [**Rockstar North**](http://www.rockstarnorth.com/) developing the animation systems used by *Red Dead Redemption 2* and the *Rockstar Advanced Game Engine* (RAGE).
 
-I'm also Founder & Chief Software Engineer of [**Core System Co-Dev**](https://coresystemcodev.com/), where we provide software co-development and consulting for the gaming industry.
+I'm also Founder and Principal Software Engineer of [**Core System Co-Dev**](https://coresystemcodev.com/), where we provide software co-development and consulting for the gaming industry.
 
 ----
 
