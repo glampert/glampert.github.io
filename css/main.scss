@@ -20,7 +20,26 @@ body {
     font-family: $site-base-font-family;
     font-weight: $site-base-font-weight;
 
-    @include my-site-background;
+    @include my-site-body;
+}
+
+header {
+    color: $headings-color;
+    p {
+        color: $text-color;
+    }
+}
+
+hr {
+    color: $separator-color;
+    background-color: $separator-color;
+    border-top: 1px solid $separator-color;
+}
+
+pre {
+    border: none;
+    color: $text-color;
+    background-color: $code-pre-quote-background-color;
 }
 
 pre, code {
@@ -28,15 +47,15 @@ pre, code {
 }
 
 code {
-    background-color: rgb(220, 220, 220);
-    color:            rgb( 63,  63,  63);
+    background-color: rgba(200, 200, 200, 0.2);
+    color:            rgb(170, 195, 188);
 }
 
 .highlight {
     // Color set here will be the background color of code snippets.
     pre {
-        background-color: rgb(63, 63, 63);
-        color:            rgb(63, 63, 63);
+        background-color: $code-pre-quote-background-color;
+        color:            rgb(170, 195, 188);
     }
 }
 
@@ -59,8 +78,8 @@ table {
 
     thead {
         border-bottom:    1px dashed rgb(119, 119, 119);
-        background-color: rgb(170, 170, 170);
-        color:            white;
+        background-color: $background-color;
+        color:            $text-color;
     }
 
     td {
@@ -74,14 +93,14 @@ table {
 
     tr {
         &:nth-child(2n) {
-            background-color: rgb(229, 234, 237);
+            background-color: $navbar-background-color;
         }
     }
 }
 
 blockquote {
-    color:        rgb(68, 68, 68);
-    background:   rgba(112, 138, 153, 0.1);
+    color:        $text-blockquote-color;
+    background:   $code-pre-quote-background-color;
     border-left:  5px solid rgb(214, 219, 223);
     padding-left: 15px;
     font-size:    16px;
@@ -93,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight:   normal; // Normal font for headings
     margin-top:    20px;
     margin-bottom: 15px;
+    color:         $headings-color;
 }
 
 // Make sure code markups inside headings use the proper font size:
@@ -107,8 +127,8 @@ h6 code { font-size: inherit; }
 .my-hr {
     height: 1px;
     border: none;
-    color:  silver;
-    background-color: silver;
+    color:  $separator-color;
+    background-color: $separator-color;
 }
 
 // ========================================================
@@ -116,23 +136,23 @@ h6 code { font-size: inherit; }
 // ========================================================
 
 // Ordinary links:
-a:link    { color: rgb( 85, 143, 218); }
-a:visited { color: rgb( 60, 102, 156); }
-a:active  { color: rgb(145, 195, 207); }
-a:hover   { color: rgb(115, 139, 170); text-decoration: underline; }
+a:link    { color: $link-color; }
+a:visited { color: $link-visited-color; }
+a:active  { color: $link-active-color; }
+a:hover   { color: $link-hover-color; text-decoration: underline; }
 
 // Links with code markup get the same font
 // color and decoration of ordinary links:
-a:link    code { color: rgb( 85, 143, 218); }
-a:visited code { color: rgb( 60, 102, 156); }
-a:active  code { color: rgb(145, 195, 207); }
-a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
+a:link    code { color: $link-color; }
+a:visited code { color: $link-visited-color; }
+a:active  code { color: $link-active-color; }
+a:hover   code { color: $link-hover-color; text-decoration: underline; }
 
 // Main post index links:
-#index a:link    { color: rgb(  0,   0,  85); }
-#index a:visited { color: rgb(100, 128, 200); }
-#index a:active  { color: rgb(153, 153, 187); }
-#index a:hover   { color: rgb( 51,  51, 102); text-decoration: none; }
+#index a:link    { color: $link-color; }
+#index a:visited { color: $link-visited-color; }
+#index a:active  { color: $link-active-color; }
+#index a:hover   { color: $link-hover-color; text-decoration: none; }
 
 // ========================================================
 // Embedded videos / iframes:
@@ -145,13 +165,13 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     margin-bottom:    25px;
     position:         relative;
     vertical-align:   middle;
-    background-color: black;
-
-    // White border, like the images.
-    border: 5px solid white;
+    color:            $background-color;
+    background-color: $background-color;
+    border:           2px solid $text-color;
+    border-radius:    10px;
 
     // Shadow like other images.
-    @include my-box-shadow;
+    //@include my-box-shadow;
 }
 
 #cv-frame {
@@ -169,6 +189,11 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     // has a rounded border by default.
     border:        none;
     border-radius: 0;
+
+    color:            $navbar-background-color;
+    background-color: $navbar-background-color;
+
+    @include my-box-shadow;
 }
 
 .navbar-nav li {
@@ -176,12 +201,33 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     text-align: center;
 }
 
-.navbar-brand {
-    font-size: 26px;
+.navbar-inverse .navbar-nav li a {
+    color: $navbar-text-color;
+    background-color: transparent !important;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+    color: $link-hover-color !important;
 }
 
 .navbar-text {
     font-size: 16px;
+}
+
+.navbar-inverse .navbar-text {
+    color: $navbar-text-color;
+}
+
+.navbar-brand {
+    font-size: 26px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: $navbar-text-color;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: $link-hover-color !important;
 }
 
 // A couple tweaks in the drop-down menu...
@@ -205,7 +251,7 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     border: 5px solid white;
     background-color: rgb(210, 210, 210);
 
-    @include my-box-shadow;
+    //@include my-box-shadow;
 }
 
 // Tiny logo in the nav bar:
@@ -240,9 +286,9 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
 
 .post-list-header {
     padding:       15px 30px;
-    border-bottom: 1px solid silver;
     font-size:     30px;
     font-weight:   bold;
+    color:         $headings-color;
 }
 
 .post-list-item-text {
@@ -255,8 +301,10 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     display:       block;
     position:      relative;
     padding:       10px 15px 0px 15px;
-    border-bottom: 1px solid rgb(221, 221, 221);
     height:        158px;
+
+    // Separator after each item?
+    //border-bottom: 1px solid $separator-color;
 
     @include my-mouse-hover-transition;
 
@@ -279,6 +327,7 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
     text-align:    left;
     margin-top:    4px;
     margin-bottom: 4px;
+    color:         $text-color;
 }
 
 // ========================================================
@@ -290,13 +339,13 @@ a:hover   code { color: rgb(115, 139, 170); text-decoration: underline; }
         width:            100%;
         vertical-align:   middle;
         position:         relative;
-        background-color: white;
+        background-color: $background-color;
         margin-top:       10px;
 
-        border: 10px solid white;
+        border-bottom: 4px solid $background-color;
         border-bottom-width: 35px;
 
-        @include my-box-shadow;
+        //@include my-box-shadow;
     }
 }
 
@@ -316,25 +365,28 @@ img + em {
     margin-right:    5px;
     margin-left:     5px;
     top:            -28px;
+    color:           $text-color;
 
     @include my-display-flex-center-align;
 }
 
 .post-thumbnail {
-    float:            left;
-    width:            220px;
-    height:           140px;
-    margin-right:     20px;
-    color:            white;
-    background-color: white;
+    float:        left;
+    width:        220px;
+    height:       140px;
+    margin-right: 20px;
 
-    @include my-box-shadow;
+    //@include my-box-shadow;
 }
 
 .post-thumbnail-image {
     width:  inherit;
     height: inherit;
-    border: 5px solid white;
+
+    // Add border to thumbnails?
+    border: 2px solid $background-color;
+    border-radius: 10px;
+
     // Thumbnails are lazily loaded by JavaScript,
     // so the images are initially hidden.
     display: none;
@@ -387,7 +439,6 @@ img + em {
 // ========================================================
 
 .paginator {
-    border-top:  1px solid rgb(221, 221, 221);
     text-align:  center;
     padding:     15px 20px;
     font-size:   16px;
@@ -407,15 +458,18 @@ img + em {
     display:       block;
     padding:       12px 15px;
     padding-top:   37px;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid $separator-color;
     font-size:     16px;
     font-weight:   bold;
+    color:         $text-color;
 }
 
 .categories-list-item {
     display:       block;
     padding:       8px 15px;
-    border-bottom: 1px solid rgb(221, 221, 221);
+
+    // Add a separator between each category tag?
+    //border-bottom: 1px solid $separator-color;
 
     @include my-mouse-hover-transition;
 
@@ -431,8 +485,8 @@ img + em {
     .my-badge {
         float:              right;
         font-size:          12px;
-        color:              white;
-        background-color:   rgb(153, 153, 153);
+        color:              $text-color;
+        background-color:   $code-pre-quote-background-color;
         padding:            0 7px 1px 7px;
         border-radius:      9px;
 
@@ -483,10 +537,10 @@ img + em {
     line-height: 25px;
 }
 
-#content a:link    { color: rgb(102, 102, 102); }
-#content a:visited { color: rgb(102, 102, 102); }
-#content a:active  { color: rgb(153, 153, 187); }
-#content a:hover   { color: rgb( 51,  51, 102); text-decoration: underline; }
+#content a:link    { color: $link-color; }
+#content a:visited { color: $link-visited-color; }
+#content a:active  { color: $link-active-color; }
+#content a:hover   { color: $link-hover-color; text-decoration: underline; }
 
 // ========================================================
 // Site footer:
@@ -494,7 +548,7 @@ img + em {
 
 .site-footer {
     margin-top: 30px;
-    border-top: 1px solid rgb(30, 30, 30);
+    border-top: 1px solid $separator-color;
     padding:    30px 0;
     text-align: justify;
 }
@@ -503,6 +557,7 @@ img + em {
     font-size:     24px;
     margin-bottom: 15px;
     margin-left:   40px;
+    color:        $text-color;
 }
 
 .contact-list, .social-media-list {
@@ -514,7 +569,7 @@ img + em {
 .footer-col-wrapper {
     font-size:    15px;
     margin-left: -15px;
-    color:        rgb(130, 130, 130);
+    color:        $text-color;
 }
 
 .footer-col {
@@ -546,9 +601,9 @@ img + em {
 #medium-pic {
     max-width:        320px;
     max-height:       260px;
-    border:           5px solid white;
+    border:           5px solid $background-color;
     border-radius:    0;
-    background-color: white;
+    background-color: $background-color;
 }
 
 #profile-pic {
@@ -556,9 +611,9 @@ img + em {
     max-height:       135px;
     margin-bottom:    25px;
     margin-right:     50px;
-    border:           5px solid white;
+    border:           5px solid $background-color;
     border-radius:    0;
-    background-color: white;
+    background-color: $background-color;
 }
 
 #stackexchange-flair {
@@ -567,7 +622,7 @@ img + em {
     margin-bottom:    10px;
     border:           none;
     border-radius:    0;
-    background-color: white;
+    background-color: $background-color;
 }
 
 // ========================================================

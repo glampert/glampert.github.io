@@ -9,7 +9,7 @@ thumbnail:  ossg
 
 Just a few weeks back I finished a little iOS game, the **Oldschool Space Shooter Game - OSSG**.
 I did it as a University assignment. It is not published, mainly because I don't have the slightest
-desire of paying Apple $100 bucks just to publish it `:P`, but also because it is still very rough
+desire of paying Apple $100 bucks just to publish it, but also because it is still very rough
 and missing some original art assets.
 
 This was my first time writing an iOS app and coding in Objective-C, so the code is pretty lame, overall.

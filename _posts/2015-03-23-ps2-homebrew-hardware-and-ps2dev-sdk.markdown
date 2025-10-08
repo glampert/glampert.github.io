@@ -366,7 +366,7 @@ tough the code is written for the Linux SDK, it is quite readable and can be eas
 This last one was a life saver for me, since at first I had no access to official
 documentation and was pretty much left guessing everything by myself.
 
-----
+<br/>
 
 Happy hackings! Till next time.
 

@@ -1,7 +1,35 @@
 
-// Common site fonts:
-$site-base-font-family: Helvetica, Arial, sans-serif;
-$site-base-font-weight: lighter;
+// ========================================================
+// Site color scheme:
+// ========================================================
+
+$navbar-background-color: rgb(52, 57, 67) !default;
+$navbar-text-color: rgb(240, 240, 240) !default;
+
+$link-color: #009688 !default;
+$link-visited-color: #026d64 !default;
+$link-active-color: #009688 !default;
+$link-hover-color: #04ad9c !default;
+
+$headings-color: #009688 !default;
+$text-color: rgb(174, 181, 188) !default;
+$background-color: rgb(32, 36, 41) !default;
+
+$separator-color: black !default;
+$text-blockquote-color: rgb(157, 157, 157) !default;
+$code-pre-quote-background-color: rgb(43, 47, 55) !default;
+
+// ========================================================
+// Site fonts:
+// ========================================================
+
+$site-base-font-family: "RobotoRegular", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$site-base-font-weight: normal;
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url("../static/fonts/roboto-regular.woff");
+}
 
 // ========================================================
 // SCSS Mixins, common style blocks/macros:
@@ -28,10 +56,11 @@ $site-base-font-weight: lighter;
 }
 
 //
-// Site background image and image sampling rules.
+// Site background/body.
 //
-@mixin my-site-background {
-    background: url("../static/images/site-bg.png") repeat center top;
+@mixin my-site-body {
+    background-color: $background-color;
+    color: $text-color;
 }
 
 //
