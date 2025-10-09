@@ -10,13 +10,16 @@ thumbnail:  vt-ios-2
 Things have been going smoothly since my last update on bringing Virtual Textures to iOS. Following is
 a [short video of a simple demo][link_video] running on the XCode simulator (it runs much faster on a device, with 30+ fps):
 
-<iframe type="text/html"
+<iframe
+    class="embedded-video"
     width="480"
     height="440"
-    class="embedded-video"
+    src="https://www.youtube.com/embed/sWz45m0QKj4?si=2JPH6_uukuj85nsQ"
     title="Virtual Textures - iOS"
-    src="http://www.youtube.com/embed/sWz45m0QKj4"
-    frameborder="0">
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
 </iframe>
 
 I've also coded another demo, which I call the *Planets* demo. It is too heavy to run on the simulator,
@@ -41,7 +44,7 @@ presented on [MrElusive's paper][link_paper] to work on GL-ES. A great deal of s
 The goal now is to further optimize the implementation and step the demos up a notch.
 The source code repository is live at [Bitbucket][link_project].
 
-[link_video]:   https://youtu.be/sWz45m0QKj4
+[link_video]:   https://youtu.be/sWz45m0QKj4?si=2JPH6_uukuj85nsQ
 [link_paper]:   http://www.mrelusive.com/publications/papers/Software-Virtual-Textures.pdf
 [link_project]: https://bitbucket.org/glampert/vt-mobile
 [link_gpupro]:  http://gpupro.blogspot.com

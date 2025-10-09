@@ -25,15 +25,17 @@ The coolest thing in the end though was the 3D background I added behind the Coc
 The source code repository can be found [here](https://bitbucket.org/glampert/ossg/overview),
 if anyone is interested in taking a look.
 
-Following is a [short gameplay video](https://youtu.be/YQTbddA4IYw)
+Following is a [short gameplay video](https://youtu.be/YQTbddA4IYw?si=V4PJVfUgP_MA3qFk)
 (running on the simulator, so forgive the low frame-rate).
 
-<iframe type="text/html"
+<iframe
+    class="embedded-video"
     width="480"
     height="440"
-    class="embedded-video"
+    src="https://www.youtube.com/embed/YQTbddA4IYw?si=V4PJVfUgP_MA3qFk"
     title="OSSG Gameplay"
-    src="http://www.youtube.com/embed/YQTbddA4IYw"
-    frameborder="0">
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
 </iframe>
-
