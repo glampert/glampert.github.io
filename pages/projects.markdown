@@ -15,6 +15,28 @@ Source code can be found on [**GitHub**](https://github.com/glampert) or [**Bitb
 
 ----
 
+## MrQuake2 - Multiple Renderers Quake 2
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/mrq2-s1.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/mrq2-s2.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/mrq2-s3.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/mrq2-s4.jpeg" | prepend: site.baseurl }}">
+</div></div>
+
+Multiple Renderers Quake 2, or *MrQuake2*, is a Quake 2 custom renderers playground.
+
+Currently the following back-ends are supported:
+- `D3D11` - Windows
+- `D3D12` - Windows
+- `Vulkan` - Windows
+
+The aim is to implement each renderer with the same visuals as the original Quake 2 but some modernizations are also implemented and can be toggled by CVars. We also support loading higher resolution textures such as the HD texture pack from Yamagi Quake 2. There's also support for `RenderDoc` debugging and profiling with `Optick`. This project is based on the original Quake 2 source release from id Software.
+
+- [Source code](https://github.com/glampert/MrQuake2)
+
+----
+
 ## PlayStation 2 Homebrew
 
 <div class="slideshow-container"><div class="slideshow-img-list">
