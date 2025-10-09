@@ -241,37 +241,46 @@ but should work in the PS2 just fine. This will not prevent the rest of the game
 
 Following are a couple YouTube videos showcasing the three demo levels I wrote.
 
-#### [A simple test level](https://youtu.be/kM_C4iHzdNQ)
+#### [Test Level](https://youtu.be/kM_C4iHzdNQ?si=qowcY_dHT_yjSWev)
 
-<iframe type="text/html"
+<iframe
+    class="embedded-video"
     width="480"
     height="440"
-    class="embedded-video"
-    title="Test level"
-    src="http://www.youtube.com/embed/kM_C4iHzdNQ"
-    frameborder="0">
+    src="https://www.youtube.com/embed/kM_C4iHzdNQ?si=qowcY_dHT_yjSWev"
+    title="PlayStation 2 Homebrew Game - Test Level"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
 </iframe>
 
-#### [The Dungeons](https://youtu.be/qrPz5AMEOUM)
+#### [The Dungeons](https://youtu.be/qrPz5AMEOUM?si=49ukqMAOOPc82LU-)
 
-<iframe type="text/html"
+<iframe
+    class="embedded-video"
     width="480"
     height="440"
-    class="embedded-video"
-    title="The Dungeons"
-    src="http://www.youtube.com/embed/qrPz5AMEOUM"
-    frameborder="0">
+    src="https://www.youtube.com/embed/qrPz5AMEOUM?si=49ukqMAOOPc82LU-"
+    title="PlayStation 2 Homebrew Game - The Dungeons Level"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
 </iframe>
 
-#### [The Graveyard](https://youtu.be/pK5r_wBrzcM)
+#### [The Graveyard](https://youtu.be/pK5r_wBrzcM?si=z1fQPSKOMjwaZovh)
 
-<iframe type="text/html"
+<iframe
+    class="embedded-video"
     width="480"
     height="440"
-    class="embedded-video"
-    title="The Graveyard"
-    src="http://www.youtube.com/embed/pK5r_wBrzcM"
-    frameborder="0">
+    src="https://www.youtube.com/embed/pK5r_wBrzcM?si=z1fQPSKOMjwaZovh"
+    title="PlayStation 2 Homebrew Game - Graveyard Level"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
 </iframe>
 
 [link_prev_post]:    {{ "/2015/03-23/ps2-homebrew-hardware-and-ps2dev-sdk/" | prepend: site.baseurl }}
