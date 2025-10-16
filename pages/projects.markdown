@@ -15,6 +15,24 @@ Source code can be found on [**GitHub**](https://github.com/glampert) or [**Bitb
 
 ----
 
+## Rust City Builder Game
+
+<div class="slideshow-container"><div class="slideshow-img-list">
+<img defpath="{{ "/static/images/slides/city-sim-s1.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/city-sim-s2.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/city-sim-s3.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/city-sim-s4.jpeg" | prepend: site.baseurl }}">
+<img defpath="{{ "/static/images/slides/city-sim-s5.jpeg" | prepend: site.baseurl }}">
+</div></div>
+
+Ongoing project of a city builder game based on ancient civilizations of Asia. Inspired by classic city builders like *Pharaoh* and *Caesar*.
+
+This game is written from the ground up using the Rust programming language, with a custom OpenGL-based renderer backend.
+
+- [Source code](https://github.com/glampert/rust-citysim)
+
+----
+
 ## MrQuake2 - Multiple Renderers Quake 2
 
 <div class="slideshow-container"><div class="slideshow-img-list">
