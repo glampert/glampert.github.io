@@ -15,7 +15,7 @@ Source code can be found on [**GitHub**](https://github.com/glampert) or [**Bitb
 
 ----
 
-## Rust City Builder Game
+## Heritage Builder - Homebrew City Builder Game
 
 <div class="slideshow-container"><div class="slideshow-img-list">
 <img defpath="{{ "/static/images/slides/city-sim-s1.jpeg" | prepend: site.baseurl }}">
