@@ -25,7 +25,7 @@ I'm also Founder and Principal Software Engineer of [**Core System Co-Dev**](htt
 
 You can also find me on [StackOverflow][link_so], [CodeReview.SE][link_cr] and [GameDev.SE][link_gdse]:
 
-<div>
+<!--<div>
   <a href="https://stackexchange.com/users/1234852/glampert">
     <img src="https://stackexchange.com/users/flair/1234852.png"
          id="stackexchange-flair"
@@ -33,7 +33,7 @@ You can also find me on [StackOverflow][link_so], [CodeReview.SE][link_cr] and [
          title="Profile for glampert on Stack Exchange, a network of free, community-driven Q&amp;A sites"
     />
   </a>
-</div>
+</div>-->
 
 [link_so]:   http://stackoverflow.com/users/1198654/glampert?tab=profile
 [link_cr]:   http://codereview.stackexchange.com/users/39810/glampert?tab=profile
