@@ -1,14 +1,16 @@
 
-## My personal Website and Blog `@glampert.github.io`
+## My personal site and blog `@glampert.github.io`
 
-Source code repository for my site/blog,
-which can be found online at [(www.)glampert.com](http://glampert.com/)
-or at the standard GitHub Pages URL [glampert.github.io](http://glampert.github.io).
+Source code repository for my personal site/blog, which can be found online at the GitHub Pages URL [glampert.github.io](https://glampert.github.io).
 
-It uses [Jekyll](http://jekyllrb.com/) to generate the site from a set of static Markdown and HTLM
+It uses [Jekyll](https://jekyllrb.com) to generate the site from a set of static Markdown and HTLM
 pages annotated with the [Liquid](https://github.com/Shopify/liquid/wiki) templating language.
 
 The included `Makefile` simplifies running Jekyll locally to test the site.
+
+- `make all`: Runs jekyll build.
+- `make run`: Runs jekyll build + serve.
+- `make clean`: Deletes all generated/cached static content & build artifacts.
 
 ## License
 

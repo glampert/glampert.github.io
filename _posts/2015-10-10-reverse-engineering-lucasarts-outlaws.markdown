@@ -327,7 +327,7 @@ and spot the names of the key systems of the game and Jedi Engine. The game was 
 [link_dllhell]:     https://en.wikipedia.org/wiki/DLL_Hell
 [link_glide]:       https://en.wikipedia.org/wiki/Glide_API
 [link_xentax]:      http://wiki.xentax.com/index.php?title=Lucus_Arts_LAB
-[link_dstone_post]: http://glampert.com/2015/09-01/reverse-engineering-darkstone/#mtf-compression
+[link_dstone_post]: https://glampert.github.io/2015/09-01/reverse-engineering-darkstone/#mtf-compression
 [link_repo]:        https://github.com/glampert/reverse-engineering-outlaws
 [link_euler]:       https://en.wikipedia.org/wiki/Euler_angles
 [link_pcx]:         https://en.wikipedia.org/wiki/PCX

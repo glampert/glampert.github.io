@@ -20,9 +20,9 @@ description: >
     programming and game development. I'm mainly interested in graphics and real-time rendering for games.
     C, C++ and Rust are usually the programming languages I play with.
 
-destination: ./site               # Directory Jekyll outputs to
-baseurl:      ""                  # The subpath of your site, e.g. /site/
-url:          http://glampert.com # The base hostname & protocol for your site
+destination: ./site # Directory Jekyll outputs to
+baseurl:      ""    # The subpath of your site, e.g. /site/
+url:          https://glampert.github.io # The base hostname & protocol for your site
 
 # Title of the landing page. Presented in the nav-bar.
 landing_page: Articles
